@@ -14,7 +14,7 @@ import Teaching from './panels/Teaching';
 import Profile from './panels/Profile';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Started');
+	const [activePanel, setActivePanel] = useState('Home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
