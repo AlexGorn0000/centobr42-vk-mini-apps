@@ -39,6 +39,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24Cancel/></HeaderButton>}>Личный кабинет</PanelHeader>	
+	<img src="https://i.imgur.com/9QKDeAg.png"/>
 	<Group>
 	 <List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
