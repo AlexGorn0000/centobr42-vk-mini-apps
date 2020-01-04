@@ -13,8 +13,7 @@ import Education from './panels/Education';
 import Teaching from './panels/Teaching';
 import Profile from './panels/Profile';
 import Projects from './panels/Projects'
-//Projects
-import Project1 from './panels/Projects/Project1'
+import Project1 from './panels/Project1'
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Home');
