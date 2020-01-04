@@ -39,11 +39,11 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Projects = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Проекты</PanelHeader>
- 	<Group title="Действующие проекты">
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мероприятия</PanelHeader>
+ 	<Group title="Действующие мероприятия">
     <Cell expandable before={<Avatar src="https://sun9-8.userapi.com/c855332/v855332850/12dbfb/21ssy9iYcGs.jpg"/>}>Школьное телевидение</Cell>
      </Group>
-     <Group title="Прошедшие проекты">
+     <Group title="Прошедшие мероприятия">
      <List>
      <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} onClick={go} Data-to="Project1">Конкурс "Один в один"</Cell>
     </List>
