@@ -12,6 +12,7 @@ import Started from './panels/Started'
 import Education from './panels/Education';
 import Teaching from './panels/Teaching';
 import Profile from './panels/Profile';
+import Projects from './panels/Projects'
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Home');
@@ -49,6 +50,7 @@ const App = () => {
 			<Education id='Education' fetchedUser={fetchedUser} go={go} />
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
+			<Profile id='Projects' go={go}/>
 		</View>
 	);
 }
