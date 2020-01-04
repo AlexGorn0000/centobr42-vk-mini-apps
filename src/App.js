@@ -13,9 +13,11 @@ import Education from './panels/Education';
 import Teaching from './panels/Teaching';
 import Profile from './panels/Profile';
 import Projects from './panels/Projects'
+//Projects
+import Project1 from './panels/Projects/Project1'
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Projects');
+	const [activePanel, setActivePanel] = useState('Home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
@@ -51,6 +53,7 @@ const App = () => {
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>
+			<Project1 id='Project1' go={go}/>
 		</View>
 	);
 }
