@@ -45,7 +45,7 @@ const Projects = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
     <Group>
-    <Gallery
+    <Gallery>
                 slideWidth="90%"
                 align="center"
                 style={{ height: 200 }}
