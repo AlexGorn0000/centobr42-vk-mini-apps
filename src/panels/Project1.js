@@ -44,7 +44,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
     <Group>
     <Gallery
     slideWidth="90%"
@@ -65,27 +65,27 @@ const Project1 = ({ id, go, fetchedUser }) => (
     </Gallery>
     </Group>
     <Group>
-    <Cell before={<Icon24Followers/>}>???? ??????????</Cell>
+    <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
     <List>
-    <InfoRow>?????? ????: ? 25 ?? 29 ??????</InfoRow>
-    <InfoRow>?????? ???? (?????): 16 ???????</InfoRow>
+    <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
+    <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
     </List>
     <Separator style={{ margin: '10px 0' }} />
-    <Cell before={<Icon24Place/>}>????? ??????????</Cell>
+    <Cell before={<Icon24Place/>}>Место проведения</Cell>
     <List>
-    <InfoRow>??????, ??????????? ???, ?.???????, ??.????????, ?.34?</InfoRow>
+    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
     </List>
     <Separator style={{ margin: '10px 0' }} />
     </Group>
-    <Group title="?????????????">
+    <Group title="Дополнительно">
     <List>
-    <Cell expandable before={<Icon24Video/>}>???????????</Cell>
-    <Cell expandable before={<Icon24Gallery/>}>??????????</Cell>
+    <Cell expandable before={<Icon24Video/>}>Видеозаписи</Cell>
+    <Cell expandable before={<Icon24Gallery/>}>Фотографии</Cell>
     </List>
     </Group>
     <Group>
   	<List>
-	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">???? ??????</Cell>
+	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">Наша группа</Cell>
 	 </List>
 	 </Group>
  </Panel>
