@@ -30,6 +30,7 @@ import Icon24Help from '@vkontakte/icons/dist/24/help';
 import Icon24Followers from '@vkontakte/icons/dist/24/followers';
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Services from '@vkontakte/icons/dist/24/services';
+import Icon24Write from '@vkontakte/icons/dist/24/write';
 import Icon24Note from '@vkontakte/icons/dist/24/note';
 import Icon24Video from '@vkontakte/icons/dist/24/video';
 import Icon24Gallery from '@vkontakte/icons/dist/24/gallery';
@@ -65,19 +66,25 @@ const Project1 = ({ id, go, fetchedUser }) => (
     </Gallery>
     </Group>
     <Group>
+    <Cell before={<Icon24Write/>}>Наименование</Cell>
+    <Separator style={{ margin: '10px 0' }} />
+    <Cell before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} description="Музыкальный проект">Конкурс "Один в один"</Cell>
+    </Group>
+    <Group>
     <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
     <List>
     <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
     <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
     </List>
-    <Separator style={{ margin: '10px 0' }} />
+    </Group>
+    <Group> 
     <Cell before={<Icon24Place/>}>Место проведения</Cell>
     <List>
     <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
     </List>
-    <Separator style={{ margin: '10px 0' }} />
     </Group>
     <Group title="Дополнительно">
+    <Separator style={{ margin: '10px 0' }} />
     <List>
     <Cell expandable before={<Icon24Video/>}>Видеозаписи</Cell>
     <Cell expandable before={<Icon24Gallery/>}>Фотографии</Cell>
