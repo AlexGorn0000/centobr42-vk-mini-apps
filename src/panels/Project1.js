@@ -7,7 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import connect from '@vkontakte/vk-connect'; 
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-
+import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
