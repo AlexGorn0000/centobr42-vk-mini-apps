@@ -44,7 +44,9 @@ const Projects = ({ id, go, fetchedUser }) => (
     <Cell expandable before={<Avatar src="https://sun9-8.userapi.com/c855332/v855332850/12dbfb/21ssy9iYcGs.jpg"/>}>Школьное телевидение</Cell>
      </Group>
      <Group title="Прошедшие проекты">
+     <List>
      <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} onClick={go} Data-to="Project1">Конкурс "Один в один"</Cell>
+    </List>
     </Group>
  </Panel>
 );

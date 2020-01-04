@@ -66,25 +66,21 @@ const Project1 = ({ id, go, fetchedUser }) => (
     </Gallery>
     </Group>
     <Group>
-    <Cell before={<Icon24Write/>}>Наименование</Cell>
-    <Separator style={{ margin: '10px 0' }} />
-    <Cell before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} description="Музыкальный проект">Конкурс "Один в один"</Cell>
-    </Group>
-    <Group>
     <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
-    <List>
+    <Div>
     <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
+    </Div>
+    <Div>
     <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
-    </List>
-    </Group>
-    <Group> 
+    </Div>
+    <Separator style={{ margin: '5px 0' }} />
     <Cell before={<Icon24Place/>}>Место проведения</Cell>
-    <List>
+    <Div>
     <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
-    </List>
+    </Div>
     </Group>
     <Group title="Дополнительно">
-    <Separator style={{ margin: '10px 0' }} />
+    <Separator style={{ margin: '5px 0' }} />
     <List>
     <Cell expandable before={<Icon24Video/>}>Видеозаписи</Cell>
     <Cell expandable before={<Icon24Gallery/>}>Фотографии</Cell>
