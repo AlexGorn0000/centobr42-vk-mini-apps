@@ -41,7 +41,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 
 
-const Projects = ({ id, go, fetchedUser }) => (
+const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
     <Group>
@@ -80,7 +80,7 @@ const Projects = ({ id, go, fetchedUser }) => (
  </Panel>
 );
 
-Projects.propTypes = {
+Project1.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -93,4 +93,4 @@ Projects.propTypes = {
 	}),
 };
 
-export default Projects;
+export default Project1;
