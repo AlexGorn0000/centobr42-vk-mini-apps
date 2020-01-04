@@ -60,7 +60,6 @@ const Home = ({ id, go, fetchedUser }) => (
                 align="center"
                 style={{ height: 200 }}
               >
-				<iframe width="560" height="315" src="https://vk.com/video-187421428_456239048" frameborder="0" allowfullscreen></iframe>
 				<img src="https://sun9-10.userapi.com/c200720/v200720233/28432/Q81mleE1TM8.jpg"/>
                 <img src="https://sun9-64.userapi.com/c206528/v206528826/1c48f/NNFKtP0-bC8.jpg"/>
 				<img src="https://sun9-58.userapi.com/c204616/v204616763/16b18/mbg8fvOzBHE.jpg"/>
