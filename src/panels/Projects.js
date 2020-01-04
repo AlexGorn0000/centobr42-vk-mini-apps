@@ -39,24 +39,23 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 
 
-const Profile = ({ id, go, fetchedUser }) => (
+const Projects = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>???????</PanelHeader>
- 	<Group title="??????????? ???????">
-    <Cell expandable before={<Icon24User/>}>???????? ?????</Cell>
-    <Cell expandable before={<Avatar src="https://sun9-8.userapi.com/c855332/v855332850/12dbfb/21ssy9iYcGs.jpg"/>}>???????? ???????????</Cell>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Проекты</PanelHeader>
+ 	<Group title="Действующие проекты">
+    <Cell expandable before={<Avatar src="https://enginecrew.net/images/avatar-profile.jpg"/>}>Школьное радио</Cell>
+    <Cell expandable before={<Avatar src="https://sun9-8.userapi.com/c855332/v855332850/12dbfb/21ssy9iYcGs.jpg"/>}>Школьное телевидение</Cell>
      </Group>
-     <Group title="????????? ???????">
-     <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>}>??????? "???? ? ????"</Cell>
-     <Cell expandable before={<Avatar src="https://sun9-18.userapi.com/c845521/v845521060/185e69/-Poj5OWvw0I.jpg"/>}>?????? ?? ???????????</Cell>
-     <Cell expandable before={<Avatar src="https://sun9-56.userapi.com/c853524/v853524614/180a74/EmbF7mDRjCM.jpg"/>}>??????? "? ?? ??? ????? ????? ??????!"</Cell>
-     <Cell expandable before={<Avatar src="https://sun9-49.userapi.com/c858224/v858224433/ecc30/KFgggeOEr9w.jpg"/>}>???????? ?????-?????? ??? ?.???????</Cell>
-     <Placeholder icon={<Icon56NotificationOutline/>} title="?????? ?????? ?????????" action={<Button size="l" href="https://vk.com/centobr42_press_center">?????????</Button>}>???????? ? ?????? ?????-?????? ? ????? ?? ????? ?????? ? ????? ????????!</Placeholder>
+     <Group title="Прошедшие проекты">
+     <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>}>Конкурс "Один в один"</Cell>
+    </Group>
+    <Group>
+    <Placeholder icon={<Icon56NotificationOutline/>} title="Хочешь больше новостей?" action={<Button size="l" href="https://vk.com/centobr42_press_center">Подробнее</Button>}>Заходите в группу Пресс-центра и тогда Вы точно будете в курсе новостей!</Placeholder>
     </Group>
  </Panel>
 );
 
-Profile.propTypes = {
+Projects.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -69,4 +68,4 @@ Profile.propTypes = {
 	}),
 };
 
-export default Profile;
+export default Projects;
