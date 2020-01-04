@@ -7,6 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import connect from '@vkontakte/vk-connect'; 
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
+import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
@@ -45,12 +46,11 @@ const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
     <Group>
-    <Gallery>
-                slideWidth="90%"
-                align="center"
-                style={{ height: 200 }}
-              >
-				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
+    <Gallery
+    slideWidth="90%"
+    align="center"
+    style={{ height: 200 }}>
+				        <img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
                 <img src="https://sun9-32.userapi.com/c204616/v204616763/16a5b/QXGt8DwB240.jpg"/>
                 <img src="https://sun9-25.userapi.com/c204616/v204616763/16ac7/aOEhtTmFBv8.jpg"/>
                 <img src="https://sun9-72.userapi.com/c204616/v204616763/16ad9/DhhtGPRzkHE.jpg"/>
