@@ -48,8 +48,6 @@ const Home = ({ id, go, fetchedUser }) => (
 	 <Cell expandable before={<Icon24Education />} onClick={go} Data-to="Education">Образование</Cell>
 	 <Cell expandable before={<Icon24Services />} onClick={go} Data-to="Projects">Проекты</Cell>
 	 <Cell expandable before={<Icon24Live/>} onClick={go} Data-to="Broadcast">Прямая трансляция</Cell>
-	 <Cell expandable before={<Icon24MoneyTransfer/>} onClick={go} Data-to="My-transfer">Мои платежи</Cell>
-	 <Cell expandable before={<Icon24Market/>} onClick={go} Data-to="Marketplace" description="В разработке">Магазин</Cell>
 	 <Cell expandable before={<Icon24Help/>} onClick={go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
 	 <Cell expandable before={<Icon24Settings />} onClick={go} Data-to="Settings">Настройки</Cell>
@@ -63,8 +61,11 @@ const Home = ({ id, go, fetchedUser }) => (
                 style={{ height: 200 }}
               >
 				<img src="https://sun9-10.userapi.com/c200720/v200720233/28432/Q81mleE1TM8.jpg"/>
-                <img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
-				<img src="https://sun9-14.userapi.com/c200424/v200424239/1148e/svoFQUELUIY.jpg"/>
+                <img src="https://sun9-2.userapi.com/c206624/v206624987/2296c/bjR9RJkzirw.jpg"/>
+				<img src="https://sun9-64.userapi.com/c206528/v206528826/1c48f/NNFKtP0-bC8.jpg"/>
+				<img src="https://sun9-58.userapi.com/c204616/v204616763/16b18/mbg8fvOzBHE.jpg"/>
+				<img src="https://sun9-58.userapi.com/c204616/v204616763/16b18/mbg8fvOzBHE.jpg"/>
+				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
             </Gallery>
 			  <Separator style={{ margin: '10px 0'}}/>
 			  <Button size="xl" level="outline" href="https://vk.com/centobr42_press_center">Подробнее</Button>
