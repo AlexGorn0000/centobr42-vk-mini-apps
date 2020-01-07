@@ -33,26 +33,24 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
+import Icon24Up from '@vkontakte/icons/dist/24/up';
 
 
 const Activity = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
    
-		<img autoscale="true" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
+		<img src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
 		{fetchedUser &&
 		<Group>
 		<Div><center>Учавсвуй в жизни класса и школы, и зарабатывай баллы</center></Div>
-		<Div><center>"Будь лучшим - среди лучших!" - Администрация школы</center></Div>
+		<Div><center>"Будь лучшим - среди лучших!" - Александр Горбунов</center></Div>
 		</Group>}
 		{fetchedUser &&
 		<Group title="Мой рейтинг">
 			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description="Баллы: 0"
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
+				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} description={fetchedUser.score}/> : null}
+				>{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
 		</Group>}	
    <Group title="Лучшие">
     <List>
@@ -63,13 +61,7 @@ const Activity = ({ id, go, fetchedUser }) => (
    <Cell before={<Avatar src="https://sun9-54.userapi.com/c855320/v855320779/e8adf/6-zwcZuCkqU.jpg"/>} description="Баллы: 0">Александр Горбунов</Cell> 
    </List>
    </Group>
-   <Group title="Other">
-   <List>
-   <Cell before={<Avatar src="https://sun1-18.userapi.com/c849424/v849424891/1b78dc/20spFdKqGYE.jpg"/>} description="Баллы: 0">Владимир Путин</Cell>
-   </List>
-   </Group>
-
- </Panel>
+</Panel>
 );
 
 Activity.propTypes = {

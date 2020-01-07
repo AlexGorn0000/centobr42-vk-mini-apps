@@ -36,11 +36,11 @@ const App = () => {
 			}
 		fetchData();
 	}, []);
-
   
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
+	
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
