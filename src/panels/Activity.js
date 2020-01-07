@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, Separator } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -39,7 +39,17 @@ const Activity = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
    
-   
+		<img width="375" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
+		{fetchedUser &&
+		<Group>
+		<Div><center>Лучшие учащиеся</center></Div>
+		<Div><center>Учавсвуй в жизни класса и школы, и получай баллы</center></Div>
+		<Div><center>"Будь в топе лучших - получай баллы!" - Александр Горбунов</center></Div>
+		<Separator style={{ margin: '10px 0' }} />
+		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="1-е место">{`${fetchedUser.first_name}`}</Cell>
+		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="2-е место">{`${fetchedUser.first_name}`}</Cell>
+		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="3-е место">{`${fetchedUser.first_name}`}</Cell>
+		</Group>}
 		{fetchedUser &&
 		<Group title="Мой рейтинг">
 			<Cell

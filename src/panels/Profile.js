@@ -67,16 +67,10 @@ const Profile = ({ id, go, fetchedUser }) => (
 		 </Div>
 		</Group>}
 	    <Group>
-		<Group>
 		<Cell before={<Icon24Gift/>}>Награда</Cell>
 		</Group>
 		<Group>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
+		<Group>
 		<Div></Div>
 		<Div></Div>
 		<Div></Div>
