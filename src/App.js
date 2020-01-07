@@ -3,6 +3,7 @@ import connect from '@vkontakte/vk-connect';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
+import './css/style.css'
 
 import Auth from './panels/Auth';
 import Register from './panels/Register';
@@ -31,6 +32,7 @@ const App = () => {
 
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
+			const leaderboard = await connect.sendPromise('VKWebAppShowLeaderBoardBox');
 			setUser(user);
 			setPopout(null);
 			}
