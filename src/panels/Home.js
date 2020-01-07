@@ -65,7 +65,7 @@ const Home = ({ id, go, fetchedUser }) => (
 				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
             </Gallery>
 			  <Separator style={{ margin: '10px 0'}}/>
-			  <Button size="xl" level="outline" href="https://vk.com/centobr42_press_center">Подробнее</Button>
+			  <Button size="xl" level="outline" onClick={go} href="https://vk.com/centobr42_press_center">Подробнее</Button>
          </Group>
     <Group>
 	<List>
