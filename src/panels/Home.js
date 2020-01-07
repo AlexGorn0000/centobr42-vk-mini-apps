@@ -12,8 +12,6 @@ import List from '@vkontakte/vkui/dist/components/List/List';
 import Separator from '@vkontakte/vkui/dist/components/Separator/Separator'
 import { FormLayout, FormLayoutGroup, Input } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
-import './css/style.css'
-
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon24Search from '@vkontakte/icons/dist/24/search';
