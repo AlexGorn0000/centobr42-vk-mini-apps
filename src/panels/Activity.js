@@ -39,9 +39,10 @@ import Icon24Up from '@vkontakte/icons/dist/24/up';
 const Activity = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
-   		<img width="415" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
-		{fetchedUser &&
+   		{fetchedUser &&
 		<Group>
+		<img width="415" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
+		<Separator style={{ margin: '5px 0' }} />
 		<Div><center>Учавсвуй в жизни класса и школы, и зарабатывай баллы</center></Div>
 		<Div><center>"Будь лучшим - среди лучших!" - Александр Горбунов</center></Div>
 		</Group>}
