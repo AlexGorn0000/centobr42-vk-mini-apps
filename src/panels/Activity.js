@@ -39,16 +39,11 @@ const Activity = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
    
-		<img width="375" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
+		<img autoscale="true" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
 		{fetchedUser &&
 		<Group>
-		<Div><center>Лучшие учащиеся</center></Div>
-		<Div><center>Учавсвуй в жизни класса и школы, и получай баллы</center></Div>
-		<Div><center>"Будь в топе лучших - получай баллы!" - Александр Горбунов</center></Div>
-		<Separator style={{ margin: '10px 0' }} />
-		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="1-е место">{`${fetchedUser.first_name}`}</Cell>
-		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="2-е место">{`${fetchedUser.first_name}`}</Cell>
-		<Cell before={<Avatar src={fetchedUser.photo_200}/>} description="3-е место">{`${fetchedUser.first_name}`}</Cell>
+		<Div><center>Учавсвуй в жизни класса и школы, и зарабатывай баллы</center></Div>
+		<Div><center>"Будь лучшим - среди лучших!" - Администрация школы</center></Div>
 		</Group>}
 		{fetchedUser &&
 		<Group title="Мой рейтинг">
