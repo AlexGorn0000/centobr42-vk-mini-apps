@@ -16,7 +16,7 @@ import Projects from './panels/Projects'
 import Project1 from './panels/Project1'
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Started');
+	const [activePanel, setActivePanel] = useState('Auth');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
@@ -31,17 +31,16 @@ const App = () => {
 
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
-			const leaderboard = await connect.sendPromise('VKWebAppShowLeaderBoardBox');
 			setUser(user);
 			setPopout(null);
 			}
 		fetchData();
 	}, []);
+
   
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
-	
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
