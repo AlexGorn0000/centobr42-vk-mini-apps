@@ -38,9 +38,9 @@ import '../css/style.css';
 
 
 const Home = ({ id, go, fetchedUser }) => (
-	<Panel id={id} className="background_gradient">
+	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24Cancel/></HeaderButton>}>Личный кабинет</PanelHeader>
-	<Div className="background_gradient">
+	<div className="background_home">
 	<Group>
 	<List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
@@ -74,7 +74,7 @@ const Home = ({ id, go, fetchedUser }) => (
 	 <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">Наша группа</Cell>
 	</List>
 	</Group>
-	</Div>
+</div>
  </Panel>
 );
 

@@ -49,11 +49,11 @@ const App = () => {
 			<Register id='Register' fetchedUser={fetchedUser} go={go} />
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Started id='Started' go={go} />
-			<Education id='Education' fetchedUser={fetchedUser} go={go} />
+			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>
-			<Project1 id='Project1' go={go}/>
+			<Project1 id='Project1' go={go} />
 		</View>
 	);
 }

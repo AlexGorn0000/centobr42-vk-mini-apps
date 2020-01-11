@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, classNames } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -34,19 +34,18 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
+import '../css/style.css';
 
-
-const Education = ({ id, go, fetchedUser }) => (
+const Education = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Образование</PanelHeader>
    <Group title="Образование">
    <List>
     <Cell expandable before={<Icon24Education/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
-    <Cell expandable before={<Icon24Note/>} description="Следите за успеваемость своего ребенка">Электронный дневник</Cell>
+    <Cell expandable before={<Icon24Note/>} description="В разработке">Электронный дневник</Cell>
    </List>
    </Group>
-
- </Panel>
+   </Panel>
 );
 
 Education.propTypes = {
