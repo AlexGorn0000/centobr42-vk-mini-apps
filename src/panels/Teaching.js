@@ -51,34 +51,34 @@ const Education = ({ id, go, fetchedUser }) => (
   </Group>
    <Group title="Методическое объединение учителей иностранного языка">
    <List>
-   <Cell before={<Avatar src="../img/teaching-staff/2-1.jpg"/>} description="Учитель немецкого языка">Глебова Тамара Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-2.jpg"/>} description="Учитель английского языка">Орлова Татьяна Андреевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-3.jpg"/>} description="Учитель английского языка">Хорошавина Елена Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-4.jpg"/>} description="Учитель английского языка">Свирелкина Ирина Ивановна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-5.jpg"/>} description="Учитель английского языка">Могилевская Арина Юрьевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/5sWnGps"/>} description="Учитель немецкого языка">Глебова Тамара Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/7Jrfzpk"/>} description="Учитель английского языка">Орлова Татьяна Андреевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/k1sL515"/>} description="Учитель английского языка">Хорошавина Елена Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/J3fzD5W"/>} description="Учитель английского языка">Свирелкина Ирина Ивановна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/wWbgLQM"/>} description="Учитель английского языка">Могилевская Арина Юрьевна</Cell>
    <Separator style={{ margin: '5px 0' }} />
-   <Cell before={<Avatar src="../img/teaching-staff/2-8.jpg"/>} description="Учитель английского языка">Елгаева Свтелана Анатольевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-9.jpg"/>} description="Учитель английского языка">Бабкина Надежда Викторовна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/2-10.jpg"/>} description="Учитель английского языка">Александрова Виктория Валерьевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/fQhrDtq"/>} description="Учитель английского языка">Елгаева Свтелана Анатольевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/bv6FmXG"/>} description="Учитель английского языка">Бабкина Надежда Викторовна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/gWBb7Z0"/>} description="Учитель английского языка">Александрова Виктория Валерьевна</Cell>
    </List>
    </Group>
    <Group title="Методическое объединение учителей начальной школы">
    <List>
-   <Cell before={<Avatar src="../img/teaching-staff/3-1.jpg"/>} description="Учитель, классный руководитель: 2«З»">Белозерова Галина Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-2.jpg"/>} description="Классный руководитель: 3«Д»">Сидельникова Татьяна Леонидовна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-3.jpg"/>} description="Учитель, классный руководитель: 1«Е»">Скамьина Ольга Геннадьевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-5.jpg"/>} description="Учитель, классный руководитель: 4«А»">Акиндинова Светлана Владимировна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-6.jpg"/>} description="Классный руководитель: 3«В»">Аристархова Елена Сергеевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-7.jpg"/>} description="Учитель, классный руководитель: 1«А»">Бегова Валентина Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-8.jpg"/>} description="Учитель, классный руководитель: 1«Л»">Белозерова Валентина Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-9.jpg"/>} description="Классный руководитель: 3«Г»">Наволоцкая Татьяна Владимировна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-10.jpg"/>} description="Классный руководитель: 2«К»">Вискова Яна Валериевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-11.jpg"/>} description="Классный руководитель: 2«Е»">Воеводина Наталья Вениаминовна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-12.jpg"/>} description="Классный руководитель: 3«Ж»">Галасова Александра Глебовна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-13.jpg"/>} description="Классный руководитель: 3«А»">Житкова Нина Анатольевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-14.jpg"/>} description="Учитель, классный руководитель: 1«Д»">Ипшман Елена Валериевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-16.jpg"/>} description="Учитель, классный руководитель: 1«В»">Колина Маргарита Николаевна</Cell>
-   <Cell before={<Avatar src="../img/teaching-staff/3-17.jpg"/>} description="Учитель, классный руководитель: 3«Б»">Корельская Светлана Леонидовна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/ZMK7gqC"/>} description="Учитель, классный руководитель: 2«З»">Белозерова Галина Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/3vFK3QT"/>} description="Классный руководитель: 3«Д»">Сидельникова Татьяна Леонидовна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/KDtyRjP"/>} description="Учитель, классный руководитель: 1«Е»">Скамьина Ольга Геннадьевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/SNRg8KC"/>} description="Учитель, классный руководитель: 4«А»">Акиндинова Светлана Владимировна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/MPnhDy7"/>} description="Классный руководитель: 3«В»">Аристархова Елена Сергеевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/wccDXHB"/>} description="Учитель, классный руководитель: 1«А»">Бегова Валентина Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/V24hz6d"/>} description="Учитель, классный руководитель: 1«Л»">Белозерова Валентина Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/HYGTSHL"/>} description="Классный руководитель: 3«Г»">Наволоцкая Татьяна Владимировна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/FkvFPMM"/>} description="Классный руководитель: 2«К»">Вискова Яна Валериевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/rkb634w"/>} description="Классный руководитель: 2«Е»">Воеводина Наталья Вениаминовна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/FwpXyBD"/>} description="Классный руководитель: 3«Ж»">Галасова Александра Глебовна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/QcPnsWd"/>} description="Классный руководитель: 3«А»">Житкова Нина Анатольевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/m0kktdh"/>} description="Учитель, классный руководитель: 1«Д»">Ипшман Елена Валериевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/FWP6CBb"/>} description="Учитель, классный руководитель: 1«В»">Колина Маргарита Николаевна</Cell>
+   <Cell before={<Avatar src="https://ibb.co/cFCxRsJ"/>} description="Учитель, классный руководитель: 3«Б»">Корельская Светлана Леонидовна</Cell>
    </List>
    </Group>
    <Group title="Физико-математический факультет">
