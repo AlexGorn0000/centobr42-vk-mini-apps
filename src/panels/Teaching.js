@@ -35,14 +35,49 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 
+const thematics = [
+  {id: 3201, name: "Администрация школы"},
+  {id: 3282, name: "Начальная школа"},
+  {id: 3288, name: "Тьютор"},
+  {id: 3117, name: "Логопед"},
+  {id: 3273, name: "Немецкий язык"},
+  {id: 3205, name: "Английский язык"},
+  {id: 3283, name: "Русский язык и литература"},
+  {id: 3284, name: "История и обществознание"},
+  {id: 3285, name: "Музыка"},
+  {id: 3286, name: "Изобразительное искусство"},
+  {id: 3287, name: "Педагог-библиотекарь"},
+  {id: 3118, name: "Математика"},
+  {id: 3119, name: "Алгебра и геометрия"},
+  {id: 3120, name: "География"},
+  {id: 3121, name: "Информатика"},
+  {id: 3122, name: "Биология"},
+  {id: 3123, name: "Физика"},
+  {id: 3124, name: "Технология"},
+  {id: 3125, name: "Физичиская культура"},
+  {id: 3126, name: "ОБЖ"}
+];
+
+const users = [
+  {id: 3201, name: "Калистратова Елена Ивановна"},
+  {id: 3201, name: "Орлова Татьяна Андреевна"},
+  {id: 3201, name: "Орехова Наталья Борисовна"},
+  {id: 3201, name: "Люлина Елена Николаевна"}
+];
 
 const Education = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Педагогический состав</PanelHeader>
-   
+
+  <Search value={this.state.search} onChange={this.onChange}>
+  {this.thematics.length > 0 &&
+  <List>
+  {this.thematics.map(thematic => <Cell key={thematic.id}>{thematic.name}</Cell>)}
+  </List>}
+  </Search> 
   <Group title="Администрация школы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
+  <Cell before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
   <Cell before={<Avatar src="https://sun1-93.userapi.com/c848524/v848524153/1a65c1/4vIW-y1aE0k.jpg"/>} description="Заместитель директора по ВР">Орлова Татьяна Андреевна</Cell>
   <Cell before={<Avatar src="https://sun9-67.userapi.com/c849520/v849520489/5ce9a/kmSvoPoHndE.jpg"/>}>Бральнина Ольга Геннадьевна</Cell>
   <Cell before={<Avatar src="https://sun9-50.userapi.com/c850128/v850128827/32cfc/_63WxP1TFag.jpg"/>} description="Заместитель директора по АХЧ">Орехова Наталья Борисовна</Cell>
