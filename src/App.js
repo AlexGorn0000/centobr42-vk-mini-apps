@@ -16,7 +16,7 @@ import Projects from './panels/Projects'
 import Project1 from './panels/Project1'
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Auth');
+	const [activePanel, setActivePanel] = useState('Home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
