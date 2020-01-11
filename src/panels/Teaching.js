@@ -11,7 +11,7 @@ import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, Separator } from '@vkontakte/vkui';
-import { HeaderButton } from '@vkontakte/vkui';
+import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon24Search from '@vkontakte/icons/dist/24/search';
@@ -33,6 +33,7 @@ import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon24Add from '@vkontakte/icons/dist/24/add';
 import user from '@vkontakte/icons/dist/24/user';
 
 const thematics = [
@@ -65,16 +66,9 @@ const users = [
   {id: 3201, name: "Люлина Елена Николаевна"}
 ];
 
-const Education = ({ id, go, fetchedUser }) => (
+const Education = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Педагогический состав</PanelHeader>
-
-  <Search value={this.state.search} onChange={this.onChange}>
-  {this.thematics.length > 0 &&
-  <List>
-  {this.thematics.map(thematic => <Cell key={thematic.id}>{thematic.name}</Cell>)}
-  </List>}
-  </Search> 
   <Group title="Администрация школы">
   <List>
   <Cell before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
@@ -163,7 +157,7 @@ const Education = ({ id, go, fetchedUser }) => (
 
 Education.propTypes = {
 	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
+  go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
 		photo_200: PropTypes.string,
 		first_name: PropTypes.string,
