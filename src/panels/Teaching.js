@@ -42,7 +42,7 @@ const Education = ({ id, go, fetchedUser }) => (
    
   <Group title="Администрация школы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-26.userapi.com/c637919/v637919052/614ca/F6yDV9py2u0.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
   <Cell before={<Avatar src="https://sun1-93.userapi.com/c848524/v848524153/1a65c1/4vIW-y1aE0k.jpg"/>} description="Заместитель директора по ВР">Орлова Татьяна Андреевна</Cell>
   <Cell before={<Avatar src="https://sun9-67.userapi.com/c849520/v849520489/5ce9a/kmSvoPoHndE.jpg"/>}>Бральнина Ольга Геннадьевна</Cell>
   <Cell before={<Avatar src="https://sun9-50.userapi.com/c850128/v850128827/32cfc/_63WxP1TFag.jpg"/>} description="Заместитель директора по АХЧ">Орехова Наталья Борисовна</Cell>
@@ -94,6 +94,7 @@ const Education = ({ id, go, fetchedUser }) => (
    <Cell before={<Avatar src="https://sun9-8.userapi.com/c858320/v858320671/14d5f8/T3J5sDylM6U.jpg"/>} description="Учитель, классный руководитель: 2 «Г»">Шарова Марина Николаевна</Cell>
    <Cell before={<Avatar src="https://sun9-31.userapi.com/c858320/v858320671/14d5ff/7H146PRubAM.jpg"/>} description="Учитель, классный руководитель: 4 «В»">Стафеева Алена Александровна</Cell>
    <Cell before={<Avatar src="https://sun9-14.userapi.com/c858320/v858320671/14d606/pKcIatJRUJs.jpg"/>} description="Учитель, классный руководитель: 2 «Б»">Чекмарева Ольга Юрьевна</Cell>
+   <Separator style={{ margin: '5px 0' }} />
    <Cell before={<Avatar src="https://sun9-69.userapi.com/c858320/v858320671/14d60d/b3UxefDV18k.jpg"/>} description="Учитель музыки с 1-3 класс">Огорелышева Светлана Леонидовна</Cell>
    <Cell before={<Avatar src="https://sun9-17.userapi.com/c858320/v858320671/14d614/AzpOPVzvBLE.jpg"/>} description="Логопед с 1-4 класс">Михальцевич Ирина Константиновна</Cell>
    <Cell before={<Avatar src="https://sun9-40.userapi.com/c858320/v858320671/14d61b/p4PIq7sqtKQ.jpg"/>} description="Тьютор: 1 класс">Манько Галина Сергеевна</Cell>
@@ -102,13 +103,22 @@ const Education = ({ id, go, fetchedUser }) => (
    <Cell before={<Avatar src="https://sun9-69.userapi.com/c858320/v858320671/14d630/t81wwJF97JA.jpg"/>} description="Учитель-логопед">Шарова Екатерина Николаевна</Cell>
    </List>
    </Group>
-   <Group title="Физико-математический факультет">
+   <Group title="Методическое объединение гуманитарно-эстетического цикла">
    <List>
-   <Cell before={<Avatar src="https://sun1-14.userapi.com/c853524/v853524717/121c1e/EEbomI-Br7M.jpg"/>} description="Учитель физики и математики">Наталья Зуева</Cell>
-   <Cell before={<Avatar src="https://sun9-62.userapi.com/c858120/v858120788/c526f/jbW3KG-3kdU.jpg"/>} description="Учитель математики">Анна Дурягина</Cell>
+   <Cell before={<Avatar src="https://sun9-40.userapi.com/c857632/v857632671/14ed7e/pYwgp3I93Gw.jpg"/>} description="Учитель русского языка и литературы">Сахарусова Анна Вячеславовна</Cell>
+   <Cell before={<Avatar src="https://sun9-62.userapi.com/c857632/v857632671/14ed85/KvDBjVwG0bU.jpg"/>} description="Учитель русского языка и литературы">Еркова Марина Михайловна</Cell>
+   <Cell before={<Icon24User/>} description="Учитель русского языка и литературы">Соколова Елена Владимировна</Cell>
+   <Cell before={<Avatar src="https://sun9-62.userapi.com/c857632/v857632671/14ed8c/d5DZMvkp4j0.jpg"/>} description="Учитель русского языка и литературы">Сычева Вера Анатольевна</Cell>
+   <Cell before={<Avatar src="https://sun9-4.userapi.com/c857632/v857632671/14ed93/jzp9z_dV7HU.jpg"/>} description="Учитель русского языка и литературы">Чулкова Евгения Валерьевна</Cell>
+   <Cell before={<Avatar src="https://sun9-18.userapi.com/c857632/v857632671/14ed9a/SgROan9nHnA.jpg"/>} description="Учитель русского языка и литературы">Поляков Максим Михайлович</Cell>
+   <Cell before={<Icon24User/>} description="Учитель истории и обществознания">Коноплева Олеся Владимировна</Cell>
+   <Cell before={<Icon24User/>} description="Учитель истории и обществознания">Морозова Анастасия Владимировна</Cell>
+   <Cell before={<Avatar src="https://sun9-2.userapi.com/c857632/v857632671/14eda1/TkLfXBX1Myk.jpg"/>} description="Учитель изобразительного искусства">Румянцева Ирина Анатольевна</Cell>
+   <Cell before={<Avatar src="https://sun9-6.userapi.com/c857632/v857632671/14eda8/5lmTNl-8R3Q.jpg"/>} description="Учитель музыки с 4-8 класс">Смирнова Елена Сергеевна</Cell>
+   <Cell before={<Avatar src="https://sun9-31.userapi.com/c857632/v857632671/14edaf/qR0lLByWUkI.jpg"/>} description="Учитель истории">Березин Сергей Георгиевич</Cell>
    </List>
    </Group>
-   <Group title="Учителя начальных классов">
+   <Group title="Методическое объединение естественно-математического цикла">
    <List>
    </List>
    </Group>
