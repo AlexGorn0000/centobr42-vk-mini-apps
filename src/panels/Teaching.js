@@ -51,34 +51,55 @@ const Education = ({ id, go, fetchedUser }) => (
   </Group>
    <Group title="Методическое объединение учителей иностранного языка">
    <List>
-   <Cell before={<Avatar src="https://ibb.co/5sWnGps"/>} description="Учитель немецкого языка">Глебова Тамара Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/7Jrfzpk"/>} description="Учитель английского языка">Орлова Татьяна Андреевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/k1sL515"/>} description="Учитель английского языка">Хорошавина Елена Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/J3fzD5W"/>} description="Учитель английского языка">Свирелкина Ирина Ивановна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/wWbgLQM"/>} description="Учитель английского языка">Могилевская Арина Юрьевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/1-1-200x300.jpg"/>} description="Учитель немецкого языка">Глебова Тамара Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/3-233x300.jpg"/>} description="Учитель английского языка">Орлова Татьяна Андреевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/3-1-201x300.jpg"/>} description="Учитель английского языка">Хорошавина Елена Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/4-1-201x300.jpg"/>} description="Учитель английского языка">Свирелкина Ирина Ивановна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/5-1-201x300.jpg"/>} description="Учитель английского языка">Могилевская Арина Юрьевна</Cell>
    <Separator style={{ margin: '5px 0' }} />
-   <Cell before={<Avatar src="https://ibb.co/fQhrDtq"/>} description="Учитель английского языка">Елгаева Свтелана Анатольевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/bv6FmXG"/>} description="Учитель английского языка">Бабкина Надежда Викторовна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/gWBb7Z0"/>} description="Учитель английского языка">Александрова Виктория Валерьевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/6-1-201x300.jpg"/>} description="Учитель английского языка">Гостевская Анна Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/09/Елгаева-С.А.-252x300.jpg"/>} description="Учитель английского языка">Елгаева Свтелана Анатольевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/7-1-201x300.jpg"/>} description="Учитель английского языка">Бабкина Надежда Викторовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/8-201x300.png"/>} description="Учитель английского языка">Александрова Виктория Валерьевна</Cell>
    </List>
    </Group>
    <Group title="Методическое объединение учителей начальной школы">
    <List>
-   <Cell before={<Avatar src="https://ibb.co/ZMK7gqC"/>} description="Учитель, классный руководитель: 2«З»">Белозерова Галина Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/3vFK3QT"/>} description="Классный руководитель: 3«Д»">Сидельникова Татьяна Леонидовна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/KDtyRjP"/>} description="Учитель, классный руководитель: 1«Е»">Скамьина Ольга Геннадьевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/SNRg8KC"/>} description="Учитель, классный руководитель: 4«А»">Акиндинова Светлана Владимировна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/MPnhDy7"/>} description="Классный руководитель: 3«В»">Аристархова Елена Сергеевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/wccDXHB"/>} description="Учитель, классный руководитель: 1«А»">Бегова Валентина Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/V24hz6d"/>} description="Учитель, классный руководитель: 1«Л»">Белозерова Валентина Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/HYGTSHL"/>} description="Классный руководитель: 3«Г»">Наволоцкая Татьяна Владимировна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/FkvFPMM"/>} description="Классный руководитель: 2«К»">Вискова Яна Валериевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/rkb634w"/>} description="Классный руководитель: 2«Е»">Воеводина Наталья Вениаминовна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/FwpXyBD"/>} description="Классный руководитель: 3«Ж»">Галасова Александра Глебовна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/QcPnsWd"/>} description="Классный руководитель: 3«А»">Житкова Нина Анатольевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/m0kktdh"/>} description="Учитель, классный руководитель: 1«Д»">Ипшман Елена Валериевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/FWP6CBb"/>} description="Учитель, классный руководитель: 1«В»">Колина Маргарита Николаевна</Cell>
-   <Cell before={<Avatar src="https://ibb.co/cFCxRsJ"/>} description="Учитель, классный руководитель: 3«Б»">Корельская Светлана Леонидовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/09/белозерова-Г.Н-300x291.jpg"/>} description="Учитель, классный руководитель: 2 «З»">Белозерова Галина Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/2-2-202x300.jpg"/>} description="Классный руководитель: 3 «Д»">Сидельникова Татьяна Леонидовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/09/Скамьина-О.Г.-212x300.jpg"/>} description="Учитель, классный руководитель: 1 «Е»">Скамьина Ольга Геннадьевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/5-2-210x300.jpg"/>} description="Учитель, классный руководитель: 4 «А»">Акиндинова Светлана Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/6-2-201x300.jpg"/>} description="Классный руководитель: 3 «В»">Аристархова Елена Сергеевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/7-2-200x300.jpg"/>} description="Учитель, классный руководитель: 1 «А»">Бегова Валентина Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/8-1-219x300.jpg"/>} description="Учитель, классный руководитель: 1 «Л»">Белозерова Валентина Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/9-1-201x300.jpg"/>} description="Классный руководитель: 3 «Г»">Наволоцкая Татьяна Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/10-1-201x300.jpg"/>} description="Классный руководитель: 2 «К»">Вискова Яна Валериевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/11-1-201x300.jpg"/>} description="Классный руководитель: 2 «Е»">Воеводина Наталья Вениаминовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/12-201x300.jpg"/>} description="Классный руководитель: 3 «Ж»">Галасова Александра Глебовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/13-231x300.jpg"/>} description="Классный руководитель: 3 «А»">Житкова Нина Анатольевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/14-201x300.jpg"/>} description="Учитель, классный руководитель: 1 «Д»">Ипшман Елена Валериевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/16-200x300.jpg"/>} description="Учитель, классный руководитель: 1 «В»">Колина Маргарита Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/17-201x300.jpg"/>} description="Учитель, классный руководитель: 3 «Б»">Корельская Светлана Леонидовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/18-200x300.jpg"/>} description="Учитель, классный руководитель: 2 «А»">Крупенникова Елена Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/19-200x300.jpg"/>} description="Учитель, классный руководитель: 1 «И»">Латышева Анна Михайловна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/20-200x300.jpg"/>} description="Учитель, классный руководитель: 1 «К»">Лунева Светлана Васильевна</Cell>
+   <Cell before={<Avatar src="https://sun1-91.userapi.com/c200320/v200320873/14839/dARNGnKASrs.jpg"/>} description="Учитель, классный руководитель: 1 «Б»">Коноплева Дарья Алексеевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/22-201x300.jpg"/>} description="Учитель, классный руководитель: 2 «И»">Мартюгова Елена Ивановна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/23-201x300.jpg"/>} description="Учитель, классный руководитель: 4 «Б»">Межакова Светлана Викторовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/25-201x300.jpg"/>} description="Учитель, классный руководитель: 3 «Е»">Михайлова Инна Сергеевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/26-201x300.jpg"/>} description="Учитель, классный руководитель: 1 «Г»">Осипова Татьяна Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/09/Ромашова-АВ-201x300.jpg"/>} description="Учитель, классный руководитель: 4 «Д»">Ромашова Алла Викторовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/28-201x300.jpg"/>} description="Учитель, классный руководитель: 1 «Ж»">Смыслова Светлана Викторовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/29-201x300.jpg"/>} description="Учитель, классный руководитель: 4 «Е»">Шарова Елена Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/30-201x300.jpg"/>} description="Учитель, классный руководитель: 2 «Г»">Шарова Марина Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/31-201x300.jpg"/>} description="Учитель, классный руководитель: 4 «В»">Стафеева Алена Александровна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/32-201x300.jpg"/>} description="Учитель, классный руководитель: 2 «Б»">Чекмарева Ольга Юрьевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/33-201x300.jpg"/>} description="Учитель музыки с 1-3 класс">Огорелышева Светлана Леонидовна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/34-201x300.jpg"/>} description="Логопед с 1-4 класс">Михальцевич Ирина Константиновна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/35-201x300.jpg"/>} description="Тьютор: 1 класс">Манько Галина Сергеевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/36-201x300.jpg"/>} description="Тьютор: 2 Д класс">Кузнецова Марина Николаевна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/37-201x300.jpg"/>} description="Педагог-библиотекарь">Перова Елена Владимировна</Cell>
+   <Cell before={<Avatar src="http://centobr42.ru/wp-content/uploads/2019/02/38-201x300.jpg"/>} description="Учитель-логопед">Шарова Екатерина Николаевна</Cell>
    </List>
    </Group>
    <Group title="Физико-математический факультет">
