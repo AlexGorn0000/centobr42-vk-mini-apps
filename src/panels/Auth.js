@@ -49,10 +49,10 @@ const users = [
 */
 const Auth = ({ id, go, fetchedUser }) => (
 	<Panel id={id} theme="client_dark">
+		<div className="background_auth">
 		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
-		<div className="background_auth">
-		<img className="Education" src="https://sun9-64.userapi.com/c856132/v856132344/1c9547/svY3u5KS76k.jpg" style={{ marginLeft: '150px', marginTop: '10px'}}/>
+		<img className="Education" width="75" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg" style={{ marginLeft: '150px', marginTop: '10px'}}/>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
 		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
@@ -66,18 +66,15 @@ const Auth = ({ id, go, fetchedUser }) => (
 		<option value="gosuslugi">ГосУслуги</option>
 		<option value="ВКонтакте">ВКонтакте</option>
 		</Select>
-		</FormLayoutGroup>
-		</FormLayout>
-		<FormLayout>
-        <FormLayoutGroup>
+		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа</h4>
         <Input type="login" placeholder="Введите логин" />
 		<Input type="password" placeholder="Введите пароль"/>
 		<Button size="xl" level="primary" onClick={go} Data-to="Home">Войти</Button>
         </FormLayoutGroup>
         </FormLayout>
-		</div>
 		</Group>
+		</div>
 	</Panel>	
 );
 
