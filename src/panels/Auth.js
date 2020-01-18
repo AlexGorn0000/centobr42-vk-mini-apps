@@ -53,7 +53,7 @@ const Auth = ({ id, go, fetchedUser }) => (
 		<div className="background_auth"/>
 		<PanelHeader>Вход в учетную запись</PanelHeader>
 		<Group>
-		<Cell style={{marginLeft: '145px'}} before={<Icon56EventOutline/>}></Cell>
+		<Cell style={{marginLeft: '150px'}} before={<Icon56EventOutline/>}></Cell>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
 		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
