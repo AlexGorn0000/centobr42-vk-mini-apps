@@ -100,7 +100,7 @@ const users = [
 		<Separator style={{margin: '5px 0'}}/>
 		<FormLayout>
 		<FormLayoutGroup>
-		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь</h4>
+		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
 		<Select>
 		<option value="students">Учащийся</option>
 		<option value="parents">Родитель</option>
@@ -108,9 +108,9 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" name="login" value={login} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему'} placeholder="Введите логин" />
-		<Input type="password" name="password" value={password} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему'} placeholder="Введите пароль"/>
-		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} Data-to="Home">Войти</Button>
+        <Input type="login" name="login" value={login} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		<Input type="password" name="password" value={password} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password? 'valid' : 'error'} bottom={login, password? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
