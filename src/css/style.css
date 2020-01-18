@@ -2,17 +2,17 @@
     width: auto;
     height: auto;
     color: #ffffff;
-    background-image: linear-gradient(125deg,#1e91be,#8810d8, #14b982);
+    background-image: linear-gradient(125deg,#1e91be,#9613e2, #14b982);
 }
 .background_education{
  width: auto;
  height: auto;
  background-image: linear-gradient(125deg, #1e91be, #14b982);
 }
-Div .animation_1{
-scale: (0);
-animation-duration: 5ms;
-}
-Div .animation_1:checked{
-scale: (3);
+
+.Education{
+width: 64;
+height: 64;
+border: 2px solid #ffffff;
+border-radius: 10px;
 }

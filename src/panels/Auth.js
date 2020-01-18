@@ -7,7 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, colors} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -21,7 +21,6 @@ import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 import Icon28Mention from '@vkontakte/icons/dist/28/mention';
 import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
 import Icon56EventOutline from '@vkontakte/icons/dist/56/event_outline';
-import Icon12Verified from '@vkontakte/icons/dist/12/verified';
 import '../css/style.css';
 /*
 const users = [
@@ -50,10 +49,10 @@ const users = [
 */
 const Auth = ({ id, go, fetchedUser }) => (
 	<Panel id={id} theme="client_dark">
-		<div className="background_auth"/>
-		<PanelHeader>Вход в учетную запись</PanelHeader>
+		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
-		<Cell style={{marginLeft: '150px'}} before={<Icon56EventOutline/>}></Cell>
+		<div className="background_auth">
+		<img className="Education" src="https://sun9-64.userapi.com/c856132/v856132344/1c9547/svY3u5KS76k.jpg" style={{ marginLeft: '150px', marginTop: '10px'}}/>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
 		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
@@ -62,7 +61,7 @@ const Auth = ({ id, go, fetchedUser }) => (
 		<Separator style={{margin: '5px 0'}}/>
 		<FormLayout>
 		<FormLayoutGroup>
-		<h4 style={{marginLeft: '15px'}}>Выберите платформу</h4>
+		<h4 style={{marginLeft: '20px'}}>Выберите платформу</h4>
 		<Select>
 		<option value="gosuslugi">ГосУслуги</option>
 		<option value="ВКонтакте">ВКонтакте</option>
@@ -71,12 +70,13 @@ const Auth = ({ id, go, fetchedUser }) => (
 		</FormLayout>
 		<FormLayout>
         <FormLayoutGroup>
-		<h4 style={{marginLeft: '15px'}}>Введите данные для входа</h4>
+		<h4 style={{marginLeft: '20px'}}>Введите данные для входа</h4>
         <Input type="login" placeholder="Введите логин" />
 		<Input type="password" placeholder="Введите пароль"/>
+		<Button size="xl" level="primary" onClick={go} Data-to="Home">Войти</Button>
         </FormLayoutGroup>
         </FormLayout>
-		<Button size="xl" level="primary" onClick={go} Data-to="Home">Войти</Button>
+		</div>
 		</Group>
 	</Panel>	
 );
