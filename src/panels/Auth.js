@@ -108,10 +108,10 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" name="login" value={login} onChange={this.onChange} status={ login ? 'valid' : 'error' } bottom={ login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!' } placeholder="Введите логин" />
-		<Input type="password" name="password" value={password} onChange={this.onChange} status={ password ? 'valid' : 'error' } bottom={ password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!' } placeholder="Введите пароль"/>
+        <Input type="login" name="login" value={login} onChange={this.onChange} status={login ? 'valid' : 'error' } bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!' } placeholder="Введите логин" />
+		<Input type="password" name="password" value={password} onChange={this.onChange} status={password ? 'valid' : 'error' } bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!' } placeholder="Введите пароль"/>
 		<br></br>
-		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={ login, password ? 'valid' : 'error' } bottom={ login, password ? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!' } Data-to="Home">Войти</Button>
+		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password ? 'valid' : 'error' } bottom={login, password ? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!' } Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
