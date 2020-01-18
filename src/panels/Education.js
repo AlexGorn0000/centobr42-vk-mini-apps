@@ -42,7 +42,7 @@ const Education = ({ id, go, fetchedUser}) => (
    <Group title="Образование">
    <List>
     <Cell expandable before={<Icon24Education/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
-    <Cell expandable before={<Icon24Note/>} description="В разработке">Электронный дневник</Cell>
+    <Cell expandable before={<Icon24Note/>} description="В разработке">Расписание уроков</Cell>
    </List>
    </Group>
    </Panel>

@@ -17,13 +17,48 @@ import Icon24Info from '@vkontakte/icons/dist/24/info';
 import Icon20EducationOutline from '@vkontakte/icons/dist/20/education_outline';
 import Icon24UserOutgoing from '@vkontakte/icons/dist/24/user_outgoing';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import Icon28Mention from '@vkontakte/icons/dist/28/mention';
+import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
+/*
+const users = [
+    {id: 223646052, name: "Елена Калистратова"},
+    {id: 7181764, name: "Татьяна Орлова"},
+    {id: 59155411, name: "Наталья Зуева"},
+    {id: 270919242, name: "Александр Горбунов"},
+	{id: 3273910, name: "Борис Караваев"}
+  ];
+
+  const login = [
+    {id: 223646052, login: "yelena.kalistratova"},
+    {id: 7181764, login: "tatyana.orlova"},
+    {id: 59155411, login: "natalyyaa"},
+    {id: 270919242, login: "allexgorn"},
+	{id: 3273910, login: "karavaevb"}
+  ];
+
+  const password = [
+	{id: 223646052, password: "81456943"},
+    {id: 7181764, password: "95793857"},
+    {id: 59155411, password: "63858589"},
+    {id: 270919242, password: "81457066"},
+	{id: 3273910, password: "18593848"}
+  ];
+*/
+/*
+<Div>Чтобы авторизировать свою учетную запись, Вы должны заполнить данные в окно ввода</Div>
+*/
 
 const Auth = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24BrowserBack/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 	
 		<Group title="Авторизация">
-		<Div>Чтобы авторизировать свою учетную запись, Вы должны заполнить данные в окно ввода</Div>
+		<Cell before={<Icon28RecentOutline/>}>Будьте в центре событий!</Cell>
+		<Cell before={<Icon28ArticleOutline/>}>Следите за расписанием уроков в разделе "Образование"</Cell>
+		<Cell before={<Icon28Mention/>}>Получайте сведения о мероприятиях!</Cell>
+		</Group>
+		<Group>
 		<FormLayout>
         <FormLayoutGroup>
         <Input type="login" placeholder="Введите логин" />
@@ -45,7 +80,7 @@ Auth.propTypes = {
 		first_name: PropTypes.string,
 		last_name: PropTypes.string,
 		city: PropTypes.shape({
-			title: PropTypes.string,
+		title: PropTypes.string,
 		}),
 	}),
 };

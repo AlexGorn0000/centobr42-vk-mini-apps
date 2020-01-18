@@ -12,11 +12,12 @@ import Started from './panels/Started'
 import Education from './panels/Education';
 import Teaching from './panels/Teaching';
 import Profile from './panels/Profile';
-import Projects from './panels/Projects'
-import Project1 from './panels/Project1'
+import Projects from './panels/Projects';
+import Project1 from './panels/Project1';
+import APanel from './panels/APanel';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Home');
+	const [activePanel, setActivePanel] = useState('Auth');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
@@ -26,18 +27,20 @@ const App = () => {
 				const schemeAttribute = document.createAttribute('scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
 				document.body.attributes.setNamedItem(schemeAttribute);
-			}
+				}
 		});
 
+		
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
+			connect.sendPromise("VKWebAppGetAuthToken", {"app_id": 7266393,"scope": "notify,friends,photos"}); 
+			connect.sendPromise("VKWebAppJoinGroup", {"group_id": 168892763});
 			setUser(user);
 			setPopout(null);
 			}
 		fetchData();
 	}, []);
-
-  
+	
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
@@ -51,6 +54,7 @@ const App = () => {
 			<Started id='Started' go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
+			<APanel id='APanel' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>
 			<Project1 id='Project1' go={go} />

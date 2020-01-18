@@ -87,7 +87,7 @@ const Education = ({ id, go, fetchedUser}) => (
    <Cell before={<Avatar src="https://sun9-37.userapi.com/c858320/v858320671/14d51d/mRG5hVErV5M.jpg"/>} description="Учитель английского языка">Могилевская Арина Юрьевна</Cell>
    <Separator style={{ margin: '5px 0' }} />
    <Cell before={<Avatar src="https://sun9-127.userapi.com/c858320/v858320671/14d524/9wKlUGL4vaI.jpg"/>} description="Учитель английского языка">Гостевская Анна Николаевна</Cell>
-   <Cell before={<Avatar src="https://sun9-37.userapi.com/c858320/v858320671/14d52b/d3WQoTnyDmY.jpg"/>} description="Учитель английского языка">Елгаева Свтелана Анатольевна</Cell>
+   <Cell before={<Avatar src="https://sun9-37.userapi.com/c858320/v858320671/14d52b/d3WQoTnyDmY.jpg"/>} description="Учитель английского языка">Елгаева Светлана Анатольевна</Cell>
    <Cell before={<Avatar src="https://sun9-49.userapi.com/c858320/v858320671/14d532/RvlZ0efFTsY.jpg"/>} description="Учитель английского языка">Бабкина Надежда Викторовна</Cell>
    <Cell before={<Avatar src="https://sun9-19.userapi.com/c858320/v858320671/14d539/_98WgmU8jds.jpg"/>} description="Учитель английского языка">Александрова Виктория Валерьевна</Cell>
    </List>
@@ -151,7 +151,6 @@ const Education = ({ id, go, fetchedUser}) => (
    <List>
    </List>
    </Group>
-   
  </Panel>
 );
 

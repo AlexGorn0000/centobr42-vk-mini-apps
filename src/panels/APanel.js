@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Header, HorizontalScroll } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -36,53 +36,44 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
+import Icon12Verified from '@vkontakte/icons/dist/12/verified';
 
-const Profile = ({ id, go, fetchedUser }) => (
+  const users = [
+    {id: 223646052, name: "Елена Калистратова"},
+    {id: 7181764, name: "Татьяна Орлова"},
+    {id: 59155411, name: "Наталья Зуева"},
+    {id: 270919242, name: "Александр Горбунов"},
+	{id: 3273910, name: "Борис Караваев"}
+  ];
+
+  const login = [
+    {id: 223646052, login: "yelena.kalistratova"},
+    {id: 7181764, login: "tatyana.orlova"},
+    {id: 59155411, login: "natalyyaa"},
+    {id: 270919242, login: "allexgorn"},
+	{id: 3273910, login: "karavaevb"}
+  ];
+
+  const password = [
+	{id: 223646052, password: "81456943"},
+    {id: 7181764, password: "95793857"},
+    {id: 59155411, password: "63858589"},
+    {id: 270919242, password: "81457066"},
+	{id: 3273910, password: "18593848"}
+  ];
+
+
+const APanel = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Администрационная панель</PanelHeader>
  		{fetchedUser &&
 		<Group>
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description="Пользователь"
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
+		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null} after={<Icon12Verified/>} description="Статус: преподаватель">{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
         </Group>}
-        {fetchedUser &&
-		<Group>
-        <Div>
-		<InfoRow title="Уровень:">{`${fetchedUser.Progress_value}`}
-            <Progress value={10} />
-          </InfoRow>
-		</Div>
-		</Group>}
-		{fetchedUser &&
-		<Group>
-		 <Div>
-		 <InfoRow title="Опыт: 50/120">{`${fetchedUser.Progress_value}`}
-			 <Progress value={50} />
-		   </InfoRow>
-		 </Div>
-		</Group>}
-	    <Group>
-		<Cell before={<Icon24Gift/>}>Награда</Cell>
-		</Group>
-		<Group>
-		<Group>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
-		</Group>
-        <Cell before={<Icon24Education/>}>Образование</Cell>
-        </Group>
-        <Group>
-        <CellButton before={<Icon24Add/>}>Добавить</CellButton>
-        </Group>
  </Panel>
 );
 
-Profile.propTypes = {
+APanel.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -95,4 +86,4 @@ Profile.propTypes = {
 	}),
 };
 
-export default Profile;
+export default APanel;

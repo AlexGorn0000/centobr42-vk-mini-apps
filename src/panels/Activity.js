@@ -39,7 +39,7 @@ import Icon24Up from '@vkontakte/icons/dist/24/up';
 const Activity = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
-		<img width="415" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
+		<img width="auto" height="20" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
 		{fetchedUser &&
 		<Group>
 		<Div><center>Учавсвуй в жизни класса и школы, и зарабатывай баллы</center></Div>
@@ -48,7 +48,7 @@ const Activity = ({ id, go, fetchedUser }) => (
 		{fetchedUser &&
 		<Group title="Мой рейтинг">
 			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} description="Баллы: 0"/> : null}
+				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} description="Баллы:0"/> : null}
 				>{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
 		</Group>}	
    <Group title="Лучшие">

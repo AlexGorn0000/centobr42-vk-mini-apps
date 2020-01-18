@@ -34,13 +34,10 @@ import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import '../css/style.css';
-
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24Cancel/></HeaderButton>}>Личный кабинет</PanelHeader>
-	<div className="background_home">
 	<Group>
 	<List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
@@ -74,7 +71,6 @@ const Home = ({ id, go, fetchedUser }) => (
 	 <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">Наша группа</Cell>
 	</List>
 	</Group>
-</div>
  </Panel>
 );
 
