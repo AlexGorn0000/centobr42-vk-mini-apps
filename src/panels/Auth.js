@@ -52,7 +52,7 @@ const Auth = ({ id, go, fetchedUser }) => (
 		<div className="background_auth">
 		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
-		<img style={{ marginLeft: '155px'}} width="80" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
+		<img style={{ marginLeft: '200px'}} width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
 		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
