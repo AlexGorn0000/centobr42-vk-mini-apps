@@ -15,6 +15,7 @@ import Profile from './panels/Profile';
 import Projects from './panels/Projects';
 import Project1 from './panels/Project1';
 import APanel from './panels/APanel';
+import { render } from 'react-dom';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Auth');
@@ -45,7 +46,7 @@ const App = () => {
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
-
+	
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Auth id='Auth' fetchedUser={fetchedUser} go={go} />

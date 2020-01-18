@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {render} from 'react-dom';
+import Return from 'react-dom';
 import PropTypes from 'prop-types';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
@@ -7,7 +9,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, colors} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -47,9 +49,43 @@ const users = [
 	{id: 3273910, password: "18593848"}
   ];
 */
-const Auth = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
-		<div className="background_auth">
+	  
+    class Auth extends React.Component {
+		constructor(props) {
+		  super(props);
+	  
+		  this.state = {
+			login: '',
+			password: ''
+		  }
+		  
+		  const login = [
+			{name: 223646052, value: "yelena.kalistratova"},
+			{name: 7181764, value: "tatyana.orlova"},
+			{name: 59155411, value: "natalyyaa"},
+			{name: 270919242, value: "allexgorn"},
+			{name: 3273910, value: "karavaevb"}
+		  ];
+		
+		  const password = [
+			{name: 223646052, value: "81456943"},
+			{name: 7181764, value: "95793857"},
+			{name: 59155411, value: "63858589"},
+			{name: 270919242, value: "81457066"},
+			{name: 3273910, value: "18593848"}
+		  ];
+
+		  this.onChange = this.onChange.bind(this);
+		}
+	    onChange(e) {
+		  const { name, value} = e.currentTarget;
+		  this.setState({ [name]: value });
+		}
+		
+		render(){
+		const {login, password } = this.state;
+		return(
+		<Panel id={this.props.id}>
 		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
 		<img style={{ marginLeft: '153px'}} width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
@@ -64,7 +100,7 @@ const Auth = ({ id, go, fetchedUser }) => (
 		<Separator style={{margin: '5px 0'}}/>
 		<FormLayout>
 		<FormLayoutGroup>
-		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
+		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь</h4>
 		<Select>
 		<option value="students">Учащийся</option>
 		<option value="parents">Родитель</option>
@@ -72,17 +108,21 @@ const Auth = ({ id, go, fetchedUser }) => (
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" placeholder="Введите логин" />
-		<Input type="password" placeholder="Введите пароль"/>
-		<Button size="xl" level="primary" onClick={go} Data-to="Home">Войти</Button>
-        </FormLayoutGroup>
+        <Input type="login" name="login" value={login} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему'} placeholder="Введите логин" />
+		<Input type="password" name="password" value={password} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему'} placeholder="Введите пароль"/>
+		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} Data-to="Home">Войти</Button>
+		</FormLayoutGroup>
         </FormLayout>
 		</Group>
-		</div>
-	</Panel>	
-);
+		</Panel>
+	);
+  }
+} 
 
-Auth.propTypes = {
+
+
+
+ Auth.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
