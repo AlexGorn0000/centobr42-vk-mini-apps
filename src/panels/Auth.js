@@ -7,7 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -20,6 +20,8 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 import Icon28Mention from '@vkontakte/icons/dist/28/mention';
 import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
+import Icon56EventOutline from '@vkontakte/icons/dist/56/event_outline';
+import '../css/style.css';
 /*
 const users = [
     {id: 223646052, name: "Елена Калистратова"},
@@ -45,31 +47,29 @@ const users = [
 	{id: 3273910, password: "18593848"}
   ];
 */
-/*
-<Div>Чтобы авторизировать свою учетную запись, Вы должны заполнить данные в окно ввода</Div>
-*/
-
 const Auth = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24BrowserBack/></HeaderButton>}>Вход в учетную запись</PanelHeader>
-	
-		<Group title="Авторизация">
-		<Cell before={<Icon28RecentOutline/>}>Будьте в центре событий!</Cell>
+		<Group title="Что нового?">
+		<Div style={{ marginLeft: '10px 0' }} className="animation_1" before={<Icon56EventOutline/>}></Div>
+		<Separator style={{ margin: '10px 0' }} />
+		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
 		<Cell before={<Icon28ArticleOutline/>}>Следите за расписанием уроков в разделе "Образование"</Cell>
 		<Cell before={<Icon28Mention/>}>Получайте сведения о мероприятиях!</Cell>
 		</Group>
 		<Group>
+		<Div>Чтобы авторизировать свою учетную запись, Вы должны заполнить данные в окно ввода</Div>
 		<FormLayout>
         <FormLayoutGroup>
         <Input type="login" placeholder="Введите логин" />
 		<Input type="password" placeholder="Введите пароль"/>
         </FormLayoutGroup>
         </FormLayout>
-		<Button size="xl" level="outline" onClick={go} Data-to="Home">
+		<Button size="xl" level="primary" onClick={go} Data-to="Home">
 		  Войти
 		</Button>
-   	  </Group>
-    </Panel>
+		</Group>
+	</Panel>	
 );
 
 Auth.propTypes = {
