@@ -20,7 +20,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 import Icon28Mention from '@vkontakte/icons/dist/28/mention';
 import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
-import Icon56EventOutline from '@vkontakte/icons/dist/56/event_outline';
+import Icon28Users from '@vkontakte/icons/dist/28/users';
 import '../css/style.css';
 /*
 const users = [
@@ -48,26 +48,30 @@ const users = [
   ];
 */
 const Auth = ({ id, go, fetchedUser }) => (
-	<Panel id={id} theme="client_dark">
+	<Panel id={id}>
 		<div className="background_auth">
 		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
 		<img style={{ marginLeft: '153px'}} width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
-		<Cell before={<Icon28RecentOutline/>}>Будьте всегда в центре событий!</Cell>
-		<Cell before={<Icon28ArticleOutline/>}>Будьте в курсе завтрашних уроков!</Cell>
-		<Cell before={<Icon28Mention/>}>Получайте сведения о мероприятиях!</Cell>
+		<Cell before={<Icon28ArticleOutline/>}>Получайте сведения о завтрашних<br/>
+		уроках</Cell>
+		<Cell before={<Icon28Mention/>}>Будьте в курсе всех событий,<br/>
+		просходящих в Центре образования</Cell>
+		<Cell before={<Icon28Users/>}>Делитесь c одноклассниками<br/>
+		интересными событиями в беседе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<FormLayout>
 		<FormLayoutGroup>
-		<h4 style={{marginLeft: '20px'}}>Выберите платформу</h4>
+		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
 		<Select>
-		<option value="gosuslugi">ГосУслуги</option>
-		<option value="ВКонтакте">ВКонтакте</option>
+		<option value="students">Учащийся</option>
+		<option value="parents">Родитель</option>
+		<option value="teachers">Преподователь</option>
 		</Select>
 		<br></br>
-		<h4 style={{marginLeft: '20px'}}>Введите данные для входа</h4>
+		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
         <Input type="login" placeholder="Введите логин" />
 		<Input type="password" placeholder="Введите пароль"/>
 		<Button size="xl" level="primary" onClick={go} Data-to="Home">Войти</Button>
