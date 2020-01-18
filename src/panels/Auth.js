@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes, { string } from 'prop-types';
+import {render} from 'react-dom';
+import Return from 'react-dom';
+import PropTypes from 'prop-types';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
@@ -54,30 +56,30 @@ const users = [
 	  
 		  this.state = {
 			login: '',
-			password: '',
+			password: ''
 		  }
 		  
 		  const login = [
-			{id: 223646052, result: "yelena.kalistratova"},
-			{id: 7181764, result: "tatyana.orlova"},
-			{id: 59155411, result: "natalyyaa"},
-			{id: 270919242,result: "allexgorn"},
-			{id: 3273910, result: "karavaevb"}
+			{id: 223646052, value: "yelena.kalistratova"},
+			{id: 7181764, value: "tatyana.orlova"},
+			{id: 59155411, value: "natalyyaa"},
+			{id: 270919242, value: "allexgorn"},
+			{id: 3273910, value: "karavaevb"}
 		  ];
 		
 		  const password = [
-			{id: 223646052, result: "81456943"},
-			{id: 7181764, result: "95793857"},
-			{id: 59155411, result: "63858589"},
-			{id: 270919242, result: "81457066"},
-			{id: 3273910, result: "18593848"}
+			{id: 223646052, value: "81456943"},
+			{id: 7181764, value: "95793857"},
+			{id: 59155411, value: "63858589"},
+			{id: 270919242, value: "81457066"},
+			{id: 3273910, value: "18593848"}
 		  ];
 
 		  this.onChange = this.onChange.bind(this);
 		}
 	    onChange(e) {
-		  const { result, value} = e.currentTarget;
-		  this.setState({ [result]: value});
+		  const { id, value} = e.currentTarget;
+		  this.setState({ [id]: value });
 		}
 		
 		render(){
@@ -106,10 +108,10 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" name="login" value={login} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
-		<Input type="password" name="password" value={password} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+        <Input type="login" name="login" value={login} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		<Input type="password" name="password" value={password} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 		<br></br>
-		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password? 'valid' : 'error'} bottom={login, password? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} Data-to="Home">Войти</Button>
+		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password ? 'valid' : 'error'} bottom={login, password ? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
