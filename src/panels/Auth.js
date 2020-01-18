@@ -60,26 +60,26 @@ const users = [
 		  }
 		  
 		  const login = [
-			{id: 223646052, result: "yelena.kalistratova"},
-			{id: 7181764, result: "tatyana.orlova"},
-			{id: 59155411, result: "natalyyaa"},
-			{id: 270919242, result: "allexgorn"},
-			{id: 3273910, result: "karavaevb"}
+			{name: 223646052, value: "yelena.kalistratova"},
+			{name: 7181764, value: "tatyana.orlova"},
+			{name: 59155411, value: "natalyyaa"},
+			{name: 270919242, value: "allexgorn"},
+			{name: 3273910, value: "karavaevb"}
 		  ];
 		
 		  const password = [
-			{id: 223646052, result: "81456943"},
-			{id: 7181764, result: "95793857"},
-			{id: 59155411, result: "63858589"},
-			{id: 270919242, result: "81457066"},
-			{id: 3273910, result: "18593848"}
+			{name: 223646052, value: "81456943"},
+			{name: 7181764, value: "95793857"},
+			{name: 59155411, value: "63858589"},
+			{name: 270919242, value: "81457066"},
+			{name: 3273910, value: "18593848"}
 		  ];
 
 		  this.onChange = this.onChange.bind(this);
 		}
 	    onChange(e) {
-		  const { result, value} = e.currentTarget;
-		  this.setState({ [result]: value });
+		  const { name, value} = e.currentTarget;
+		  this.setState({ [name]: value });
 		}
 		
 		render(){
@@ -88,7 +88,7 @@ const users = [
 		<Panel id={this.props.id}>
 		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 		<Group>
-		<img style={{ marginLeft: '155px'}} width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
+		<img style={{ marginLeft: '153px'}} width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
 		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4>
 		<Separator style={{margin: '5px 0'}}/>
 		<Cell before={<Icon28ArticleOutline/>}>Получайте сведения о завтрашних<br/>
@@ -102,16 +102,15 @@ const users = [
 		<FormLayoutGroup>
 		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
 		<Select>
-		<option value="students">Ученик</option>
+		<option value="students">Учащийся</option>
 		<option value="parents">Родитель</option>
 		<option value="teachers">Преподователь</option>
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" name="login" value={login} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
-		<Input type="password" name="password" value={password} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
-		<br></br>
-		<Button size="xl" level="primary" onChange={this.onChange} status={login, password? 'valid' : 'error'} bottom={login, password? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} onClick={this.props.go} Data-to="Home">Войти</Button>
+        <Input type="login" name="login" value={login} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		<Input type="password" name="password" value={password} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password ? 'valid' : 'error'} bottom={login, password ? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
