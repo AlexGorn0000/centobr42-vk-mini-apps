@@ -34,7 +34,7 @@ const App = () => {
 		
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
-			connect.sendPromise("VKWebAppGetAuthToken", {"app_id": 7266393,"scope": notify,friends,photos}); 
+			connect.sendPromise("VKWebAppGetAuthToken", {"app_id": 7266393,"scope": 'notify,friends,photos'}); 
 			connect.sendPromise("VKWebAppJoinGroup", {"group_id": 168892763});
 			setUser(user);
 			setPopout(null);
