@@ -55,17 +55,13 @@ const users = [
 		  super(props);
 	  
 		  this.state = {
-			login: {
-			name: '',
-			value: '',
-			},
-		    password: {
-			name: '',
-			value: '',
-			}
+			login: '',
+			password: '', 
 		  }
+
+		  authprocess()
 		  
-		  const login = [
+		  this.UsersLogin = [
 			{name: 223646052, value: "yelena.kalistratova"},
 			{name: 7181764, value: "tatyana.orlova"},
 			{name: 59155411, value: "natalyyaa"},
@@ -73,7 +69,7 @@ const users = [
 			{name: 3273910, value: "karavaevb"}
 		  ];
 		
-		  const password = [
+		  this.UsersPassword = [
 			{name: 223646052, value: "81456943"},
 			{name: 7181764, value: "95793857"},
 			{name: 59155411, value: "63858589"},
@@ -114,9 +110,13 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-        <Input type="login" name="login" value={login} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
-		<Input type="password" name="password" value={password} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
-		<Button size="xl" level="primary" onClick={this.props.go} onChange={this.onChange} status={login, password ? 'valid' : 'error'} bottom={login, password ? 'Вы успешно авторизировались' : 'Ошибка: 0x76d270. Ваши данные не внесены в систему!'} Data-to="Home">Войти</Button>
+		{this.UsersLogin.map(({ name, value }) => (
+        <Input type="login" name={name} value={value} key={value} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		))}
+		{this.UsersPassword.map(({ name, value }) => (
+		<Input type="password" name={name} value={value} key={value} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		))}
+		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
