@@ -59,8 +59,6 @@ const users = [
 			password: '', 
 		  }
 
-		  authprocess()
-		  
 		  this.UsersLogin = [
 			{name: 223646052, value: "yelena.kalistratova"},
 			{name: 7181764, value: "tatyana.orlova"},
@@ -110,11 +108,11 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-		{this.UsersLogin.map(({ name, value }) => (
-        <Input type="login" name={name} value={value} key={value} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		{this.UsersLogin.reduce(({ name, value }) => (
+        <Input type="login" name={name} value={value} onChange={this.onChange} status={login ? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 		))}
-		{this.UsersPassword.map(({ name, value }) => (
-		<Input type="password" name={name} value={value} key={value} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		{this.UsersPassword.reduce(({ name, value }) => (
+		<Input type="password" name={name} value={value} onChange={this.onChange} status={password ? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 		))}
 		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home">Войти</Button>
 		</FormLayoutGroup>
