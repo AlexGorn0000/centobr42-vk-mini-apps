@@ -9,7 +9,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View, Tooltip} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -49,14 +49,20 @@ const users = [
 	{id: 3273910, password: "18593848"}
   ];
 */
-	  
+
     class Auth extends React.Component {
 		constructor(props) {
 		  super(props);
 	  
 		  this.state = {
-			login: '',
-			password: ''
+			login: {
+			name: '',
+			value: '',
+			},
+		    password: {
+			name: '',
+			value: '',
+			}
 		  }
 		  
 		  const login = [
@@ -81,7 +87,7 @@ const users = [
 		  const { name, value} = e.currentTarget;
 		  this.setState({ [name]: value });
 		}
-		
+
 		render(){
 		const {login, password } = this.state;
 		return(
