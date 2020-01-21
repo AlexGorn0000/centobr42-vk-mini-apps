@@ -20,8 +20,9 @@ const Settings = ({ id, go, fetchedUser }) => (
 	<Cell before={<Icon24Notification/>} asideContent={<Switch/>} onClick={this.setState.Switch}>Получать Push-уведомления</Cell>
     <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onClick={this.setState.Switch}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '5px 0'}}/>
-	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725932">Лицензионное соглашение ПО</CellButton>
-	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725961">Политика конфиденциальности</CellButton>
+	<CellButton before={<Icon24Document/>}>Лицензионное соглашение ПО</CellButton>
+	<Div><center>или</center></Div>
+	<CellButton before={<Icon24Document/>}>Политика конфиденциальности</CellButton>
     </List>
 	 </Group>
 	 </Panel>
