@@ -42,7 +42,7 @@ const App = () => {
 	const go = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 	};
-	
+
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Auth id='Auth' fetchedUser={fetchedUser} go={go} />
