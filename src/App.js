@@ -10,7 +10,6 @@ import Profile from './panels/Profile';
 import Activity from './panels/Activity'
 import Education from './panels/Education';
 import Settings from './panels/Settings';
-import Help from './panels/Help';
 import Teaching from './panels/Teaching';
 import Projects from './panels/Projects';
 import Project1 from './panels/Project1';
@@ -51,7 +50,6 @@ const App = () => {
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
-			<Help id='Help' fetchedUser={fetchedUser} go={go} />
 			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>
