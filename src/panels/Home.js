@@ -54,9 +54,9 @@ const Home = ({ id, go, fetchedUser }) => (
 	 <Group>
 	 <Cell before={<Icon24Info/>}>Информация</Cell>
 		    <Gallery
-                slideWidth="90%"
+                slideWidth="100%"
                 align="center"
-                style={{ height: 200 }}
+                style={{ height: 220 }}
               >
 				<img src="https://sun9-10.userapi.com/c200720/v200720233/28432/Q81mleE1TM8.jpg"/>
                 <img src="https://sun9-64.userapi.com/c206528/v206528826/1c48f/NNFKtP0-bC8.jpg"/>
