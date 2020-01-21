@@ -37,7 +37,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Started"><Icon24Cancel/></HeaderButton>}>Личный кабинет</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Auth"><Icon24Cancel/></HeaderButton>}>Личный кабинет</PanelHeader>
 	<Group>
 	<List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
@@ -58,7 +58,7 @@ const Home = ({ id, go, fetchedUser }) => (
                 align="center"
                 style={{ height: 220 }}
               >
-				<img src="https://sun9-10.userapi.com/c200720/v200720233/28432/Q81mleE1TM8.jpg"/>
+				<video src=""/>
                 <img src="https://sun9-64.userapi.com/c206528/v206528826/1c48f/NNFKtP0-bC8.jpg"/>
 				<img src="https://sun9-58.userapi.com/c204616/v204616763/16b18/mbg8fvOzBHE.jpg"/>
 				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
