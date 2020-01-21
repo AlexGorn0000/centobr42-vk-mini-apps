@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { platform, IOS, Group, Switch, Cell, CellButton, Separator, List } from '@vkontakte/vkui';
+import { platform, IOS, Group, Switch, Cell, CellButton, Separator, List, Div } from '@vkontakte/vkui';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
@@ -20,9 +20,9 @@ const Settings = ({ id, go, fetchedUser }) => (
 	<Cell before={<Icon24Notification/>} asideContent={<Switch/>} onClick={this.setState.Switch}>Получать Push-уведомления</Cell>
     <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onClick={this.setState.Switch}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '5px 0'}}/>
-	<CellButton before={<Icon24Document/>}>Лицензионное соглашение ПО</CellButton>
+	<CellButton before={<Icon24Document/>} href="">Лицензионное соглашение ПО</CellButton>
 	<Div><center>или</center></Div>
-	<CellButton before={<Icon24Document/>}>Политика конфиденциальности</CellButton>
+	<CellButton before={<Icon24Document/>} href="">Политика конфиденциальности</CellButton>
     </List>
 	 </Group>
 	 </Panel>
