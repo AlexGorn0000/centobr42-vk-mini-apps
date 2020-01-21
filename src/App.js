@@ -16,8 +16,8 @@ import Help from './panels/Help';
 import Teaching from './panels/Teaching';
 //Projects
 import Projects from './panels/Projects';
-import Project1 from './panels/projects/Project1/Project1';
-import Project2 from './panels/projects/Project2/Project2';
+import Project1 from './panels/Project1';
+import Project2 from './panels/Project2';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Auth');
