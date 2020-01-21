@@ -55,8 +55,8 @@ const users = [
 		  super(props);
 	  
 		  this.state = {
-			login: this.UsersLogin,
-			password: this.UsersPassword, 
+			login: '',
+			password: '', 
 		  }
 
 		  this.UsersLogin = [
@@ -108,13 +108,15 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-		{this.UsersLogin.reduceRight(({ name, value }) => (
-        <Input type="login" name={name} value={value} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+		{this.UsersLogin.reduce(({ name, value }) => (
+        <Input type="login" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 		))}
-		{this.UsersPassword.reduceRight(({ name, value }) => (
-		<Input type="password" name={name} value={value} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		{this.UsersPassword.reduce(({ name, value }) => (
+		<Input type="password" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 		))}
-		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home" enabled={this.UsersLogin, this.UsersPassword} disabled>Войти</Button>
+		{this.UsersLogin, this.UsersPassword.reduce(({ enabled }) => (
+		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home" disabled>Войти</Button>   
+		))}
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
