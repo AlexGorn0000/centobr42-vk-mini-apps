@@ -14,6 +14,7 @@ import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, Separator } fro
 import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
+import Icon24Search from '@vkontakte/icons/dist/24/search';
 import Icon24Info from '@vkontakte/icons/dist/24/info';
 import Icon24Education from '@vkontakte/icons/dist/24/education';
 import Icon24UserOutgoing from '@vkontakte/icons/dist/24/user_outgoing';
@@ -23,7 +24,6 @@ import Icon24Settings from '@vkontakte/icons/dist/24/settings';
 import Icon24MoneyTransfer from '@vkontakte/icons/dist/24/money_transfer';
 import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';
 import Icon24Market from '@vkontakte/icons/dist/24/market';
-import Icon24Search from '@vkontakte/icons/dist/24/search';
 import Icon24LogoVk from '@vkontakte/icons/dist/24/logo_vk';
 import Icon56FavoriteOutline from '@vkontakte/icons/dist/56/favorite_outline';
 import Icon24Help from '@vkontakte/icons/dist/24/help';
@@ -36,40 +36,10 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 import user from '@vkontakte/icons/dist/24/user';
 
-const users = [
-  {id: 3201, name: "Калистратова Елена Ивановна"},
-  {id: 3201, name: "Орлова Татьяна Андреевна"},
-  {id: 3201, name: "Орехова Наталья Борисовна"},
-  {id: 3201, name: "Люлина Елена Николаевна"}
-];
-
-class Teaching extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      showSearch: '',
-      search: ''
-    }
-    this.toggleSearch = this.toggleSearch.bind(this);
-
-    this.onChange = this.onChange.bind(this);
-  }
-
-  toggleSearch () { this.setState({ showSearch: !this.state.showSearch }); }
-
-  onChange (search) { this.setState({ search }); }
-
-  get users () {
-    const search = this.state.search.toLowerCase();
-    return users.filter(({name}) => name.toLowerCase().indexOf(search) > -1);
-  }
-
-  render () {
-    return (
-<Panel id={this.props.id}>
-		<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>} right={<HeaderButton onClick={this.toggleSearch}><Icon24Search /></HeaderButton>}>Педагогический состав</PanelHeader>
-  <Search theme="header" value={this.state.search} onChange={this.onChange} onClose={this.toggleSearch}/>
- <Group title="Администрация школы">
+const Teaching = ({ id, go, fetchedUser}) => (
+	<Panel id={id}>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Педагогический состав</PanelHeader>
+  <Group title="Администрация школы">
   <List>
   <Cell before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
   <Cell before={<Avatar src="https://sun1-93.userapi.com/c848524/v848524153/1a65c1/4vIW-y1aE0k.jpg"/>} description="Заместитель директора по ВР">Орлова Татьяна Андреевна</Cell>
@@ -153,8 +123,6 @@ class Teaching extends React.Component {
    </Group>
  </Panel>
 );
-}
-}
 
 Teaching.propTypes = {
 	id: PropTypes.string.isRequired,
