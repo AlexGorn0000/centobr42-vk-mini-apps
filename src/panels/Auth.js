@@ -108,15 +108,13 @@ const users = [
 		</Select>
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-		{this.UsersLogin.reduce(({ name, value }) => (
+		{this.UsersLogin.every(({ name, value }) => (
         <Input type="login" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={login ? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 		))}
-		{this.UsersPassword.reduce(({ name, value }) => (
+		{this.UsersPassword.every(({ name, value }) => (
 		<Input type="password" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={password ? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 		))}
-		{this.UsersLogin, this.UsersPassword.reduce(({ enabled }) => (
-		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home" disabled>Войти</Button>   
-		))}
+		<Button size="xl" level="primary" onClick={this.props.go} Data-to="Home">Войти</Button>   
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
