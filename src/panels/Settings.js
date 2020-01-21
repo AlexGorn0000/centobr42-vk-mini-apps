@@ -17,10 +17,11 @@ const Settings = ({ id, go, fetchedUser }) => (
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Cancel/></HeaderButton>}>Настройки</PanelHeader>
 	<Group title="Основные">
 	<List>
-	<Cell before={<Icon24Notification/>} asideContent={<Switch/>}>Получать Push-уведомления</Cell>
-    <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />}>Автообновление сервиса</Cell>
+	<Cell before={<Icon24Notification/>} asideContent={<Switch/>} onClick={this.setState.Switch}>Получать Push-уведомления</Cell>
+    <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onClick={this.setState.Switch}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '5px 0'}}/>
-	<CellButton before={<Icon24Document/>}>Лицензионное соглашение ПО</CellButton>
+	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725932">Лицензионное соглашение ПО</CellButton>
+	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725961">Политика конфиденциальности</CellButton>
     </List>
 	 </Group>
 	 </Panel>

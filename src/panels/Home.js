@@ -58,7 +58,7 @@ const Home = ({ id, go, fetchedUser }) => (
                 align="center"
                 style={{ height: 220 }}
               >
-				<iframe src="https://vk.com/video_ext.php?oid=-187421428&id=456239049&hash=de4c61aa47a2c3a9" frameborder="0" allowfullscreen></iframe>
+				<video src="https://vk.com/video_ext.php?oid=-187421428&id=456239049&hash=de4c61aa47a2c3a9" frameborder="0" allowfullscreen></video>
                 <img src="https://sun9-64.userapi.com/c206528/v206528826/1c48f/NNFKtP0-bC8.jpg"/>
 				<img src="https://sun9-58.userapi.com/c204616/v204616763/16b18/mbg8fvOzBHE.jpg"/>
 				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
