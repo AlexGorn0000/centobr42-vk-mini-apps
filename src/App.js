@@ -55,6 +55,8 @@ const App = () => {
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
+			<Help id='Help' fetchedUser={fetchedUser} go={go} />
+			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>
 			<Project1 id='Project1' go={go} />
