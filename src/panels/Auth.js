@@ -109,12 +109,12 @@ const users = [
 		<br></br>
 		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 		{this.UsersLogin.reduce(({ name, value }) => (
-        <Input type="login" name={name} value={value} onChange={value} status={value? 'valid' : 'error'} bottom={value? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+        <Input type="login" name={name} key={value} onChange={this.onChange} status={this.UsersLogin? 'valid' : 'error'} bottom={this.UsersLogin? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 		))}
 		{this.UsersPassword.reduce(({ name, value }) => (
-		<Input type="password" name={name} value={value} onChange={value} status={value? 'valid' : 'error'} bottom={value? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+		<Input type="password" name={name} key={value} onChange={this.onChange} status={this.UsersPassword? 'valid' : 'error'} bottom={this.UsersPassword? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 		))}
-		<Button size="xl" level="primary" onAuxClick={!this.UsersLogin, !!this.UsersPassword} onClick={this.props.go} Data-to="Home">Войти</Button>   
+		<Button size="xl" level="primary" onClick={!this.UsersLogin, !!this.UsersPassword, this.props.go} Data-to="Home">Войти</Button>   
 		</FormLayoutGroup>
         </FormLayout>
 		</Group>
