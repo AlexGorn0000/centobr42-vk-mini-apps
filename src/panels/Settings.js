@@ -21,7 +21,6 @@ const Settings = ({ id, go, fetchedUser }) => (
     <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onClick={this.setState.Switch}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '5px 0'}}/>
 	<CellButton before={<Icon24Document/>} href="">Лицензионное соглашение ПО</CellButton>
-	<Div><center>или</center></Div>
 	<CellButton before={<Icon24Document/>} href="">Политика конфиденциальности</CellButton>
     </List>
 	 </Group>
