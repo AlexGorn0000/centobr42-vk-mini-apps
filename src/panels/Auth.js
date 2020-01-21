@@ -49,8 +49,15 @@ const users = [
 	{id: 3273910, password: "18593848"}
   ];
 */
-
-    class Auth extends React.Component {
+const orangeBackground = {
+	backgroundImage: 'linear-gradient(135deg, #ffb73d, #ffa000)'
+  };
+  
+  const blueBackground = {
+	backgroundColor: 'var(--accent)'
+  };
+  
+   class Auth extends React.Component {
 		constructor(props) {
 		  super(props);
 	  

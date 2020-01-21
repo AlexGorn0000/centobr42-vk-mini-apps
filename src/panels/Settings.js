@@ -119,12 +119,11 @@ return(
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24Cancel/></HeaderButton>}>Настройки</PanelHeader>
 	<Group title="Основные">
 	<List>
-	<Cell before={<Icon24Notification/>} asideContent={<Switch defaultChecked />} onClick={this.openBase}>Получать Push-уведомления</Cell>
-    <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onClick={this.updateService}>Автообновление сервиса</Cell>
+	<Cell before={<Icon24Notification/>} asideContent={<Switch defaultChecked />} onChange={this.openBase}>Получать Push-уведомления</Cell>
+    <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />} onChange={this.updateService}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '8px 0'}}/>
-	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725932">Лицензионное соглашение ПО</CellButton>
-	<Div><center>или</center></Div>
-	<CellButton before={<Icon24Document/>} href="https://vk.com/doc270919242_530725961">Политика конфиденциальности</CellButton>
+	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_530725932">Лицензионное соглашение ПО</CellButton>
+	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_530725961">Политика конфиденциальности</CellButton>
     </List>
     </Group>
 	 </Panel>
