@@ -15,7 +15,6 @@ import settings from '@vkontakte/icons/dist/24/settings';
 const Settings = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Cancel/></HeaderButton>}>Настройки</PanelHeader>
-	{fetchedUser &&
 	<Group title="Основные">
 	<List>
 	<Cell before={<Icon24Notification/>} asideContent={<Switch/>}>Получать Push-уведомления</Cell>
@@ -23,7 +22,7 @@ const Settings = ({ id, go, fetchedUser }) => (
 	<Separator style={{ margin: '5px 0'}}/>
 	<CellButton before={<Icon24Document/>}>Лицензионное соглашение ПО</CellButton>
     </List>
-	 </Group>}
+	 </Group>
 	 </Panel>
 );
 
