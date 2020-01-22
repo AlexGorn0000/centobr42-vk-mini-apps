@@ -41,7 +41,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const To5a = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
+	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>5 «А» класс</PanelHeader>
   <Group>
   <Div>Понедельник:<br/>
   1-ый урок: нет урока<br/>
@@ -83,8 +83,8 @@ const To5a = ({ id, go, fetchedUser}) => (
   5-ый урок: Родной язык<br/>
   6-ой урок: Литература</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>}>Поделиться</Cell>
-  <Cell before={<Icon24Upload/>}>Скачать</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('', {}); return false;">Поделиться</Cell>
+  <Cell before={<Icon24Upload/>} component="a" href="https://vk.com/doc270919242_530725961" onClick="return saveDoc();">Скачать</Cell>
   </Group>
  </Panel>
 );
