@@ -36,72 +36,60 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Users from '@vkontakte/icons/dist/24/users';
 import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
+import Icon24Upload from '@vkontakte/icons/dist/24/upload';
 import user from '@vkontakte/icons/dist/24/user';
 
-const Timetable = ({ id, go, fetchedUser}) => (
+const To5a = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
-  <Group title="5-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>} onClick={go} Data-to="To5a">5 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «В» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Г» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Д» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Е» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Ж» класс</Cell>
-  </List>
-  </Group>
-  <Group title="6-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>6 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «В» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «Г» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «Д» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «Е» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «Ж» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>6 «З» класс</Cell>
-  </List>
-  </Group>
-  <Group title="7-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>7 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>7 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>7 «В» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>7 «Г» класс</Cell>
-  </List>
-  </Group>
-  <Group title="8-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>8 «A» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>8 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>8 «В» класс</Cell>
-  </List>
-  </Group>
-  <Group title="9-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>9 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>9 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>9 «В» класс</Cell>
-  </List>
-  </Group>
-  <Group title="10-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>10 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>10 «Б» класс</Cell>
-  </List>
-  </Group>
-  <Group title="11-е классы">
-  <List>
-  <Cell expandable before={<Icon24Users/>}>11 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>11 «Б» класс</Cell>
-  </List>
+  <Group>
+  <Div>Понедельник:<br/>
+  1-ый урок: нет урока<br/>
+  2-ой урок: Математика<br/> 
+  3-ий урок: Музыка<br/> 
+  4-ый урок: ИЗО<br/> 
+  5-ый урок: Русский язык<br/> 
+  6-ой урок: ОДНК<br/> 
+  7-ой урок: Английский язык<br/></Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Вторник:<br/>
+  1-ый урок: Английский язык<br/>
+  2-ой урок: Немецкий язык<br/> 
+  3-ий урок: Биология<br/> 
+  4-ый урок: Математика<br/> 
+  5-ый урок: Русский язык<br/></Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Среда:<br/>
+  1-ый урок: Английский язык<br/>
+  2-ой урок: Математика<br/> 
+  3-ий урок: Русский язык<br/> 
+  4-ый урок: Литература<br/> 
+  5-ый урок: Математика<br/></Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Четверг:<br/>
+  1-ый урок: Литература<br/>
+  2-ой урок: Физическая культура (зал)<br/> 
+  3-ий урок: Русский язык<br/> 
+  4-ый урок: Математика<br/> 
+  5-ый урок: История<br/>
+  6-ой урок: Информатика<br/>
+  7-ой урок: География</Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Пятница:<br/>
+  1-ый урок: Русский язык<br/>
+  2-ой урок: Физическая культура (бассейн)<br/> 
+  3-ий урок: История<br/> 
+  4-ый урок: Технология<br/> 
+  5-ый урок: Родной язык<br/>
+  6-ой урок: Литература</Div>
+  <Separator style={{margin: '15px 0'}}/>
+  <Cell before={<Icon24ShareOutline/>}>Поделиться</Cell>
+  <Cell before={<Icon24Upload/>}>Скачать</Cell>
   </Group>
  </Panel>
 );
 
-Timetable.propTypes = {
+To5a.propTypes = {
 	id: PropTypes.string.isRequired,
   go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -114,4 +102,4 @@ Timetable.propTypes = {
 	}),
 };
 
-export default Timetable;
+export default To5a;

@@ -13,6 +13,7 @@ import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
 import Teaching from './panels/education/Teaching';
 import Timetable from './panels/education/Timetable';
+import To5a from './panels/classes/5/To5a';
 import Project1 from './panels/projects/Project1';
 
 
@@ -49,13 +50,14 @@ const App = () => {
 		<View activePanel={activePanel} popout={popout}>
 			<Auth id='Auth' fetchedUser={fetchedUser} go={go} />
 			<Home id='Home' fetchedUser={fetchedUser} go={go} />
+			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
+			<Projects id='Projects' go={go}/>
+			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Timetable id='Timetable' fetchedUser={fetchedUser} go={go}/>
-			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
-			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
-			<Projects id='Projects' go={go}/>
+			<To5a id="To5a" go={go}/>
 			<Project1 id='Project1' go={go} />
 		</View>
 	);
