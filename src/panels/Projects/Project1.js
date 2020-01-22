@@ -7,6 +7,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import connect from '@vkontakte/vk-connect'; 
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
+import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
@@ -29,6 +30,7 @@ import Icon24Help from '@vkontakte/icons/dist/24/help';
 import Icon24Followers from '@vkontakte/icons/dist/24/followers';
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Services from '@vkontakte/icons/dist/24/services';
+import Icon24Write from '@vkontakte/icons/dist/24/write';
 import Icon24Note from '@vkontakte/icons/dist/24/note';
 import Icon24Video from '@vkontakte/icons/dist/24/video';
 import Icon24Gallery from '@vkontakte/icons/dist/24/gallery';
@@ -43,14 +45,13 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
     <Group>
-    <Gallery>
-                slideWidth="90%"
-                align="center"
-                style={{ height: 200 }}
-              >
-				<img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
+    <Gallery
+    slideWidth="90%"
+    align="center"
+    style={{ height: 200 }}>
+				        <img src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>
                 <img src="https://sun9-32.userapi.com/c204616/v204616763/16a5b/QXGt8DwB240.jpg"/>
                 <img src="https://sun9-25.userapi.com/c204616/v204616763/16ac7/aOEhtTmFBv8.jpg"/>
                 <img src="https://sun9-72.userapi.com/c204616/v204616763/16ad9/DhhtGPRzkHE.jpg"/>
@@ -65,18 +66,31 @@ const Project1 = ({ id, go, fetchedUser }) => (
     </Gallery>
     </Group>
     <Group>
-    <Cell before={<Icon24Followers/>}>???? ??????????</Cell>
-    <InfoRow>?????? ????: ? 25 ?? 29 ??????</InfoRow>
-    <InfoRow>?????? ???? (?????): 16 ???????</InfoRow>
-    <Separator style={{ margin: '10px 0' }} />
-    <Cell before={<Icon24Place/>}>????? ??????????</Cell>
-    <InfoRow>??????, ??????????? ???, ?.???????, ??.????????, ?.34?</InfoRow>
-    <Separator style={{ margin: '10px 0' }} />
+    <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
+    <Div>
+    <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
+    </Div>
+    <Div>
+    <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
+    </Div>
+    <Separator style={{ margin: '5px 0' }} />
+    <Cell before={<Icon24Place/>}>Место проведения</Cell>
+    <Div>
+    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
+    </Div>
     </Group>
-    <Group title="?????????????">
-    <Cell expandable before={<Icon24Video/>}>???????????</Cell>
-    <Cell expandable before={<Icon24Gallery/>}>??????????</Cell>
+    <Group title="Дополнительно">
+    <Separator style={{ margin: '5px 0' }} />
+    <List>
+    <Cell expandable before={<Icon24Video/>}>Видеозаписи</Cell>
+    <Cell expandable before={<Icon24Gallery/>}>Фотографии</Cell>
+    </List>
     </Group>
+    <Group>
+  	<List>
+	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">Наша группа</Cell>
+	 </List>
+	 </Group>
  </Panel>
 );
 

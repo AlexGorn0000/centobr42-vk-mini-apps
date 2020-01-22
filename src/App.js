@@ -5,14 +5,22 @@ import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Auth from './panels/Auth';
-import Home from './panels/Home';
-import Profile from './panels/Profile';
-import Activity from './panels/Activity'
-import Education from './panels/Education';
-import Settings from './panels/Settings';
-import Teaching from './panels/Teaching';
-import Projects from './panels/Projects';
-import Project1 from './panels/Project1';
+/*[=============General=================]*/
+import Home from './panels/General/Home';
+import Profile from './panels/General/Profile';
+import Activity from './panels/General/Activity'
+import Education from './panels/General/Education';
+import Settings from './panels/General/Settings';
+import Projects from './panels/General/Projects';
+/*[===========Block Education===========]*/
+import Teaching from './panels/Education/Teaching';
+import Timetable from './panels/Education/Timetable';
+/*[===============Classes===============] */
+import to5a from './panels/Education/Classes/5/5a';
+import to5b from './panels/Education/Classes/5/5b';
+/*[==============Projects===============]*/
+import Project1 from './panels/Projects/Project1';
+
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Auth');
@@ -50,6 +58,7 @@ const App = () => {
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
+			<Timetable id='Timetable' fetchedUser={fetchedUser} go={go}/>
 			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Projects id='Projects' go={go}/>

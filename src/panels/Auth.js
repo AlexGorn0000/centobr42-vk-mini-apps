@@ -23,7 +23,6 @@ import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 import Icon28Mention from '@vkontakte/icons/dist/28/mention';
 import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
 import Icon28Users from '@vkontakte/icons/dist/28/users';
-import '../css/style.css';
 /*
 const users = [
     {id: 223646052, name: "Елена Калистратова"},
