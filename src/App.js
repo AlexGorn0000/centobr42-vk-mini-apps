@@ -5,21 +5,15 @@ import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Auth from './panels/Auth';
-/*[=============General=================]*/
-import Home from './panels/Home';
-import Profile from './panels/Profile';
-import Activity from './panels/Activity'
-import Education from './panels/Education';
-import Settings from './panels/Settings';
-import Projects from './panels/Projects';
-/*[===========Block Education===========]*/
-import Teaching from './panels/Teaching';
-import Timetable from './panels/Timetable';
-/*[===============Classes===============] */
-import to5a from './panels/Classes/5/5a';
-import to5b from './panels/Classes/5/5b';
-/*[==============Projects===============]*/
-import Project1 from './panels/Project1';
+import Home from './panels/general/Home';
+import Profile from './panels/general/Profile';
+import Activity from './panels/general/Activity'
+import Education from './panels/general/Education';
+import Settings from './panels/general/Settings';
+import Projects from './panels/general/Projects';
+import Teaching from './panels/education/Teaching';
+import Timetable from './panels/education/Timetable';
+import Project1 from './panels/projects/Project1';
 
 
 const App = () => {
