@@ -43,59 +43,59 @@ const Teaching = ({ id, go, fetchedUser}) => (
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
   <Group title="5-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "Б" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "В" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "Г" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "Д" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "Е" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>5 "Ж" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «Б» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «В» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «Г» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «Д» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «Е» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>5 «Ж» класс</Cell>
   </List>
   </Group>
   <Group title="6-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "Б" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "В" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "Г" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "Д" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "Е" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "Ж" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>6 "З" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «Б» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «В» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «Г» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «Д» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «Е» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «Ж» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>6 «З» класс</Cell>
   </List>
   </Group>
   <Group title="7-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>7 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>7 "Б" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>7 "В" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>7 "Г" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>7 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>7 «Б» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>7 «В» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>7 «Г» класс</Cell>
   </List>
   </Group>
   <Group title="8-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>8 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>8 "Б" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>8 "В" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>8 «A» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>8 «Б» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>8 «В» класс</Cell>
   </List>
   </Group>
   <Group title="9-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>9 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>9 "Б" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>9 "В" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>9 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>9 «Б» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>9 «В» класс</Cell>
   </List>
   </Group>
   <Group title="10-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>10 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>10 "Б" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>10 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>10 «Б» класс</Cell>
   </List>
   </Group>
   <Group title="11-е классы">
   <List>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>11 "А" класс</Cell>
-  <Cell before={<Icon24Users/>} asideContent={<Icon24ShareOutline/>}>11 "Б" класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>11 «А» класс</Cell>
+  <Cell expandable before={<Icon24Users/>}>11 «Б» класс</Cell>
   </List>
   </Group>
  </Panel>
