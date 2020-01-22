@@ -83,8 +83,7 @@ const To5a = ({ id, go, fetchedUser}) => (
   5-ый урок: Родной язык<br/>
   6-ой урок: Литература</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('', {}); return false;">Поделиться</Cell>
-  <Cell before={<Icon24Upload/>} component="a" href="https://vk.com/doc270919242_530725961" onClick="return saveDoc();">Скачать</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return false;">Поделиться</Cell>
   </Group>
  </Panel>
 );
