@@ -34,7 +34,6 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
-import '../css/style.css';
 
 const Education = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
@@ -42,7 +41,7 @@ const Education = ({ id, go, fetchedUser}) => (
    <Group title="Образование">
    <List>
     <Cell expandable before={<Icon24Education/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
-    <Cell expandable before={<Icon24Note/>} description="В разработке">Расписание уроков</Cell>
+    <Cell expandable before={<Icon24Note/>} onClick={go} Data-to="Timetable">Расписание уроков</Cell>
    </List>
    </Group>
    </Panel>
