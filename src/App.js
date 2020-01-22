@@ -6,20 +6,20 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Auth from './panels/Auth';
 /*[=============General=================]*/
-import Home from './panels/General/Home';
-import Profile from './panels/General/Profile';
-import Activity from './panels/General/Activity'
-import Education from './panels/General/Education';
-import Settings from './panels/General/Settings';
-import Projects from './panels/General/Projects';
+import Home from './panels/general/Home';
+import Profile from './panels/general/Profile';
+import Activity from './panels/general/Activity'
+import Education from './panels/general/Education';
+import Settings from './panels/general/Settings';
+import Projects from './panels/general/Projects';
 /*[===========Block Education===========]*/
-import Teaching from './panels/Education/Teaching';
-import Timetable from './panels/Education/Timetable';
+import Teaching from './panels/education/Teaching';
+import Timetable from './panels/education/Timetable';
 /*[===============Classes===============] */
-import to5a from './panels/Education/Classes/5/5a';
-import to5b from './panels/Education/Classes/5/5b';
+import to5a from './panels/education/Classes/5/5a';
+import to5b from './panels/education/Classes/5/5b';
 /*[==============Projects===============]*/
-import Project1 from './panels/Projects/Project1';
+import Project1 from './panels/projects/Project1';
 
 
 const App = () => {
