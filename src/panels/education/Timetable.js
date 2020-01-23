@@ -43,13 +43,13 @@ const Timetable = ({ id, go, fetchedUser}) => (
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
   <Group title="5-е классы">
   <List>
-  <Cell expandable before={<Icon24Users/>} onClick={go} Data-to="To5a">5 «А» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Б» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «В» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Г» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Д» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Е» класс</Cell>
-  <Cell expandable before={<Icon24Users/>}>5 «Ж» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-38.userapi.com/c205224/v205224888/48339/USuKdro0P1w.jpg"/>} onClick={go} Data-to="To5a">5 «А» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-5.userapi.com/c205224/v205224888/48340/_enT_btY0FI.jpg"/>} onClick={go} Data-to="To5b">5 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-69.userapi.com/c205224/v205224888/48347/JoIgYBMlBmk.jpg"/>} onClick={go} Data-to="To5v">5 «В» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-37.userapi.com/c205224/v205224888/4834e/EQ2zaY5bsvw.jpg"/>} onClick={go} Data-to="To5g">5 «Г» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-21.userapi.com/c205224/v205224888/48355/RzLo8WV_wQ0.jpg"/>} onClick={go} Data-to="To5d">5 «Д» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-4.userapi.com/c205224/v205224888/4835c/M6K_An_TFMQ.jpg"/>} onClick={go} Data-to="To5e">5 «Е» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c205224/v205224888/48363/tM558wpmH2E.jpg"/>} onClick={go} Data-to="To5h">5 «Ж» класс</Cell>
   </List>
   </Group>
   <Group title="6-е классы">

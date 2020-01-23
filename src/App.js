@@ -13,7 +13,13 @@ import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
 import Teaching from './panels/education/Teaching';
 import Timetable from './panels/education/Timetable';
-import To5a from './panels/classes/5/To5a';
+import To5a from './panels/education/classes/5/To5a';
+import To5b from './panels/education/classes/5/To5b';
+import To5b from './panels/education/classes/5/To5v';
+import To5g from './panels/education/classes/5/To5g';
+import To5d from './panels/education/classes/5/To5d';
+import To5e from './panels/education/classes/5/To5e';
+import To5h from './panels/education/classes/5/To5h';
 import Project1 from './panels/projects/Project1';
 
 
@@ -58,6 +64,12 @@ const App = () => {
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Timetable id='Timetable' fetchedUser={fetchedUser} go={go}/>
 			<To5a id="To5a" go={go}/>
+			<To5b id="To5b" go={go}/>
+			<To5v id="To5v" go={go}/>
+			<To5g id="To5g" go={go}/>
+			<To5d id="To5d" go={go}/>
+			<To5e id="To5e" go={go}/>
+			<To5h id="To5h" go={go}/>
 			<Project1 id='Project1' go={go} />
 		</View>
 	);
