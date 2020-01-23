@@ -15,7 +15,7 @@ import Teaching from './panels/education/Teaching';
 import Timetable from './panels/education/Timetable';
 import To5a from './panels/education/classes/5/To5a';
 import To5b from './panels/education/classes/5/To5b';
-import To5b from './panels/education/classes/5/To5v';
+import To5v from './panels/education/classes/5/To5v';
 import To5g from './panels/education/classes/5/To5g';
 import To5d from './panels/education/classes/5/To5d';
 import To5e from './panels/education/classes/5/To5e';
