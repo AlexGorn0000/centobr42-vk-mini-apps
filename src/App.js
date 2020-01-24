@@ -20,6 +20,8 @@ import To5g from './panels/education/classes/5/To5g';
 import To5d from './panels/education/classes/5/To5d';
 import To5e from './panels/education/classes/5/To5e';
 import To5h from './panels/education/classes/5/To5h';
+import To6a from './panels/education/classes/6/To6a';
+import To6b from './panels/education/classes/6/To6b';
 import Project1 from './panels/projects/Project1';
 
 
@@ -70,6 +72,8 @@ const App = () => {
 			<To5d id="To5d" go={go}/>
 			<To5e id="To5e" go={go}/>
 			<To5h id="To5h" go={go}/>
+			<To5h id="To6a" go={go}/>
+			<To5h id="To6b" go={go}/>
 			<Project1 id='Project1' go={go} />
 		</View>
 	);
