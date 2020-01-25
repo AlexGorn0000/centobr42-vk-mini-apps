@@ -101,9 +101,9 @@ const orangeBackground = {
 	<FormLayoutGroup>
 	<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
 	<Select>
-	<option value="students">Учащийся</option>
-	<option value="parents">Родитель</option>
-	<option value="teachers">Преподователь</option>
+	<option value="0">Учащийся</option>
+	<option value="1">Родитель</option>
+	<option value="2">Преподователь</option>
 	</Select>
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
@@ -114,7 +114,7 @@ const orangeBackground = {
 	<Input type="password" name="password" value={string} key={string} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 	))}
 	{this.Users.reduce(({ name, string }) => (
-	<Button size="xl" level="primary" onClick={this.props.go? name : string} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" onClick={!this.props.go? 'name' : 'string'} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	))}
     </FormLayoutGroup>
       </FormLayout>
