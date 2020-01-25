@@ -56,79 +56,79 @@ const orangeBackground = {
 	backgroundColor: 'var(--accent)'
   };
   
-   class Auth extends React.Component {
-		constructor(props) {
-		  super(props);
-	  
-		  this.state = {
-			login: '',
-			password: '', 
-		  }
+  class Auth extends React.Component {
+	constructor(props) {
+	  super(props);
+  
+	  this.state = {
+		login: '',
+		password: ''
+	  }
 
-		  this.UsersLogin = [
-			{name: 223646052, value: "yelena.kalistratova"},
-			{name: 7181764, value: "tatyana.orlova"},
-			{name: 59155411, value: "natalyyaa"},
-			{name: 270919242, value: "allexgorn"},
-			{name: 3273910, value: "karavaevb"}
-		  ];
-		
-		  this.UsersPassword = [
-			{name: 223646052, value: "81456943"},
-			{name: 7181764, value: "95793857"},
-			{name: 59155411, value: "63858589"},
-			{name: 270919242, value: "81457066"},
-			{name: 3273910, value: "18593848"}
-		  ];
+	  this.UsersLogin = [
+	  {name: 'elena.kalistratova'},
+	  {name: 'boris.karavaev'},
+	  {name: 'alexander.gorbunov'},
+	  {name: 'tatyana.orlova'},
+	  {name: 'natalya.zyeva'},
+	  ];
 
-		  this.onChange = this.onChange.bind(this);
-		}
-	    onChange(e) {
-		  const { name, value} = e.currentTarget;
-		  this.setState({ [name]: value });
-		}
-
-		render(){
-		const {login, password } = this.state;
-		return(
-		<Panel id={this.props.id}>
-		<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
-		<Group>
-		<Div style={{textAlign: "center"}}><img width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
-		<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4></Div>
-		<Separator style={{margin: '5px 0'}}/>
-		<Cell before={<Icon28ArticleOutline/>}>Получайте сведения о завтрашних<br/>
-		уроках</Cell>
-		<Cell before={<Icon28Mention/>}>Будьте в курсе всех событий,<br/>
-		просходящих в Центре образования</Cell>
-		<Cell before={<Icon28Users/>}>Делитесь c одноклассниками<br/>
-		интересными событиями в беседе</Cell>
-		<Separator style={{margin: '5px 0'}}/>
-		<FormLayout>
-		<FormLayoutGroup>
-		<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
-		<Select>
-		<option value="students">Учащийся</option>
-		<option value="parents">Родитель</option>
-		<option value="teachers">Преподователь</option>
-		</Select>
-		<br></br>
-		<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-		{this.UsersLogin.reduce(({ name, value }) => (
-        <Input type="login" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={value? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
-		))}
-		{this.UsersPassword.reduce(({ name, value }) => (
-		<Input type="password" name={name} value={value} onChange={this.onChange} status={value? 'valid' : 'error'} bottom={value? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
-		))}
-		<Button size="xl" level="primary" onClick={!!this.setState.UsersLogin, !!this.setState.UsersPassword, !this.props.go} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
-		</FormLayoutGroup>
-        </FormLayout>
-		</Group>
-		</Panel>
+	 this.UsersPassword = [
+	  {name: '814838'},
+	  {name: '492383'},
+	  {name: '135433'},
+	  {name: '902343'},
+	  {name: '231334'},
+	  ];
+	 	 
+	  this.onChange = this.onChange.bind(this);
+	}
+  
+	onChange(e) {
+	  const { name, value } = e.currentTarget;
+	  this.setState({ [name]: value });
+	}
+  
+	render() {
+	const { login, password } = this.state;
+    return(
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
+	<Group>
+	<Div style={{textAlign: "center"}}><img width="85" height="75" src="https://sun9-18.userapi.com/c200628/v200628344/41609/ZxjRT37a5Qs.jpg"/>
+	<h4 style={{textAlign: 'center'}}>Добро пожаловать в<br/>Личный кабинет</h4></Div>
+	<Separator style={{margin: '5px 0'}}/>
+	<Cell before={<Icon28ArticleOutline/>}>Получайте сведения о завтрашних<br/>
+	уроках</Cell>
+	<Cell before={<Icon28Mention/>}>Будьте в курсе всех событий,<br/>
+	просходящих в Центре образования</Cell>
+	<Cell before={<Icon28Users/>}>Делитесь c одноклассниками<br/>
+	интересными событиями в беседе</Cell>
+	<Separator style={{margin: '5px 0'}}/>
+	<FormLayout>
+	<FormLayoutGroup>
+	<h4 style={{marginLeft: '20px'}}>Выберите, кем Вы являетесь:</h4>
+	<Select>
+	<option value="students">Учащийся</option>
+	<option value="parents">Родитель</option>
+	<option value="teachers">Преподователь</option>
+	</Select>
+	<br></br>
+	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
+	{this.UsersLogin.reduce(({ name }) => (
+	<Input type="login" name="login" value={name} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+	))}
+	{this.UsersPassword.reduce(({ name }) => (
+	<Input type="password" name="password" value={name} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+	))}
+	<Button size="xl" level="primary" onClick={!this.setState.login, !this.setState.password, !this.props.go} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	</FormLayoutGroup>
+      </FormLayout>
+	</Group>
+	</Panel>
 	);
   }
-} 
-
+}
 
 
 
