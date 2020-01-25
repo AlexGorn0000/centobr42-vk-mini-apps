@@ -65,7 +65,7 @@ const orangeBackground = {
 		password: ''
 	  }
 
-	  this.UsersLogin = [
+	  this.state.UsersLogin = [
 	  {name: 'elena.kalistratova'},
 	  {name: 'boris.karavaev'},
 	  {name: 'alexander.gorbunov'},
@@ -73,7 +73,7 @@ const orangeBackground = {
 	  {name: 'natalya.zyeva'},
 	  ];
 
-	 this.UsersPassword = [
+	 this.state.UsersPassword = [
 	  {name: '814838'},
 	  {name: '492383'},
 	  {name: '135433'},
@@ -115,13 +115,13 @@ const orangeBackground = {
 	</Select>
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-	{this.UsersLogin.reduce(({ name }) => (
-	<Input type="login" name="login" value={name} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+	{this.state.UsersLogin.reduce(({ name }) => (
+	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 	))}
-	{this.UsersPassword.reduce(({ name }) => (
-	<Input type="password" name="password" value={name} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+	{this.state.UsersPassword.reduce(({ name }) => (
+	<Input type="password" name="password" value={name} key={name} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 	))}
-	<Button size="xl" level="primary" onClick={!this.setState.login, !this.setState.password, !this.props.go} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" onClick={!this.setState.UsersLogin, !this.setState.UsersPassword, !!this.props.go} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
