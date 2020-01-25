@@ -113,10 +113,8 @@ const orangeBackground = {
 	{this.state.Users.reduce(({ name, string }) => (
 	<Input type="password" name="password" value={string} key={string} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 	))}
-	{this.state.Users.reduce(({ name, string }) => (
 	<Button size="xl" level="primary" onClick={this.props.go, !this.state.Users} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
-	))}
-    </FormLayoutGroup>
+	</FormLayoutGroup>
       </FormLayout>
 	</Group>
 	</Panel>
