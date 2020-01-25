@@ -65,22 +65,14 @@ const orangeBackground = {
 		password: ''
 	  }
 
-	  this.state.UsersLogin = [
-	  {name: 'elena.kalistratova'},
-	  {name: 'boris.karavaev'},
-	  {name: 'alexander.gorbunov'},
-	  {name: 'tatyana.orlova'},
-	  {name: 'natalya.zyeva'},
+	  this.Users = [
+	  {name: 'yelkalistratova' , string: '814384'},
+	  {name: 'boriskaravaev', string: '123123'},
+	  {name: 'alexander.gorbunov', string: '537883'},
+	  {name: 'tatyana.orlova', string: '312123'},
+	  {name: 'natalya.zyeva', string: '312334'},
 	  ];
 
-	 this.state.UsersPassword = [
-	  {name: '814838'},
-	  {name: '492383'},
-	  {name: '135433'},
-	  {name: '902343'},
-	  {name: '231334'},
-	  ];
-	 	 
 	  this.onChange = this.onChange.bind(this);
 	}
   
@@ -115,14 +107,16 @@ const orangeBackground = {
 	</Select>
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-	{this.state.UsersLogin.reduce(({ name }) => (
-	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={name? 'valid' : 'error'} bottom={name? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+	{this.Users.reduce(({ name, string }) => (
+	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 	))}
-	{this.state.UsersPassword.reduce(({ name }) => (
-	<Input type="password" name="password" value={name} key={name} onChange={this.onChange} status={name? 'valid' : 'error'} bottom={name? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+	{this.Users.reduce(({ name, string }) => (
+	<Input type="password" name="password" value={string} key={string} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 	))}
-	<Button size="xl" level="primary" onClick={this.props.go? this.UsersLogin : this.UsersPassword} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
-	</FormLayoutGroup>
+	{this.Users.reduce(({ name, string }) => (
+	<Button size="xl" level="primary" onClick={this.props.go? name : string} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	))}
+    </FormLayoutGroup>
       </FormLayout>
 	</Group>
 	</Panel>
