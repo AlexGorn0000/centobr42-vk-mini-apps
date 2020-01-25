@@ -22,6 +22,12 @@ import To5e from './panels/education/classes/5/To5e';
 import To5h from './panels/education/classes/5/To5h';
 import To6a from './panels/education/classes/6/To6a';
 import To6b from './panels/education/classes/6/To6b';
+import To6v from './panels/education/classes/6/To6v';
+import To6g from './panels/education/classes/6/To6g';
+import To6d from './panels/education/classes/6/To6d';
+import To6e from './panels/education/classes/6/To6e';
+import To6h from './panels/education/classes/6/To6h';
+import To6z from './panels/education/classes/6/To6z';
 import Project1 from './panels/projects/Project1';
 
 
@@ -72,8 +78,14 @@ const App = () => {
 			<To5d id="To5d" go={go}/>
 			<To5e id="To5e" go={go}/>
 			<To5h id="To5h" go={go}/>
-			<To5h id="To6a" go={go}/>
-			<To5h id="To6b" go={go}/>
+			<To6a id="To6a" go={go}/>
+			<To6b id="To6b" go={go}/>
+			<To6v id="To6v" go={go}/>
+			<To6g id="To6g" go={go}/>
+			<To6d id="To6d" go={go}/>
+			<To6e id="To6e" go={go}/>
+			<To6h id="To6h" go={go}/>
+			<To6z id="To6z" go={go}/>
 			<Project1 id='Project1' go={go} />
 		</View>
 	);
