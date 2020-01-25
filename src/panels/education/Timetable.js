@@ -56,12 +56,12 @@ const Timetable = ({ id, go, fetchedUser}) => (
   <List>
   <Cell expandable before={<Avatar src="https://sun9-16.userapi.com/c204628/v204628887/4907f/JL5Ein_D2YA.jpg"/>} onClick={go} Data-to="To6a">6 «А» класс</Cell>
   <Cell expandable before={<Avatar src="https://sun9-49.userapi.com/c204628/v204628887/49086/kITrF-B_L9g.jpg"/>} onClick={go} Data-to="To6b">6 «Б» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-63.userapi.com/c204628/v204628887/4908d/PvM7KFIoqvc.jpg"/>}>6 «В» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-68.userapi.com/c204628/v204628887/49094/t2W3ZRY4XHw.jpg"/>}>6 «Г» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-44.userapi.com/c204628/v204628887/4909b/jdjG3WUyWmk.jpg"/>}>6 «Д» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-61.userapi.com/c204628/v204628887/490a2/EAuuXu717xM.jpg"/>}>6 «Е» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-18.userapi.com/c204628/v204628887/490a9/SmxeWu46-RM.jpg"/>}>6 «Ж» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-50.userapi.com/c204628/v204628887/490b0/BUaRBp57Pi4.jpg"/>}>6 «З» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-63.userapi.com/c204628/v204628887/4908d/PvM7KFIoqvc.jpg"/>} onClick={go} Data-to="To6v">6 «В» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-68.userapi.com/c204628/v204628887/49094/t2W3ZRY4XHw.jpg"/>} onClick={go} Data-to="To6g">6 «Г» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-44.userapi.com/c204628/v204628887/4909b/jdjG3WUyWmk.jpg"/>} onClick={go} Data-to="To6d">6 «Д» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-61.userapi.com/c204628/v204628887/490a2/EAuuXu717xM.jpg"/>} onClick={go} Data-to="To6e">6 «Е» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-18.userapi.com/c204628/v204628887/490a9/SmxeWu46-RM.jpg"/>} onClick={go} Data-to="To6h">6 «Ж» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-50.userapi.com/c204628/v204628887/490b0/BUaRBp57Pi4.jpg"/>} onClick={go} Data-to="To6z">6 «З» класс</Cell>
   </List>
   </Group>
   <Group title="7-е классы">
