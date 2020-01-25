@@ -82,7 +82,7 @@ const To5e = ({ id, go, fetchedUser}) => (
   5-ый урок: Математика<br/>
   6-ой урок: Физическая культура (бассейн)</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">??????????</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick='connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393#hash";}); return true'>Поделиться</Cell>
   </Group>
  </Panel>
 );

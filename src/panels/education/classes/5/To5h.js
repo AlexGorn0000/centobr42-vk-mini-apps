@@ -81,7 +81,7 @@ const To5h = ({ id, go, fetchedUser}) => (
   4-ый урок: Литература<br/> 
   5-ый урок: Английский язык</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">??????????</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick='connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393#hash";}); return true'>Поделиться</Cell>
   </Group>
  </Panel>
 );
