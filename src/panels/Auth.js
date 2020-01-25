@@ -116,12 +116,12 @@ const orangeBackground = {
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 	{this.state.UsersLogin.reduce(({ name }) => (
-	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={this.UsersLogin? 'valid' : 'error'} bottom={this.UsersLogin? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
+	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={name? 'valid' : 'error'} bottom={name? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
 	))}
 	{this.state.UsersPassword.reduce(({ name }) => (
-	<Input type="password" name="password" value={name} key={name} onChange={this.onChange} status={this.UsersPassword? 'valid' : 'error'} bottom={this.UsersPassword? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
+	<Input type="password" name="password" value={name} key={name} onChange={this.onChange} status={name? 'valid' : 'error'} bottom={name? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
 	))}
-	<Button size="xl" level="primary" onClick={!this.setState.UsersLogin, !this.setState.UsersPassword, this.props.go} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" onClick={this.props.go? this.UsersLogin : this.UsersPassword} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
