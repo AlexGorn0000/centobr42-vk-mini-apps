@@ -65,13 +65,21 @@ const orangeBackground = {
 		password: '',
       }
 
-	  this.state.Users = [
-	  {name: 'yelkalistratova' , string: '814384'},
-	  {name: 'boriskaravaev', string: '123123'},
-	  {name: 'alexgorbunov', string: '537883'},
-	  {name: 'tatyorlova', string: '312123'},
-	  {name: 'natalzyeva', string: '312334'},
+	  this.state.login = [
+	  {name: 'yelkalistratova'},
+	  {name: 'boriskaravaev'},
+	  {name: 'alexgorbunov'},
+	  {name: 'tatyorlova'},
+	  {name: 'natalzyeva'}
 	  ];
+
+	  this.state.pass = [
+	  {name: '8145673894'},
+	  {name: '2131823848'},
+	  {name: '1242141244'},
+	  {name: '5453453554'},
+	  {name: '2321312312'}
+	  ]
 
 	  this.onChange = this.onChange.bind(this);
 	}
@@ -107,13 +115,9 @@ const orangeBackground = {
 	</Select>
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
-	{this.state.Users.reduce(({ name, string }) => (
-	<Input type="login" name="login" value={name} key={name} onChange={this.onChange} status={login? 'valid' : 'error'} bottom={login? 'Ваш логин успешно инициализирован' : 'Ошибка: 0x52d270. Ваши данные не внесены в систему!'} placeholder="Введите логин" />
-	))}
-	{this.state.Users.reduce(({ name, string }) => (
-	<Input type="password" name="password" value={string} key={string} onChange={this.onChange} status={password? 'valid' : 'error'} bottom={password? 'Ваш пароль успешно инициализорован!' : 'Ошибка: 0x74d270. Ваши данные не внесены в систему!'} placeholder="Введите пароль"/>
-	))}
-	<Button size="xl" level="primary" onClick={this.props.go, !this.state.Users} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Input type="login" name="login" placeholder="Введите логин" onChange={e => this.setState({login: e.target.value})}/>
+	<Input type="password" name="password" placeholder="Введите пароль" onChange={e => this.setState({pass: e.target.value})}/>
+	<Button size="xl" level="primary" onClick={() => {var login=this.state.login; var password=this.state.password;}}  onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
