@@ -85,8 +85,8 @@ const orangeBackground = {
 	}
   
 	onChange(e) {
-	  const { name, value } = e.currentTarget;
-	  this.setState({ [name]: value });
+	  const { login, password } = e.currentTarget;
+	  this.setState({ [login]: password });
 	}
   
 	render() {
@@ -117,7 +117,7 @@ const orangeBackground = {
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 	<Input type="login" name="login" placeholder="Введите логин" onChange={e => this.setState({login: e.target.value})}/>
 	<Input type="password" name="password" placeholder="Введите пароль" onChange={e => this.setState({pass: e.target.value})}/>
-	<Button size="xl" level="primary" type="submit" onClick={() => {var login = this.state.login; var password = this.state.password}} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" type="submit" onClick={() => {var login = this.state.login; var password = this.state.password; this.props.go();}} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
