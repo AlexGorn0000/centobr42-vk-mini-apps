@@ -65,27 +65,27 @@ const orangeBackground = {
 		password: '',
       }
 
-	  this.state.login = [
-	  {name: 'yelkalistratova'},
-	  {name: 'boriskaravaev'},
-	  {name: 'alexgorbunov'},
-	  {name: 'tatyorlova'},
-	  {name: 'natalzyeva'}
+	  const login = [
+	  {name: '1', value: 'yelkalistratova'},
+	  {name: '2', value: 'boriskaravaev'},
+	  {name: '3', value: 'alexgorbunov'},
+	  {name: '4', value: 'tatyorlova'},
+	  {name: '5', value: 'natalzyeva'}
 	  ];
 
-	  this.state.password = [
-	  {name: '8145673894'},
-	  {name: '2131823848'},
-	  {name: '1242141244'},
-	  {name: '5453453554'},
-	  {name: '2321312312'}
+	  const password = [
+	  {name: '1', value: '8145673894'},
+	  {name: '2', value: '2131823848'},
+	  {name: '3', value: '1242141244'},
+	  {name: '4', value: '5453453554'},
+	  {name: '5', value: '2321312312'}
 	  ];
 
 	  this.onChange = this.onChange.bind(this);
 	}
   
 	onChange(e) {
-	  const { name, value } = e.currentTarget;
+	  const { name, value } = e.target.value;
 	  this.setState({ [name]: value });
 	}
   
