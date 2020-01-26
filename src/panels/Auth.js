@@ -65,33 +65,35 @@ const orangeBackground = {
 		password: '',
       }
 
-	  const login = [
-	  {name: '1', value: 'yelkalistratova'},
-	  {name: '2', value: 'boriskaravaev'},
-	  {name: '3', value: 'alexgorbunov'},
-	  {name: '4', value: 'tatyorlova'},
-	  {name: '5', value: 'natalzyeva'}
+	  this.state.login = [
+	  {name: [1], value: 'yelkalistratova'},
+	  {name: [2], value: 'boriskaravaev'},
+	  {name: [3], value: 'alexgorbunov'},
+	  {name: [4], value: 'tatyorlova'},
+	  {name: [5], value: 'natalzyeva'}
 	  ];
 
-	  const password = [
-	  {name: '1', value: '8145673894'},
-	  {name: '2', value: '2131823848'},
-	  {name: '3', value: '1242141244'},
-	  {name: '4', value: '5453453554'},
-	  {name: '5', value: '2321312312'}
+	  this.state.password = [
+	  {name: [1], value: '8145673894'},
+	  {name: [2], value: '2131823848'},
+	  {name: [3], value: '1242141244'},
+	  {name: [4], value: '5453453554'},
+	  {name: [5], value:'2321312312'}
 	  ];
 
-	  this.onChange = this.onChange.bind(this);
+	  this.onChangeLogin = this.onChangeLogin.bind(this);
+	  this.onChangePassword = this.onChangePassword.bind(this);
 	}
   
-	onChange(e) {
-	  const { name, value } = e.target.value;
-	  this.setState({ [name]: value });
+	onChangeLogin(e) {
+	this.setState({ login: e.target.value });
 	}
-  
-	render() {
-	const { login, password } = this.state;
-    return(
+
+	onChangePassword(e) {
+	this.setState({ password: e.target.value })
+	}
+  	render() {
+	return(
 	<Panel id={this.props.id}>
 	<PanelHeader left={<HeaderButton><Icon24UserOutgoing/></HeaderButton>}>Вход в учетную запись</PanelHeader>
 	<Group>
@@ -117,7 +119,7 @@ const orangeBackground = {
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 	<Input type="login" name="login" placeholder="Введите логин" onChange={e => this.setState({login: e.target.value})}/>
 	<Input type="password" name="password" placeholder="Введите пароль" onChange={e => this.setState({password: e.target.value})}/>
-	<Button size="xl" level="primary" onClick={(go) => {var login=this.state.login; var password=this.state.password;}} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" onChange={() => {var login=this.state.login;var password=this.state.password;}} onClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
