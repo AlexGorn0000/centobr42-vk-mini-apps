@@ -39,7 +39,7 @@ import To9a from './panels/education/classes/9/To9a';
 import To9b from './panels/education/classes/9/To9b';
 import To9v from './panels/education/classes/9/To9v';
 import To10a from './panels/education/classes/10/To10a';
-import To10b from './panels/education/classes/11/To10b';
+import To10b from './panels/education/classes/10/To10b';
 import To11a from './panels/education/classes/11/To11a';
 import To11b from './panels/education/classes/11/To11b';
 import To11v from './panels/education/classes/11/To11v';
