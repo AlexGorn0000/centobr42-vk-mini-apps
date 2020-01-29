@@ -7,10 +7,11 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import connect from '@vkontakte/vk-connect'; 
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
+import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -26,35 +27,62 @@ import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';
 import Icon24Market from '@vkontakte/icons/dist/24/market';
 import Icon24LogoVk from '@vkontakte/icons/dist/24/logo_vk';
 import Icon24Help from '@vkontakte/icons/dist/24/help';
+import Icon24Followers from '@vkontakte/icons/dist/24/followers';
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Services from '@vkontakte/icons/dist/24/services';
+import Icon24Write from '@vkontakte/icons/dist/24/write';
 import Icon24Note from '@vkontakte/icons/dist/24/note';
+import Icon24Video from '@vkontakte/icons/dist/24/video';
+import Icon24Gallery from '@vkontakte/icons/dist/24/gallery';
 import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24Gift from '@vkontakte/icons/dist/24/gift';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
+import Icon24Place from '@vkontakte/icons/dist/24/place';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon24Poll from '@vkontakte/icons/dist/24/poll';
 import user from '@vkontakte/icons/dist/24/user';
 
-const Projects = ({ id, go, fetchedUser }) => (
+
+const Project2 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мероприятия</PanelHeader>
- 	<img width="100%" height="100%" src="https://sun9-31.userapi.com/c857720/v857720147/167b49/hsg4j6NzW5Y.jpg"/>
-	<Group title="Действующие мероприятия">
-    <Cell expandable before={<Avatar src="https://sun9-63.userapi.com/c205628/v205628009/4712e/Ec_INcSjse0.jpg"/>} onClick={go} Data-to="Project2" description="День рождения школы. Скоро 2 года!">Один год хорошо, а два лучше!</Cell>
-	<Separator style={{margin: '5px 0'}}/>
-	<Div>
-	<Button level="secondary">Не могу пойти</Button> <Button level="commerce">Я смогу придти</Button></Div>
-     </Group>
-     <Group title="Прошедшие мероприятия">
-     <List>
-     <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} onClick={go} Data-to="Project1" description="Конкурс пародий. Повтори, если сможешь!">Конкурс "Один в один"</Cell>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Один год хорошо, а два лучше!</PanelHeader>
+    <Group>
+    <Gallery
+    slideWidth="100%"
+    align="center"
+    style={{ height: 200 }}>
+				        <img src="https://sun9-67.userapi.com/c858016/v858016147/1660c4/MzcFxgrZIEY.jpg"/>
+    </Gallery>
+    </Group>
+    <Group>
+    <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
+    <Div>
+    <InfoRow>31 Января в 15:00</InfoRow>
+    </Div>
+    <Separator style={{ margin: '5px 0' }} />
+    <Cell before={<Icon24Place/>}>Место проведения</Cell>
+    <Div>
+    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А, Актовый зал</InfoRow>
+    </Div>
+    </Group>
+    <Group title="Дополнительно">
+    <Separator style={{ margin: '5px 0' }} />
+    <List>
+    <Cell before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">Статистика</Cell>
+    <Cell before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">Видеозаписи</Cell>
+    <Cell before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">Фотографии</Cell>
     </List>
     </Group>
+    <Group>
+  	<List>
+	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/centobr42_press_center">Наша группа</Cell>
+	 </List>
+	 </Group>
  </Panel>
 );
 
-Projects.propTypes = {
+Project2.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -67,4 +95,4 @@ Projects.propTypes = {
 	}),
 };
 
-export default Projects;
+export default Project2;

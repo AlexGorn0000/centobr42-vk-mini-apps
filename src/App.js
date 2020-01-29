@@ -43,11 +43,11 @@ import To10b from './panels/education/classes/10/To10b';
 import To11a from './panels/education/classes/11/To11a';
 import To11b from './panels/education/classes/11/To11b';
 import To11v from './panels/education/classes/11/To11v';
-import Project1 from './panels/projects/Project1';
-
+import Project1 from './panels/projects/project1/Project1';
+import Project2 from './panels/projects/project2/Project2';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Timetable');
+	const [activePanel, setActivePanel] = useState('Auth');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
@@ -117,6 +117,7 @@ const App = () => {
 			<To11b id="To11b" go={go}/>
 			<To11v id="To11v" go={go}/>
 			<Project1 id='Project1' go={go} />
+			<Project2 id='Project2' go={go} />
 		</View>
 	);
 }
