@@ -28,6 +28,21 @@ import To6d from './panels/education/classes/6/To6d';
 import To6e from './panels/education/classes/6/To6e';
 import To6h from './panels/education/classes/6/To6h';
 import To6z from './panels/education/classes/6/To6z';
+import To7a from './panels/education/classes/7/To7a';
+import To7b from './panels/education/classes/7/To7b';
+import To7v from './panels/education/classes/7/To7v';
+import To7g from './panels/education/classes/7/To7g';
+import To8a from './panels/education/classes/8/To8a';
+import To8b from './panels/education/classes/8/To8b';
+import To8v from './panels/education/classes/8/To8v';
+import To9a from './panels/education/classes/9/To9a';
+import To9b from './panels/education/classes/9/To9b';
+import To9v from './panels/education/classes/9/To9v';
+import To10a from './panels/education/classes/10/To10a';
+import To10b from './panels/education/classes/11/To10b';
+import To11a from './panels/education/classes/11/To11a';
+import To11b from './panels/education/classes/11/To11b';
+import To11v from './panels/education/classes/11/To11v';
 import Project1 from './panels/projects/Project1';
 
 
@@ -86,6 +101,21 @@ const App = () => {
 			<To6e id="To6e" go={go}/>
 			<To6h id="To6h" go={go}/>
 			<To6z id="To6z" go={go}/>
+			<To7a id="To7a" go={go}/>
+			<To7b id="To7b" go={go}/>
+			<To7v id="To7v" go={go}/>
+			<To7g id="To7g" go={go}/>
+			<To8a id="To8a" go={go}/>
+			<To8b id="To8b" go={go}/>
+			<To8v id="To8v" go={go}/>
+			<To9a id="To9a" go={go}/>
+			<To9b id="To9b" go={go}/>
+			<To9v id="To9v" go={go}/>
+			<To10a id="To10a" go={go}/>
+			<To10b id="To10b" go={go}/>
+			<To11a id="To11a" go={go}/>
+			<To11b id="To11b" go={go}/>
+			<To11v id="To11v" go={go}/>
 			<Project1 id='Project1' go={go} />
 		</View>
 	);

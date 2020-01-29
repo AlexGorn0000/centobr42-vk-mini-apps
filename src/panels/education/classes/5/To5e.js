@@ -44,7 +44,7 @@ const To5e = ({ id, go, fetchedUser}) => (
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>5 «Е» класс</PanelHeader>
   <Group>
   <Div>Понедельник<br/>
-  1-ый урок: нет урока<br/>
+  1-ый урок: Нет урока<br/>
   2-ой урок: Русский язык<br/> 
   3-ий урок: Английский язык<br/> 
   4-ый урок: Математика<br/> 

@@ -53,7 +53,7 @@ const To6a = ({ id, go, fetchedUser}) => (
   7-ой урок: Физическая культура (зал)</Div>
   <Separator style={{margin: '10px 0'}}/>
   <Div>Вторник<br/>
-  1-ый урок: нет урока<br/>
+  1-ый урок: Нет урока<br/>
   2-ой урок: Музыка<br/> 
   3-ий урок: Немецкий язык<br/> 
   4-ый урок: Английский язык<br/> 
@@ -84,7 +84,7 @@ const To6a = ({ id, go, fetchedUser}) => (
   4-ый урок: Физическая культура (бассейн)<br/> 
   5-ый урок: Родная литература</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">??????????</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Поделиться</Cell>
   </Group>
  </Panel>
 );

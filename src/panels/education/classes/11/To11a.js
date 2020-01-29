@@ -39,56 +39,66 @@ import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 import Icon24Upload from '@vkontakte/icons/dist/24/upload';
 import user from '@vkontakte/icons/dist/24/user';
 
-const To5a = ({ id, go, fetchedUser}) => (
+const To11a = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>5 «А» класс</PanelHeader>
+	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>11 «А» класс</PanelHeader>
   <Group>
   <Div>Понедельник<br/>
-  1-ый урок: Нет урока<br/>
-  2-ой урок: Математика<br/> 
-  3-ий урок: Музыка<br/> 
-  4-ый урок: ИЗО<br/> 
-  5-ый урок: Русский язык<br/> 
-  6-ой урок: ОДНК<br/> 
-  7-ой урок: Английский язык<br/></Div>
-  <Separator style={{margin: '10px 0'}}/>
-  <Div>Вторник<br/>
-  1-ый урок: Английский язык<br/>
-  2-ой урок: Немецкий язык<br/> 
-  3-ий урок: Биология<br/> 
-  4-ый урок: Математика<br/> 
-  5-ый урок: Русский язык<br/></Div>
-  <Separator style={{margin: '10px 0'}}/>
-  <Div>Среда<br/>
-  1-ый урок: Английский язык<br/>
-  2-ой урок: Математика<br/> 
-  3-ий урок: Русский язык<br/> 
-  4-ый урок: Литература<br/> 
-  5-ый урок: Математика<br/></Div>
-  <Separator style={{margin: '10px 0'}}/>
-  <Div>Четверг<br/>
-  1-ый урок: Литература<br/>
-  2-ой урок: Физическая культура (зал)<br/> 
-  3-ий урок: Русский язык<br/> 
+  1-ый урок: Информатика (1-я группа)<br/>
+  2-ой урок: Информатика (1-я группа)<br/> 
+  3-ий урок: Математика<br/> 
   4-ый урок: Математика<br/> 
   5-ый урок: История<br/>
-  6-ой урок: Информатика<br/>
-  7-ой урок: География</Div>
+  6-ой урок: Обществознание<br/>
+  7-ой урок: Физическая культура (зал)<br/>
+  8-ой урок: Астрономия</Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Вторник<br/>
+  1-ый урок: Нет урока<br/>
+  2-ой урок: Обществознание<br/> 
+  3-ий урок: Английский язык<br/> 
+  4-ый урок: Химия<br/> 
+  5-ый урок: Русский язык<br/>
+  6-ой урок: Литература
+  7-ой урок: Физика<br/>
+  8-ой урок: Физика</Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Среда<br/>
+  1-ый урок: Информатика<br/>
+  2-ой урок: Информатика<br/> 
+  3-ий урок: Математика<br/> 
+  4-ый урок: Математика<br/> 
+  5-ый урок: Обществознание<br/>
+  6-ой урок: Английский язык<br/>
+  7-ой урок: Физическая культура (зал)<br/>
+  8-ой урок: Физика</Div>
+  <Separator style={{margin: '10px 0'}}/>
+  <Div>Четверг<br/>
+  1-ый урок: Биология<br/>
+  2-ый урок: Электронная математика<br/> 
+  3-ий урок: ОБЖ<br/> 
+  4-ый урок: История<br/> 
+  5-ый урок: Английский язык<br/>
+  6-ой урок: Литература<br/>
+  7-ой урок: Информатика (2-я группа)<br/>
+  8-ой урок: Информатика (2-я группа)</Div>
   <Separator style={{margin: '10px 0'}}/>
   <Div>Пятница<br/>
-  1-ый урок: Русский язык<br/>
-  2-ой урок: Физическая культура (бассейн)<br/> 
-  3-ий урок: История<br/> 
-  4-ый урок: Технология<br/> 
-  5-ый урок: Родная литература<br/>
-  6-ой урок: Литература</Div>
+  1-ый урок: Информатика (1-я группа)<br/>
+  2-ой урок: Информатика (1-я группа)<br/> 
+  3-ий урок: Родной язык<br/> 
+  4-ый урок: Математика<br/> 
+  5-ый урок: Литература<br/>
+  6-ой урок: Математика<br/>
+  7-ой урок: Физика<br/>
+  8-ой урок: Физика</Div>
   <Separator style={{margin: '15px 0'}}/>
   <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Поделиться</Cell>
   </Group>
  </Panel>
 );
 
-To5a.propTypes = {
+To11a.propTypes = {
 	id: PropTypes.string.isRequired,
   go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -101,4 +111,4 @@ To5a.propTypes = {
 	}),
 };
 
-export default To5a;
+export default To11a;

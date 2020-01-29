@@ -41,6 +41,9 @@ import user from '@vkontakte/icons/dist/24/user';
 const Timetable = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
+  <FixedLayout>
+  <img width="100%" height="50%" src="https://sun9-5.userapi.com/c204628/v204628810/50fca/0P_UVJPR_qY.jpg"/>
+  </FixedLayout>
   <Group title="5-е классы">
   <List>
   <Cell expandable before={<Avatar src="https://sun9-69.userapi.com/c204628/v204628887/4904e/eFOm_3bHQIk.jpg"/>} onClick={go} Data-to="To5a">5 «А» класс</Cell>
@@ -66,36 +69,37 @@ const Timetable = ({ id, go, fetchedUser}) => (
   </Group>
   <Group title="7-е классы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-45.userapi.com/c204628/v204628887/490b7/l7m7icyWbiQ.jpg"/>}>7 «А» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-11.userapi.com/c204628/v204628887/490be/sQqWGz2pPrs.jpg"/>}>7 «Б» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-5.userapi.com/c204628/v204628887/490c5/PtXpBtMpqJA.jpg"/>}>7 «В» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-39.userapi.com/c204628/v204628887/490cc/fz6ESNDQuDc.jpg"/>}>7 «Г» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-45.userapi.com/c204628/v204628887/490b7/l7m7icyWbiQ.jpg"/>} onClick={go} Data-to="To7a">7 «А» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-11.userapi.com/c204628/v204628887/490be/sQqWGz2pPrs.jpg"/>} onClick={go} Data-to="To7b">7 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-5.userapi.com/c204628/v204628887/490c5/PtXpBtMpqJA.jpg"/>} onClick={go} Data-to="To7v">7 «В» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-39.userapi.com/c204628/v204628887/490cc/fz6ESNDQuDc.jpg"/>} onClick={go} Data-to="To7g">7 «Г» класс</Cell>
   </List>
   </Group>
   <Group title="8-е классы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-22.userapi.com/c204628/v204628887/490d3/qmiRntWiYJg.jpg"/>}>8 «A» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-15.userapi.com/c204628/v204628887/490da/xXAut-jzmH0.jpg"/>}>8 «Б» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-30.userapi.com/c204628/v204628887/490e1/SaxAqxFDD-A.jpg"/>}>8 «В» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-22.userapi.com/c204628/v204628887/490d3/qmiRntWiYJg.jpg"/>} onClick={go} Data-to="To8a">8 «A» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-15.userapi.com/c204628/v204628887/490da/xXAut-jzmH0.jpg"/>} onClick={go} Data-to="To8b">8 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-30.userapi.com/c204628/v204628887/490e1/SaxAqxFDD-A.jpg"/>} onClick={go} Data-to="To8v">8 «В» класс</Cell>
   </List>
   </Group>
   <Group title="9-е классы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-19.userapi.com/c204628/v204628887/490e8/8cqIvHry0zk.jpg"/>}>9 «А» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-38.userapi.com/c204628/v204628887/490ef/ObpCEV833ZQ.jpg"/>}>9 «Б» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-42.userapi.com/c204628/v204628887/490f6/f1cgs77rWPg.jpg"/>}>9 «В» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-19.userapi.com/c204628/v204628887/490e8/8cqIvHry0zk.jpg"/>} onClick={go} Data-to="To9a">9 «А» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-38.userapi.com/c204628/v204628887/490ef/ObpCEV833ZQ.jpg"/>} onClick={go} Data-to="To9b">9 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-42.userapi.com/c204628/v204628887/490f6/f1cgs77rWPg.jpg"/>} onClick={go} Data-to="To9v">9 «В» класс</Cell>
   </List>
   </Group>
   <Group title="10-е классы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-6.userapi.com/c204628/v204628887/490fd/MkdOiH-s6kM.jpg"/>}>10 «А» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-11.userapi.com/c204628/v204628887/49104/Awol5kwCMic.jpg"/>}>10 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-6.userapi.com/c204628/v204628887/490fd/MkdOiH-s6kM.jpg"/>} onClick={go} Data-to="To10a">10 «А» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-11.userapi.com/c204628/v204628887/49104/Awol5kwCMic.jpg"/>} onClick={go} Data-to="To10b">10 «Б» класс</Cell>
   </List>
   </Group>
   <Group title="11-е классы">
   <List>
-  <Cell expandable before={<Avatar src="https://sun9-16.userapi.com/c204628/v204628887/4910b/fI9CcMvUBqw.jpg"/>}>11 «А» класс</Cell>
-  <Cell expandable before={<Avatar src="https://sun9-35.userapi.com/c204628/v204628887/49112/ymx0bbUKjcY.jpg"/>}>11 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-16.userapi.com/c204628/v204628887/4910b/fI9CcMvUBqw.jpg"/>} onClick={go} Data-to="To11a">11 «А» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-35.userapi.com/c204628/v204628887/49112/ymx0bbUKjcY.jpg"/>} onClick={go} Data-to="To11b">11 «Б» класс</Cell>
+  <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c858228/v858228394/1575f1/M4omkVu1Fec.jpg"/>} onClick={go} Data-to="To11v">11 «В» класс</Cell>
   </List>
   </Group>
  </Panel>

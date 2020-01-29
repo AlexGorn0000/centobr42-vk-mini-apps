@@ -81,7 +81,7 @@ const To5d = ({ id, go, fetchedUser}) => (
   5-ый урок: Немецкий язык<br/>
   6-ой урок: Музыка</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Подписаться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Поделиться</Cell>
   </Group>
  </Panel>
 );
