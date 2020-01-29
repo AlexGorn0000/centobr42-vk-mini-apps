@@ -41,9 +41,7 @@ import user from '@vkontakte/icons/dist/24/user';
 const Timetable = ({ id, go, fetchedUser}) => (
 	<Panel id={id}>
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Расписание уроков</PanelHeader>
-  <FixedLayout>
   <img width="100%" height="50%" src="https://sun9-5.userapi.com/c204628/v204628810/50fca/0P_UVJPR_qY.jpg"/>
-  </FixedLayout>
   <Group title="5-е классы">
   <List>
   <Cell expandable before={<Avatar src="https://sun9-69.userapi.com/c204628/v204628887/4904e/eFOm_3bHQIk.jpg"/>} onClick={go} Data-to="To5a">5 «А» класс</Cell>
