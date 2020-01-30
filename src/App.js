@@ -12,6 +12,7 @@ import Education from './panels/general/Education';
 import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
 import Teaching from './panels/education/Teaching';
+import Help from './panels/general/Help';
 import Timetable from './panels/education/Timetable';
 import To5a from './panels/education/classes/5/To5a';
 import To5b from './panels/education/classes/5/To5b';
@@ -47,7 +48,7 @@ import Project1 from './panels/projects/project1/Project1';
 import Project2 from './panels/projects/project2/Project2';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Auth');
+	const [activePanel, setActivePanel] = useState('Help');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
@@ -86,6 +87,7 @@ const App = () => {
 			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Timetable id='Timetable' fetchedUser={fetchedUser} go={go}/>
+			<Help id ='Help' fetchedUser={fetchedUser} go={go}/>
 			<To5a id="To5a" go={go}/>
 			<To5b id="To5b" go={go}/>
 			<To5v id="To5v" go={go}/>

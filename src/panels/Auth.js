@@ -80,7 +80,7 @@ const orangeBackground = {
 	  {pass: '1242141244'},
 	  {pass: '5453453554'},
 	  {pass: '2321312312'}
-	  ]
+	  ];
 
 	  this.onChange = this.onChange.bind(this);
 	  this.openDefault = this.openDefault.bind(this);
@@ -139,13 +139,13 @@ const orangeBackground = {
 	<Select>
 	<option value="0">Учащийся</option>
 	<option value="1">Родитель</option>
-	<option value="2">Преподователь</option>
+	<option value="2">Преподаватель</option>
 	</Select>
 	<br></br>
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 	<Input type="login" name="login" placeholder="Введите логин" onChange={e => this.setState({login: e.target.value})}/>
 	<Input type="password" name="password" placeholder="Введите пароль" onChange={e => this.setState({pass: e.target.value})}/>
-	<Button size="xl" level="primary" type="submit" onClick={() => {var login = this.state.login; var password = this.state.pass; alert = this.openDefault}} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" onClick={() => {var login = this.setState.login; var password = this.setState.pass; alert = this.openDefault}} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
