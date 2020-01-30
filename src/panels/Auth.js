@@ -9,7 +9,7 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View, Tooltip} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View, Tooltip, Alert} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -66,28 +66,55 @@ const orangeBackground = {
       }
 
 	  this.state.login = [
-	  {name: 'yelkalistratova'},
-	  {name: 'boriskaravaev'},
-	  {name: 'alexgorbunov'},
-	  {name: 'tatyorlova'},
-	  {name: 'natalzyeva'}
+	  {login: 'yelkalistratova'},
+	  {login: 'boriskaravaev'},
+	  {login: 'alexgorbunov'},
+	  {login: 'tatyorlova'},
+	  {login: 'natalzyeva'}
 	  ];
 
-	  this.state.password = [
-	  {name: '8145673894'},
-	  {name: '2131823848'},
-	  {name: '1242141244'},
-	  {name: '5453453554'},
-	  {name: '2321312312'}
+	  this.state.pass = [
+	  {pass: '8145673894'},
+	  {pass: '2131823848'},
+	  {pass: '1242141244'},
+	  {pass: '5453453554'},
+	  {pass: '2321312312'}
 	  ]
 
 	  this.onChange = this.onChange.bind(this);
+	  this.openDefault = this.openDefault.bind(this);
+	  this.closePopout = this.closePopout.bind(this);
 	}
   
 	onChange(e) {
 	  const { login, password } = e.currentTarget;
-	  this.setState({ [login]: password });
+	  this.setState({login: e.target.value });
+	  this.setState({pass: e.target.value});
 	}
+
+	openDefault () {
+		this.setState({ popout:
+		<Alert
+			actions={[{
+			  title: 'Отмена',
+			  autoclose: true,
+			  mode: 'cancel'
+			}, {
+			  title: 'Подтвердить',
+			  autoclose: true,
+			  action: () => this.props.go('Home'),
+			}]}
+			onClose={this.closePopout}
+		  >
+		<h2>Подтвердите действие</h2>
+		<p>Нажимая кнопку потверждения, Вы подтверждаете вход в учетную запись и соглашаетсь с политикой конфиденциальности</p>
+		  </Alert>
+		});
+	  }
+
+	  closePopout () {
+		this.setState({ popout: null });
+	  }
   
 	render() {
 	const { login, password } = this.state;
@@ -117,7 +144,7 @@ const orangeBackground = {
 	<h4 style={{marginLeft: '20px'}}>Введите данные для входа:</h4>
 	<Input type="login" name="login" placeholder="Введите логин" onChange={e => this.setState({login: e.target.value})}/>
 	<Input type="password" name="password" placeholder="Введите пароль" onChange={e => this.setState({pass: e.target.value})}/>
-	<Button size="xl" level="primary" type="submit" onClick={() => {var login = this.state.login; var password = this.state.password; this.props.go();}} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
+	<Button size="xl" level="primary" type="submit" onChange={() => {var login = this.state.login; var password = this.state.pass;}} onClick={this.openDefault} onDoubleClick={this.props.go} Data-to="Home">Войти</Button>   
 	</FormLayoutGroup>
       </FormLayout>
 	</Group>
