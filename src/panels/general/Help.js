@@ -40,7 +40,7 @@ import user from '@vkontakte/icons/dist/24/user';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', snackbar: null, text: ''};
+	  this.state = {name: '',email: '', message: '', snackbar: null, text: 'Отправить', level: 'primary'};
 	  this.openWithAvatar = this.openWithAvatar.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
@@ -49,7 +49,12 @@ class Help extends React.Component {
     }
 
     onSubmit(event){
-    event.preventDefault();
+	this.setState({name: null});
+	this.setState({email: null});
+	this.setState({message: null});
+	this.setState({text: `Отправлено`});
+	this.setState({level: 'secondary'});
+	event.preventDefault();
     }
 
     onChangeMessage(event){
@@ -91,13 +96,13 @@ class Help extends React.Component {
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
 	<Separator style={{margin: '5px 0'}}/>
-	<Div>Не нашли ответ на свой вопрос, но хотите его задать Администрации школы?</Div>
+	<Div>Не нашли ответ на свой вопрос, но хотите задать его Администрации школы?</Div>
 	<Div>
-	<Input placeholder="Введите имя" value={this.state.name} onChange={this.onChangeName}/><br/>
-	<Input placeholder="Введите E-mail" value={this.state.email} onChange={this.onChangeEmail}/><br/>
+	<Input placeholder="Введите имя" type="text" value={this.state.name} onChange={this.onChangeName}/><br/>
+	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link src="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
-	<Button size="xl" onChange={this.onSubmit} onClick={this.openWithAvatar}>Отправить</Button></Div>
+	<Button size="xl" level={this.state.level} onChange={this.onSubmit} onClick={this.openWithAvatar}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );
