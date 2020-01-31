@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -34,30 +34,60 @@ import Icon24Gift from '@vkontakte/icons/dist/24/gift';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon24Dropdown from '@vkontakte/icons/dist/24/dropdown';
 import user from '@vkontakte/icons/dist/24/user';
 
-const Help = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
+class Help extends React.Component {
+    constructor(props) {
+      super(props);
+	  this.state = {name: '',email: '', message: ''};
+	  this.onChangeName = this.onChangeName.bind(this);
+      this.onChangeEmail = this.onChangeEmail.bind(this);
+      this.onChangeMessage = this.onChangeMessage.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(event){
+      alert(`Сообщение успешно отправлено получателю "${this.state.email}"`);
+      event.preventDefault();
+    }
+
+    onChangeMessage(event){
+      this.setState({message: event.target.value});
+	}
+	
+	onChangeName(e){
+	this.setState({name: e.target.value});
+	}
+
+    onChangeEmail(e) {
+      this.setState({email: e.target.value});
+	}
+	
+	render() {
+    return (
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
     <List>
-    <CellButton>Как можно просмотреть сведения о мероприятии?</CellButton>
-    <CellButton>Что делать, если расписание уроков моего ребенка<br/>
-	не совпадает c расписанием уроков в приложении?</CellButton>
-    <CellButton>Будет ли синхронизация с электронным дневником,<br/>
-    чтобы проследить за успеваемостью ребенка?</CellButton>
+    <CellButton asidecontent={<Icon24Dropdown/>}>Как можно просмотреть сведения о мероприятии?</CellButton>
+    <CellButton>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+    <CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
 	<Separator style={{margin: '5px 0'}}/>
 	<Div>Не нашли ответ на свой вопрос, но хотите его задать Администрации школы?</Div>
 	<Div>
-	<Input placeholder="Введите имя"/><br/>
-	<Input placeholder="Введите фамилию"/><br/>
-	<Textarea placeholder="Напишите что-нибудь."/><br/>
-	<Button size="xl">Отправить</Button></Div>
+	<Input placeholder="Введите имя" value={this.state.name} onChange={this.onChangeName}/><br/>
+	<Input placeholder="Введите E-mail" value={this.state.email} onChange={this.onChangeEmail}/><br/>
+	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
+	<Checkbox>Я принимаю условия <Link src="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
+	<Button size="xl" onChange={this.onSubmit}>Отправить</Button></Div>
     </Group>
  </Panel>
 );
+}
+}
 
 Help.propTypes = {
 	id: PropTypes.string.isRequired,

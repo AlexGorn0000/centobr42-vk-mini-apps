@@ -42,10 +42,9 @@ const Home = ({ id, go, fetchedUser }) => (
 	<List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
-	 <Cell expandable before={<Icon24Newsfeed />} onClick={go} Data-to="Activity">Доска почета</Cell>
 	 <Cell expandable before={<Icon24Education />} onClick={go} Data-to="Education">Образование</Cell>
 	 <Cell expandable before={<Icon24Services />} onClick={go} Data-to="Projects">Мероприятия</Cell>
-	 <Cell expandable before={<Icon24Live/>} onClick={go} Data-to="Broadcast">Прямая трансляция</Cell>
+	 <Cell expandable before={<Icon24Live/>} description="В разработке до 5 февраля">Прямая трансляция</Cell>
 	 <Cell expandable before={<Icon24Help/>} onClick={go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
 	 <Cell expandable before={<Icon24Settings />} onClick={go} Data-to="Settings">Настройки</Cell>

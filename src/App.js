@@ -48,7 +48,7 @@ import Project1 from './panels/projects/project1/Project1';
 import Project2 from './panels/projects/project2/Project2';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Help');
+	const [activePanel, setActivePanel] = useState('Profile');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	

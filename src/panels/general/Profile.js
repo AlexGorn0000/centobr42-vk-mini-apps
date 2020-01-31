@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -49,36 +49,27 @@ const Profile = ({ id, go, fetchedUser }) => (
 				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
 			</Cell>
         </Group>}
-        {fetchedUser &&
-		<Group>
-        <Div>
-		<InfoRow title="Уровень:">{`${fetchedUser.Progress_value}`}
-            <Progress value={10} />
-          </InfoRow>
-		</Div>
-		</Group>}
 		{fetchedUser &&
 		<Group>
-		 <Div>
-		 <InfoRow title="Опыт: 50/120">{`${fetchedUser.Progress_value}`}
-			 <Progress value={50} />
-		   </InfoRow>
-		 </Div>
+		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
+		<Separator style={{margin: '5px 0'}}/>
+		<Div>
+		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow>
+		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow>
+		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow>
+		<InfoRow title="Семейное положение">{`${fetchedUser.relation}`}{`${fetchedUser.relation_partner}`}</InfoRow>
+		<InfoRow title="Родной город">{`${fetchedUser.home_town}`}</InfoRow>
+		</Div>
+		<br></br>
+		<Cell before={<Icon24Education/>}>Образования</Cell>
+		<Div>
+		<InfoRow title="Школа">{`${fetchedUser.schools}`}<br/>{`${fetchedUser.education}`}</InfoRow>
+		</Div>
 		</Group>}
-	    <Group>
-		<Cell before={<Icon24Gift/>}>Награда</Cell>
-		</Group>
 		<Group>
-		<Group>
-		<Div></Div>
-		<Div></Div>
-		<Div></Div>
+		<Cell before={<Icon24LogoVk/>} component="a" href="https://vk.com/centobr42_press_center">Техническая поддержка</Cell>
 		</Group>
-        <Cell before={<Icon24Education/>}>Образование</Cell>
-        </Group>
-        <Group>
-        <CellButton before={<Icon24Add/>}>Добавить</CellButton>
-        </Group>
+		
  </Panel>
 );
 
