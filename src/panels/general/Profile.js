@@ -42,27 +42,33 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
  		{fetchedUser &&
 		<Group>
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description="Пользователь"
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-        </Group>}
-		{fetchedUser &&
-		<Group>
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow>
-		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow>
-		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow>
+		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell><br/>
+		<InfoRow title="Родной город">{`${fetchedUser.city_title}`}</InfoRow><br/>
+		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
+		{fetchedUser &&
 		<Group>
+		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
+		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<Cell before={<Icon24LogoVk/>} component="a" href="https://vk.com/centobr42_press_center">Техническая поддержка</Cell>
+		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools.name}`}</InfoRow><br/>
+		<InfoRow title="Год обучения">{`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schoolsyear_to}`}</InfoRow><br/>
+		<InfoRow title="Класс">{`${fetchedUser.schools.class}`}</InfoRow><br/>
+		<InfoRow title="Специализация">{`${fetchedUser.schools.speciality}`}</InfoRow><br/>
 		</Div>
+		</Group>}
+		<Group title="Достижения">
+		<Div><center><img src="https://vk.com/sticker/1-9022-128"/></center></Div><br/>
+		<Div><center>Увы, но у Вас нет каких-либо достижений, чтобы их получить участвуйте в мероприятиях.<br/>
+		<Separator style={{margin: '10px 0'}}/>
+		<Button size="xl" level="commerce" onClick={go} Data-to="Projects">Перейти в блок "Мероприятия"</Button></center></Div>
+		</Group>
+		<Group>
+		<Cell before={<Icon24LogoVk/>} component="a" href="https://vk.com/centobr42_press_center">Техническая поддержка</Cell>
 		</Group>
  </Panel>
 );

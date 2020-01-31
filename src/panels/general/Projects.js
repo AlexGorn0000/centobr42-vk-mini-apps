@@ -41,13 +41,12 @@ const Projects = ({ id, go, fetchedUser }) => (
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мероприятия</PanelHeader>
  	<img width="100%" height="100%" src="https://sun9-31.userapi.com/c857720/v857720147/167b49/hsg4j6NzW5Y.jpg"/>
 	<Group title="Действующие мероприятия">
-    <Cell expandable before={<Avatar src="https://sun9-63.userapi.com/c205628/v205628009/4712e/Ec_INcSjse0.jpg"/>} onClick={go} Data-to="Project2" description="День рождения школы. Скоро 2 года!">Один год хорошо, а два лучше!</Cell>
+	<Cell before={<Avatar style={{ background: 'var(--destructive)' }} size={24}><Icon24Info fill="var(--white)" /></Avatar>}>В данный момент нет активных<br/>мероприятий, попробуйте вернуться<br/>позднее.</Cell>
 	<Separator style={{margin: '5px 0'}}/>
-	<Div>
-	<Button level="secondary">Не могу пойти</Button> <Button level="commerce">Я смогу придти</Button></Div>
-     </Group>
+	</Group>
      <Group title="Прошедшие мероприятия">
      <List>
+	 <Cell expandable before={<Avatar src="https://sun9-63.userapi.com/c205628/v205628009/4712e/Ec_INcSjse0.jpg"/>} onClick={go} Data-to="Project2" description="День рождения школы. Скоро 2 года!">Один год хорошо, а два лучше!</Cell>
      <Cell expandable before={<Avatar src="https://sun9-3.userapi.com/c855416/v855416853/1a4f0c/YB36punuuwQ.jpg"/>} onClick={go} Data-to="Project1" description="Конкурс пародий. Повтори, если сможешь!">Конкурс "Один в один"</Cell>
     </List>
     </Group>
