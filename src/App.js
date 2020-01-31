@@ -13,6 +13,7 @@ import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
 import Teaching from './panels/education/Teaching';
 import Help from './panels/general/Help';
+import Update from './panels/Update';
 import Timetable from './panels/education/Timetable';
 import To5a from './panels/education/classes/5/To5a';
 import To5b from './panels/education/classes/5/To5b';
@@ -48,7 +49,7 @@ import Project1 from './panels/projects/project1/Project1';
 import Project2 from './panels/projects/project2/Project2';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Profile');
+	const [activePanel, setActivePanel] = useState('Home');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	
@@ -61,7 +62,6 @@ const App = () => {
 				}
 		});
 
-		
 		async function fetchData() {
 			const user = await connect.sendPromise('VKWebAppGetUserInfo');
 			connect.sendPromise("VKWebAppGetAuthToken", {"app_id": 7266393,"scope": 'notify,friends,photos,poll'}); 
@@ -79,6 +79,7 @@ const App = () => {
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Auth id='Auth' fetchedUser={fetchedUser} go={go} />
+			<Update id='Update' go={go}/>
 			<Home id='Home' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />

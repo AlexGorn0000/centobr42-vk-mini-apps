@@ -57,19 +57,9 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow>
 		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow>
-		<InfoRow title="Семейное положение">{`${fetchedUser.relation}`}{`${fetchedUser.relation_partner}`}</InfoRow>
-		<InfoRow title="Родной город">{`${fetchedUser.home_town}`}</InfoRow>
-		</Div>
-		<br></br>
-		<Cell before={<Icon24Education/>}>Образования</Cell>
-		<Div>
-		<InfoRow title="Школа">{`${fetchedUser.schools}`}<br/>{`${fetchedUser.education}`}</InfoRow>
+		<Cell before={<Icon24LogoVk/>} component="a" href="https://vk.com/centobr42_press_center">Техническая поддержка</Cell>
 		</Div>
 		</Group>}
-		<Group>
-		<Cell before={<Icon24LogoVk/>} component="a" href="https://vk.com/centobr42_press_center">Техническая поддержка</Cell>
-		</Group>
-		
  </Panel>
 );
 

@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link, Snackbar} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -40,7 +40,8 @@ import user from '@vkontakte/icons/dist/24/user';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: ''};
+	  this.state = {name: '',email: '', message: '', snackbar: null, text: ''};
+	  this.openWithAvatar = this.openWithAvatar.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
@@ -48,8 +49,7 @@ class Help extends React.Component {
     }
 
     onSubmit(event){
-      alert(`Сообщение успешно отправлено получателю "${this.state.email}"`);
-      event.preventDefault();
+    event.preventDefault();
     }
 
     onChangeMessage(event){
@@ -63,6 +63,21 @@ class Help extends React.Component {
     onChangeEmail(e) {
       this.setState({email: e.target.value});
 	}
+
+	openWithAvatar () {
+		if (this.state.snackbar) return;
+		this.setState({ snackbar:
+		  <Snackbar
+			layout="vertical"
+			onClose={() => this.setState({ snackbar: null })}
+			action="Отменить"
+			onActionClick={() => this.setState({ text: `Сообщение получателю "${this.state.email}" было отменено.` })}
+			after={<Avatar src="https://sun9-20.userapi.com/c846018/v846018136/164bc/XoLIN4P5Kb0.jpg?ava=1" size={32} />}
+		  >
+			Сообщение успешно отправлено получателю {`${this.state.email}`}. Ожидайте ответ в течении 2-х часов
+		  </Snackbar>
+		});
+	  }
 	
 	render() {
     return (
@@ -82,7 +97,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите E-mail" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link src="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
-	<Button size="xl" onChange={this.onSubmit}>Отправить</Button></Div>
+	<Button size="xl" onChange={this.onSubmit} onClick={this.openWithAvatar}>Отправить</Button></Div>
     </Group>
  </Panel>
 );
