@@ -44,7 +44,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		 <Group>
 		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">
 		{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
-		 </Group>}
+		</Group>}
 		{fetchedUser &&
 		<Group>
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
@@ -56,14 +56,14 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
-		{fetchedUser &&
+		{fetchedUser.schools &&
 		<Group>
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools.name}`}</InfoRow><br/>
-		<InfoRow title="Год обучения">{`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
-		<InfoRow title="Специализация">{`${fetchedUser.schools.speciality}`}</InfoRow><br/>
+		<InfoRow title="Образовательное учреждение">{`${fetchedUser.name}`}</InfoRow><br/>
+		<InfoRow title="Год обучения">{`${fetchedUser.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
+		<InfoRow title="Специализация">{`${fetchedUser.speciality}`}</InfoRow><br/>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
