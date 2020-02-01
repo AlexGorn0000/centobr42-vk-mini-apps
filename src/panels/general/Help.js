@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link, Snackbar} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link, ActionSheet, ActionSheetItem} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -36,21 +36,31 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Dropdown from '@vkontakte/icons/dist/24/dropdown';
 import user from '@vkontakte/icons/dist/24/user';
+import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary'};
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', popout: null};
+	  this.openContext_1 = this.openContext_1.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
     }
 
+	openContext_1() {
+		this.setState({ popout:
+		  <ActionSheet before={<Icon24Cancel/>} onClose={() => this.setState({ popout: null })}>
+		  <Div>Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы получить сведения о расписании уроков, перейдите в блок "Образование", а затем выберите "Расписание уроков".</Div>
+		 </ActionSheet>
+		});
+	  }
+	
     onSubmit(event){
-	this.setState({name: null});
-	this.setState({email: null});
-	this.setState({message: null});
+	this.setState({name: ''});
+	this.setState({email: ''});
+	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
 	event.preventDefault();
@@ -73,19 +83,18 @@ class Help extends React.Component {
 	<Panel id={this.props.id}>
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
-    <List>
-    <CellButton asidecontent={<Icon24Dropdown/>}>Как можно просмотреть сведения о мероприятии?</CellButton>
-    <CellButton>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
-    <CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
+   	<List>
+    <CellButton onClick={this.openContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
 	<Separator style={{margin: '5px 0'}}/>
-	<Div>Не нашли ответ на свой вопрос, но хотите задать его Администрации школы?</Div>
+	<Div>Не нашли ответ на свой вопрос, но хотите задать его Администрации школы? Укажите контактные данные и опишите свою проблему.</Div>
 	<Div>
 	<Input placeholder="Введите имя" type="text" value={this.state.name} onChange={this.onChangeName}/><br/>
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
-	<Checkbox>Я принимаю условия <Link href="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
+	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_530725961">политики конфиденциальности</Link></Checkbox>
 	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
