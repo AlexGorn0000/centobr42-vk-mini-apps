@@ -49,9 +49,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Родной город">{`${fetchedUser.city_title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
-		</Group>}
-		{fetchedUser &&
-		<Group>
+		<Separator style={{margin: '10px 0'}}/>
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
@@ -63,7 +61,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		</Group>}
 		<Group title="Достижения">
 		<Div><center><img src="https://vk.com/sticker/1-9022-128"/></center></Div><br/>
-		<Div><center>Увы, но у Вас нет каких-либо достижений, чтобы их получить участвуйте в мероприятиях.<br/>
+		<Div><center>Увы, но у Вас нет каких-либо достижений. Чтобы их получить участвуйте в мероприятиях.<br/>
 		<Separator style={{margin: '10px 0'}}/>
 		<Button size="xl" level="commerce" onClick={go} Data-to="Projects">Перейти в блок "Мероприятия"</Button></center></Div>
 		</Group>
