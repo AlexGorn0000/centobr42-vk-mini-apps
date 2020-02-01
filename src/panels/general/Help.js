@@ -41,10 +41,14 @@ import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: ''};
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: '', context_2: '', context_3: ''};
 
 	  this.openWithoutContext_1 = this.openWithoutContext_1.bind(this);
 	  this.closeWithoutContext_1 = this.closeWithoutContext_1.bind(this);
+	  this.openWithoutContext_2 = this.openWithoutContext_2.bind(this);
+	  this.closeWithoutContext_2 = this.closeWithoutContext_2.bind(this);
+	  this.openWithoutContext_3 = this.openWithoutContext_3.bind(this);
+	  this.closeWithoutContext_3 = this.closeWithoutContext_3.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
@@ -52,10 +56,22 @@ class Help extends React.Component {
     }
 	 
 	openWithoutContext_1(){
-	this.setState({context_1: 'Здравствуйте! Вы можете посмотреть информацию о текущем расписании уроков, перейдя в блок "Расписание уроков" и выбрать в нем класс своего ребенка'});
+	this.setState({context_1: 'Здравствуйте! Чтобы посмотреть информацию о текущем расписании уроков, перейдите в блок "Расписание уроков" и выберите в нем класс своего ребенка.'});
 	}
 	closeWithoutContext_1(){
 	this.setState({context_1: ''});
+	}
+	openWithoutContext_2(){
+	this.setState({context_2: 'Наша команда разработчиков в данный момент занимается этим вопросом, но мы считаем, что в дальнейшем синхронизация с электронным дневником вполне возможна.'});
+	}
+	closeWithoutContext_2(){
+    this.setState({context_2: ''});
+	}
+	openWithoutContext_3(){
+	this.setState({context_3: 'Хотим Вам напомнить, что за потерю личных вещей Администрация школы ответственности не несет!'});
+	}
+	closeWithoutContext_3(){
+	this.setState({context_3: ''});
 	}
 
 	onSubmit(event){
@@ -85,13 +101,21 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openWithoutContext_1} onAuxClick={this.closeWithoutContext_1}>Что делать, если у моего ребенка неправильное расписание уроков?</CellButton>
+    <CellButton onClick={this.openWithoutContext_1}>Что делать, если у моего ребенка неправильное расписание уроков?</CellButton>
 	{this.state.context_1 && 
 	<Div>{this.state.context_1}
-	<Separator style={{margin: '5px 0'}}/>
+	<Separator style={{margin: '10px 0'}}/>
 	<Button level="primary" onClick={this.closeWithoutContext_1}>Это решает мою проблему</Button></Div>}
-	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
-    <CellButton>Будет ли обновляться контент в приложении?</CellButton>
+	<CellButton onClick={this.openWithoutContext_2}>Будет ли в дальнейшем синхронизация с электронным дневником?</CellButton>
+	{this.state.context_2 &&
+	<Div>{this.state.context_2}
+	<Separator style={{margin: '10px 0'}}/>
+	<Button level="primary" onClick={this.closeWithoutContext_2}>Это решает мою проблему</Button></Div>}
+    <CellButton onClick={this.openWithoutContext_3}>Что делать, если у моего ребенка в школе пропали личные вещи?</CellButton>
+	{this.state.context_3 &&
+	<Div>{this.state.context_3}
+	<Separator style={{margin: '10px 0'}}/>
+	<Button level="primary" onClick={this.closeWithoutContext_3}>Это решает мою проблему</Button></Div>}
 	</List>
 	<Separator style={{margin: '5px 0'}}/>
 	<Div>Не нашли ответ на свой вопрос, но хотите задать его Администрации школы? Укажите контактные данные и опишите свою проблему.</Div>
