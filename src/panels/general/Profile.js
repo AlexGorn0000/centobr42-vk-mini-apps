@@ -65,9 +65,9 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools.name}`}</InfoRow><br/>
-		<InfoRow title="Год обучения">{`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
-		<InfoRow title="Специализация">{`${fetchedUser.schools.speciality}`}</InfoRow><br/>
+		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools_name}`}</InfoRow><br/>
+		<InfoRow title="Год обучения">{`${fetchedUser.schools_year_from}`}-{`${fetchedUser.schools_year_to}`}</InfoRow><br/>
+		<InfoRow title="Специализация">{`${fetchedUser.schools_speciality}`}</InfoRow><br/>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
@@ -93,8 +93,8 @@ Profile.propTypes = {
 		title: PropTypes.string,
 		schools: PropTypes.shape({
 		name: PropTypes.string,
-		year_from: PropTypes.isRequired,	
-		year_to: PropTypes.isRequired,
+		year_from: PropTypes.string,	
+		year_to: PropTypes.string,
 		speciality: PropTypes.string,
 	  }),
 	}),
