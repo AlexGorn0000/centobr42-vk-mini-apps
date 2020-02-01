@@ -41,7 +41,7 @@ const Projects = ({ id, go, fetchedUser }) => (
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мероприятия</PanelHeader>
  	<img width="100%" height="100%" src="https://sun9-31.userapi.com/c857720/v857720147/167b49/hsg4j6NzW5Y.jpg"/>
 	<Group title="Действующие мероприятия">
-	<Cell before={<Avatar style={{ background: 'var(--destructive)' }} size={24}><Icon24Info fill="var(--white)" /></Avatar>}>В данный момент нет активных<br/>мероприятий, попробуйте вернуться<br/>позднее.</Cell>
+	<Cell before={<Avatar style={{ background: 'var(--destructive)' }} size={24}><Icon24Info fill="var(--white)" /></Avatar>}>В данный момент нет активных<br/>мероприятий! Попробуйте вернуться<br/>позднее.</Cell>
 	<Separator style={{margin: '5px 0'}}/>
 	</Group>
      <Group title="Прошедшие мероприятия">

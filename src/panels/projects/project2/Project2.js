@@ -46,33 +46,26 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project2 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Один год хорошо, а два лучше!</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to=""><Icon24BrowserBack/></HeaderButton>}>Один год хорошо, а два лучше!</PanelHeader>
     <Group>
-    <Gallery
-    slideWidth="100%"
-    align="center"
-    style={{ height: 200 }}>
-				        <img src="https://sun9-67.userapi.com/c858016/v858016147/1660c4/MzcFxgrZIEY.jpg"/>
+    <Gallery slideWidth="100%" align="center" style={{ height: 200 }}>
+    <img src="https://sun9-67.userapi.com/c858016/v858016147/1660c4/MzcFxgrZIEY.jpg"/>
     </Gallery>
     </Group>
     <Group>
     <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
     <Div>
-    <InfoRow>31 Января в 15:00</InfoRow>
+    <InfoRow>31 января в 15:00 в Актовом зале</InfoRow>
     </Div>
     <Separator style={{ margin: '5px 0' }} />
     <Cell before={<Icon24Place/>}>Место проведения</Cell>
     <Div>
-    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А, Актовый зал</InfoRow>
+    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
     </Div>
     </Group>
     <Group title="Дополнительно">
     <Separator style={{ margin: '5px 0' }} />
-    <List>
-    <Cell before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">Статистика</Cell>
-    <Cell before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">Видеозаписи</Cell>
-    <Cell before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">Фотографии</Cell>
-    </List>
+    <Cell before={<Avatar style={{background: 'var(--destructive)'}} size={24}><Icon24Info fill="var(--white)"/></Avatar>}>В данный момент нет дополнительных<br/>действий! Попробуйте вернуться<br/>позднее.</Cell>
     </Group>
     <Group>
   	<List>

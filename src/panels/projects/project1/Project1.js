@@ -46,7 +46,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
     <Group>
     <Gallery
     slideWidth="100%"
