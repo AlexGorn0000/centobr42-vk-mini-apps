@@ -46,7 +46,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project2 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to=""><Icon24BrowserBack/></HeaderButton>}>Один год хорошо, а два лучше!</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>Один год хорошо, а два лучше!</PanelHeader>
     <Group>
     <Gallery slideWidth="100%" align="center" style={{ height: 200 }}>
     <img src="https://sun9-67.userapi.com/c858016/v858016147/1660c4/MzcFxgrZIEY.jpg"/>
