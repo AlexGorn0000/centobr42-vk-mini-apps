@@ -49,11 +49,11 @@ class Help extends React.Component {
     }
 
     onSubmit(event){
-	this.setState({name: null});
-	this.setState({email: null});
-	this.setState({message: null});
-	this.setState({text: `Отправлено`});
-	this.setState({level: 'secondary'});
+	const {name} = this.setState({name: null});
+	const {email} = this.setState({email: null});
+	const {message} = this.setState({message: null});
+	const {text} = this.setState({text: 'Отправлено'});
+	const {level} = this.setState({level: 'secondary'});
 	event.preventDefault();
     }
 
@@ -69,21 +69,6 @@ class Help extends React.Component {
       this.setState({email: e.target.value});
 	}
 
-	openWithAvatar () {
-		if (this.state.snackbar) return;
-		this.setState({ snackbar:
-		  <Snackbar
-			layout="vertical"
-			onClose={() => this.setState({ snackbar: null })}
-			action="Отменить"
-			onActionClick={() => this.setState({ text: `Сообщение получателю "${this.state.email}" было отменено.` })}
-			after={<Avatar src="https://sun9-20.userapi.com/c846018/v846018136/164bc/XoLIN4P5Kb0.jpg?ava=1" size={32} />}
-		  >
-			Сообщение успешно отправлено получателю {`${this.state.email}`}. Ожидайте ответ в течении 2-х часов
-		  </Snackbar>
-		});
-	  }
-	
 	render() {
     return (
 	<Panel id={this.props.id}>
@@ -101,8 +86,8 @@ class Help extends React.Component {
 	<Input placeholder="Введите имя" type="text" value={this.state.name} onChange={this.onChangeName}/><br/>
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
-	<Checkbox>Я принимаю условия <Link src="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
-	<Button size="xl" level={this.state.level} onChange={this.onSubmit} onClick={this.openWithAvatar}>{this.state.text}</Button></Div>
+	<Checkbox>Я принимаю условия <Link href="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link></Checkbox>
+	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );
