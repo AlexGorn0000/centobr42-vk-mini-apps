@@ -23,8 +23,8 @@ const Settings = ({ id, go, fetchedUser}) => (
 	<Cell before={<Icon24Notification/>} asideContent={<Switch defaultChecked />}>Получать Push-уведомления</Cell>
     <Cell before={<Icon24Repeat/>} asideContent={<Switch defaultChecked />}>Автообновление сервиса</Cell>
 	<Separator style={{ margin: '8px 0'}}/>
-	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_530725932">Лицензионное соглашение ПО</CellButton>
-	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_530725961">Политика конфиденциальности</CellButton>
+	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_532132361">Лицензионное соглашение</CellButton>
+	<CellButton before={<Icon24Document/>} component="a" href="https://vk.com/doc270919242_532132364">Политика конфиденциальности</CellButton>
     </List>
     </Group>
 	 </Panel>

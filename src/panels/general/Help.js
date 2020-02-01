@@ -52,7 +52,7 @@ class Help extends React.Component {
     }
 	 
 	openWithoutContext_1(){
-	this.setState({context_1: 'Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы посмотреть сведения о текущем расписании уроков, перейдите в блок "Образование", а затем выберите "Расписание уроков".'});
+	this.setState({context_1: 'Здравствуйте! Вы можете посмотреть информацию о текущем расписании уроков, перейдя в блок "Расписание уроков" и выбрать в нем класс своего ребенка'});
 	}
 	closeWithoutContext_1(){
 	this.setState({context_1: ''});
@@ -85,8 +85,9 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openWithoutContext_1} onClose={this.closeWithoutContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
-	{this.state.context_1}
+    <CellButton onClick={this.openWithoutContext_1} onAuxClick={this.closeWithoutContext_1}>Что делать, если расписание уроков у моего ребенка неправильное расписание?</CellButton>
+	{this.state.context_1 && 
+	<Div>{this.state.context_1}</Div>}
 	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
@@ -96,7 +97,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите имя" type="text" value={this.state.name} onChange={this.onChangeName}/><br/>
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
-	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_530725932">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_530725961">политики конфиденциальности</Link></Checkbox><br/>
+	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_532132361">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_532132364">политики конфиденциальности</Link></Checkbox><br/>
 	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
