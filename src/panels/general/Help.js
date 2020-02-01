@@ -64,11 +64,10 @@ class Help extends React.Component {
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	console.log('{name, email, message}');
 	event.preventDefault();
 	}
 
-    onChangeMessage(event){
+	onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
 	
@@ -86,8 +85,8 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openWithoutContext_1} onDoubleClick={this.closeWithoutContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
-	<Div>{this.state.context_1}</Div>
+    <CellButton onClick={this.openWithoutContext_1} onClose={this.closeWithoutContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+	{this.state.context_1}
 	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
