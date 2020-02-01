@@ -41,30 +41,31 @@ import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', popout: null};
-	  this.openContext_1 = this.openContext_1.bind(this);
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: ''};
+
+	  this.openWithoutContext_1 = this.openWithoutContext_1.bind(this);
+	  this.closeWithoutContext_1 = this.closeWithoutContext_1.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
     }
+	 
+	openWithoutContext_1(){
+	this.setState({context_1: 'Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы посмотреть сведения о текущем расписании уроков, перейдите в блок "Образования", а затем выберите "Расписание уроков"'});
+	}
+	closeWithoutContext_1(){
+	this.setState({context_1: ''});
+	}
 
-	openContext_1() {
-		this.setState({ popout:
-		  <ActionSheet before={<Icon24Cancel/>} onClose={() => this.setState({ popout: null })}>
-		  <Div>Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы получить сведения о расписании уроков, перейдите в блок "Образование", а затем выберите "Расписание уроков".</Div>
-		 </ActionSheet>
-		});
-	  }
-	
-    onSubmit(event){
+	onSubmit(event){
 	this.setState({name: ''});
 	this.setState({email: ''});
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
 	event.preventDefault();
-    }
+	}
 
     onChangeMessage(event){
       this.setState({message: event.target.value});
@@ -84,7 +85,8 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+    <CellButton onClick={this.openWithoutContext_1} onClose={this.closeWithoutContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+	{this.state.context_1}
 	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
