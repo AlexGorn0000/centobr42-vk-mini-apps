@@ -52,7 +52,7 @@ class Help extends React.Component {
     }
 	 
 	openWithoutContext_1(){
-	this.setState({context_1: 'Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы посмотреть сведения о текущем расписании уроков, перейдите в блок "Образования", а затем выберите "Расписание уроков"'});
+	this.setState({context_1: 'Здравствуйте! Расписание уроков утверждено Администрацией школы, поэтому ошибок быть не должно. Чтобы посмотреть сведения о текущем расписании уроков, перейдите в блок "Образование", а затем выберите "Расписание уроков".'});
 	}
 	closeWithoutContext_1(){
 	this.setState({context_1: ''});
@@ -85,8 +85,8 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openWithoutContext_1} onClose={this.closeWithoutContext_1}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
-	{this.state.context_1}
+    <CellButton onClick={() => {var openWithoutContext_1 = this.openWithoutContext_1; var closeWithoutContext_1 = this.closeWithoutContext_1}}>Что делать, если расписание уроков моего ребенка не совпадает c расписанием уроков в приложении?</CellButton>
+	<Div>{this.state.context_1}</Div>
 	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
