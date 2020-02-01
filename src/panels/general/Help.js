@@ -40,7 +40,7 @@ import user from '@vkontakte/icons/dist/24/user';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary'};
+	  this.state = {name: '',email: '', message: '', snackbar: null, text: 'Отправить', level: 'primary'};
 	  this.openWithAvatar = this.openWithAvatar.bind(this);
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
@@ -48,15 +48,15 @@ class Help extends React.Component {
       this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(e){
-	const {name, email, message, text, level} = e.target.value;
+    onSubmit(event){
 	this.setState({name: null});
 	this.setState({email: null});
 	this.setState({message: null});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	}
-	
+	event.preventDefault();
+    }
+
     onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
