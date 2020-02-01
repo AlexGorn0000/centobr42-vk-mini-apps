@@ -40,8 +40,7 @@ import user from '@vkontakte/icons/dist/24/user';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', snackbar: null, text: 'Отправить', level: 'primary'};
-	  this.openWithAvatar = this.openWithAvatar.bind(this);
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary'};
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
