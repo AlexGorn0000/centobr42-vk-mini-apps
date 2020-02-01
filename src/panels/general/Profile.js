@@ -40,20 +40,23 @@ import user from '@vkontakte/icons/dist/24/user';
 const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
- 		{fetchedUser &&
+		 {fetchedUser &&
+		 <Group>
+		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">
+		{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
+		 </Group>}
+		{fetchedUser &&
 		<Group>
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">
-		{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell><br/>
-		 <InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow><br/>
-		 <InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
+		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow><br/>
+		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
 		<InfoRow title="Родной город">{`${fetchedUser.city.title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
-		{fetchedUser.schools &&
+		{fetchedUser &&
 		<Group>
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
@@ -86,8 +89,8 @@ Profile.propTypes = {
 		title: PropTypes.string,
 		schools: PropTypes.shape({
 		name: PropTypes.string,
-		year_from: PropTypes.isRequired,	
-		year_to: PropTypes.isRequired,
+		year_from: PropTypes.string,	
+		year_to: PropTypes.string,
 		speciality: PropTypes.string,
 	  }),
 	}),
