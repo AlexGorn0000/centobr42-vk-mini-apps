@@ -61,9 +61,9 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<InfoRow title="Образовательное учреждение">{`${fetchedUser.name}`}</InfoRow><br/>
-		<InfoRow title="Год обучения">{`${fetchedUser.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
-		<InfoRow title="Специализация">{`${fetchedUser.speciality}`}</InfoRow><br/>
+		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools.name}`}</InfoRow><br/>
+		<InfoRow title="Годы обучения">{`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
+		<InfoRow title="Специализация">{`${fetchedUser.schools.speciality}`}</InfoRow><br/>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
