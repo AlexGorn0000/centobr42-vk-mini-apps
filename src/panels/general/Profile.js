@@ -67,7 +67,6 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Div>
 		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools.name}`}</InfoRow><br/>
 		<InfoRow title="Год обучения">{`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow><br/>
-		<InfoRow title="Класс">{`${fetchedUser.schools.class}`}</InfoRow><br/>
 		<InfoRow title="Специализация">{`${fetchedUser.schools.speciality}`}</InfoRow><br/>
 		</Div>
 		</Group>}
@@ -91,9 +90,15 @@ Profile.propTypes = {
 		first_name: PropTypes.string,
 		last_name: PropTypes.string,
 		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
+		title: PropTypes.string,
+		schools: PropTypes.shape({
+		name: PropTypes.string,
+		year_from: PropTypes.isRequired,	
+		year_to: PropTypes.isRequired,
+		speciality: PropTypes.string,
+	  }),
 	}),
+  }),
 };
 
 export default Profile;
