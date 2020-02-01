@@ -66,7 +66,7 @@ const Project2 = ({ id, go, fetchedUser }) => (
     </Group>
     <Group title="Дополнительно">
     <Separator style={{ margin: '5px 0' }} />
-    <Cell before={<Avatar style={{background: 'var(--accent)'}} size={24}><Icon24LinkCircle fill="var(--white)"/></Avatar>}>В данный момент приложение собирает сведения об этом мероприятии!<br/> Попробуйте вернуться позднее.</Cell>
+    <Cell before={<Avatar style={{background: 'var(--accent)'}} size={24}><Icon24LinkCircle fill="var(--white)"/></Avatar>}>В данный момент приложение собирает<br/>сведения об этом мероприятии!<br/>Попробуйте вернуться позднее.</Cell>
     </Group>
     <Group>
   	<List>

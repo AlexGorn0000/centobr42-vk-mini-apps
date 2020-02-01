@@ -85,9 +85,11 @@ class Help extends React.Component {
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
  	<Group>
    	<List>
-    <CellButton onClick={this.openWithoutContext_1} onAuxClick={this.closeWithoutContext_1}>Что делать, если расписание уроков у моего ребенка неправильное расписание?</CellButton>
+    <CellButton onClick={this.openWithoutContext_1} onAuxClick={this.closeWithoutContext_1}>Что делать, если у моего ребенка неправильное расписание уроков?</CellButton>
 	{this.state.context_1 && 
-	<Div>{this.state.context_1}</Div>}
+	<Div>{this.state.context_1}
+	<Separator style={{margin: '5px 0'}}/>
+	<Button level="primary" onClick={this.closeWithoutContext_1}>Это решает мою проблему</Button></Div>}
 	<CellButton>Будет ли синхронизация с электронным дневником, чтобы проследить за успеваемостью ребенка?</CellButton>
     <CellButton>Будет ли обновляться контент в приложении?</CellButton>
 	</List>
