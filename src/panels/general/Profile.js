@@ -56,16 +56,6 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
-		{fetchedUser &&
-		<Group>
-		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
-		<Separator style={{margin: '5px 0'}}/>
-		<Div>
-		<InfoRow title="Образовательное учреждение">{`${fetchedUser.schools_name}`}</InfoRow><br/>
-		<InfoRow title="Годы обучения">{`${fetchedUser.schools_year_from}`}-{`${fetchedUser.schools_year_to}`}</InfoRow><br/>
-		<InfoRow title="Специализация">{`${fetchedUser.schools_speciality}`}</InfoRow><br/>
-		</Div>
-		</Group>}
 		<Group title="Достижения">
 		<Div><center><img src="https://vk.com/sticker/1-9022-128"/></center></Div><br/>
 		<Div><center>Увы, но у Вас нет каких-либо достижений. Чтобы их получить участвуйте в мероприятиях.<br/>
