@@ -68,7 +68,7 @@ class Help extends React.Component {
     this.setState({context_2: ''});
 	}
 	openWithoutContext_3(){
-	this.setState({context_3: 'Если у вашего ребенка пропали личные вещи, то обратитесь на вахту. Но мы хотим Вам напомнить, что Администрация школы ответственности не несет!'});
+	this.setState({context_3: 'Если у вашего ребенка пропали личные вещи, то обратитесь на вахту. Но мы хотим Вам напомнить, что за потерянные вещи Администрация школы ответственности не несет!'});
 	}
 	closeWithoutContext_3(){
 	this.setState({context_3: ''});
@@ -80,7 +80,7 @@ class Help extends React.Component {
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	console.log('{name, email, message}');
+	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
 	event.preventDefault();
 	}
 
