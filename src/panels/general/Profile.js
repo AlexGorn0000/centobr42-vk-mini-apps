@@ -56,7 +56,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
-		{fetchedUser.schools &&
+		{fetchedUser &&
 		<Group>
 		<Cell before={<Icon24Education/>}>Сведения об образовании</Cell>
 		<Separator style={{margin: '5px 0'}}/>
