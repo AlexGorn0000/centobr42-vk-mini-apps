@@ -34,6 +34,7 @@ import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon24Recent from '@vkontakte/icons/dist/24/recent';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -42,10 +43,10 @@ const Home = ({ id, go, fetchedUser }) => (
 	<List>
 	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
-	 <Cell before={<Icon24Newsfeed/>} description="В разработке до 4 февраля">Доска почета</Cell>
+	 <Cell before={<Icon24Newsfeed/>} description="В разработке до 7 февраля">Доска почета</Cell>
 	 <Cell expandable before={<Icon24Education />} onClick={go} Data-to="Education">Образование</Cell>
 	 <Cell expandable before={<Icon24Services />} onClick={go} Data-to="Projects">Мероприятия</Cell>
-	 <Cell before={<Icon24Live/>} description="В разработке до 10 февраля">Прямая трансляция</Cell>
+	 <Cell before={<Icon24Live/>} description="В разработке до 12 февраля">Прямая трансляция</Cell>
 	 <Cell expandable before={<Icon24Help/>} onClick={go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
 	 <Cell expandable before={<Icon24Settings />} onClick={go} Data-to="Settings">Настройки</Cell>

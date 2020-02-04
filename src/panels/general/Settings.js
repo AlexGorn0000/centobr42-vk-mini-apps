@@ -14,10 +14,11 @@ import Icon24Favorite from '@vkontakte/icons/dist/24/favorite';
 import Icon16Done from '@vkontakte/icons/dist/16/done';
 import Icon16Cancel from '@vkontakte/icons/dist/16/cancel';
 import settings from '@vkontakte/icons/dist/24/settings';
+import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';
 
 const Settings = ({ id, go, fetchedUser}) => (
 <Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Cancel/></HeaderButton>}>Настройки</PanelHeader>
+	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Настройки</PanelHeader>
 	<Group title="Основные">
 	<List>
 	<Cell before={<Icon24Notification/>} asideContent={<Switch defaultChecked />}>Получать Push-уведомления</Cell>

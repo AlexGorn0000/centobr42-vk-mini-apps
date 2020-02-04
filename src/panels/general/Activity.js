@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, Separator } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, Separator, HorizontalScroll, UsersStack, Counter } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -34,34 +34,74 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 import Icon24Up from '@vkontakte/icons/dist/24/up';
+import Icon28Story from '@vkontakte/icons/dist/28/story';
+import Icon24LikeOutline from '@vkontakte/icons/dist/24/like_outline';
+import Icon24Like from '@vkontakte/icons/dist/24/like';
+import { render } from 'react-dom';
 
+const itemStyle = {
+    flexShrink: 0,
+    width: 80,
+    height: 94,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    fontSize: 12
+  };
 
-const Activity = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
-		<img width="auto" height="20" src="https://avatars.mds.yandex.net/get-pdb/2828228/f15db48c-0e29-4099-b7de-2c3c5d152bba/s1200"></img>
-		{fetchedUser &&
-		<Group>
-		<Div><center>Учавсвуй в жизни класса и школы, и зарабатывай баллы</center></Div>
-		<Div><center>"Будь лучшим - среди лучших!" - Александр Горбунов</center></Div>
-		</Group>}
-		{fetchedUser &&
-		<Group title="Мой рейтинг">
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} description="Баллы:0"/> : null}
-				>{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
-		</Group>}	
-   <Group title="Лучшие">
-    <List>
-   <Cell before={<Avatar src="https://sun9-21.userapi.com/c637919/v637919052/614c8/8QpNZCT3eMQ.jpg"/>} description="Баллы: 0">Елена Калистатова</Cell>   
-   <Cell before={<Avatar src="https://sun1-93.userapi.com/c850636/v850636928/4e1a2/pvAHDW3aIcg.jpg"/>} description="Баллы: 0">Борис Караваев</Cell> 
-   <Cell before={<Avatar src="https://sun1-88.userapi.com/c849224/v849224269/1e5641/ocAcUpxj54Q.jpg"/>} description="Баллы: 0">Максим Миронов</Cell> 
-   <Cell before={<Avatar src="https://sun9-42.userapi.com/c855432/v855432805/1b5d22/u-uUY_k_GCg.jpg"/>} description="Баллы: 0">Даниил Аксенов</Cell> 
-   <Cell before={<Avatar src="https://sun9-54.userapi.com/c855320/v855320779/e8adf/6-zwcZuCkqU.jpg"/>} description="Баллы: 0">Александр Горбунов</Cell> 
-   </List>
-   </Group>
+  class Activity extends React.Component {
+    constructor(props) {
+      super(props);
+	  this.state = {count: '', icon_like: '', like_text: '', fill: 'var(--destructive)'};
+}
+render() {
+return (
+<Panel id={this.props.id}>
+		<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24Newsfeed/></HeaderButton>}>Доска почета</PanelHeader>
+		<img width="100%" height="100%" src="https://sun9-12.userapi.com/c857320/v857320206/cddd5/ItRmQjAxakE.jpg"></img>
+	    <Group style={{ paddingBottom: 8 }} title="Ученическая активность">
+        <HorizontalScroll>
+          <div style={{ display: 'flex' }}>
+            <div style={{ ...itemStyle, paddingLeft: 4 }}>
+            <Avatar size={64} style={{ marginBottom: 8 }} src="https://sun1-27.userapi.com/c857216/v857216597/ce22b/M4xymDA68N4.jpg"></Avatar>Арина</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun1-29.userapi.com/c850608/v850608751/96ecc/3RjtsOvSSUc.jpg"></Avatar>Александр</div>
+           <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun1-29.userapi.com/c850224/v850224554/129d4f/C9mP5RTAGnU.jpg"></Avatar>Даниил</div>
+           <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun9-58.userapi.com/c854424/v854424863/1d9c06/B4vy4YqHOFw.jpg"></Avatar>Ульяна</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun9-54.userapi.com/c858424/v858424210/159202/0AN46o_A72o.jpg"></Avatar>Ксюша</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun1-25.userapi.com/c857324/v857324524/c8120/lNW2ajUo9f0.jpg"></Avatar>Алина</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun9-71.userapi.com/c855732/v855732138/1e5ec1/VJ1DkqsMSQ4.jpg"></Avatar>Дмитрий</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun9-52.userapi.com/c206528/v206528555/c97d/90q3pgk38bQ.jpg"></Avatar>Настя</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun1-99.userapi.com/c855024/v855024651/1bf6f5/4mfHoELNDqE.jpg"></Avatar>Ангелина</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }} src="https://sun9-65.userapi.com/c855320/v855320103/1cbe25/vlcyFTkAwJw.jpg"></Avatar>Вера</div>
+           </div>
+        </HorizontalScroll>
+		<Separator style={{margin: '5px 0'}}/>
+        <Cell></Cell>
+		</Group>
+		<Group style={{ paddingBottom: 8 }} title="Рейтинг классов">
+        <HorizontalScroll>
+        <div style={{ display: 'flex' }}>
+        <div style={{ ...itemStyle, paddingLeft: 4 }}>
+        <Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Александр</div>
+        <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Татьяна</div>
+        <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Борис</div>
+        </div>
+        </HorizontalScroll>
+		</Group>		
+		<Group style={{ paddingBottom: 8 }} title="Лучшие преподаватели">
+        <HorizontalScroll>
+          <div style={{ display: 'flex' }}>
+            <div style={{ ...itemStyle, paddingLeft: 4 }}>
+            <Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Александр</div>
+           <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Татьяна</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>Борис</div>
+           </div>
+        </HorizontalScroll>
+		</Group>
 </Panel>
 );
+}
+}
 
 Activity.propTypes = {
 	id: PropTypes.string.isRequired,
