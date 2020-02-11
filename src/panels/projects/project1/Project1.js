@@ -66,6 +66,9 @@ const Project1 = ({ id, go, fetchedUser }) => (
                 <img src="https://sun9-26.userapi.com/c204616/v204616763/16bd5/C_RpWtVM7N0.jpg"/>
     </Gallery>
     </Group>
+    <Group title="Описание">
+
+    </Group>
     <Group>
     <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
     <Div>

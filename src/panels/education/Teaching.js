@@ -41,7 +41,7 @@ const Teaching = ({ id, go, fetchedUser}) => (
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Education"><Icon24BrowserBack/></HeaderButton>}>Педагогический состав</PanelHeader>
   <Group title="Администрация школы">
   <List>
-  <Cell before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg"/>} description="Директор школы">Калистратова Елена Ивановна</Cell>
+  <Cell before={<Avatar src="https://sun9-4.userapi.com/c858132/v858132671/143a7c/bmXlfIBjQcg.jpg" />} description="Директор школы">Калистратова Елена Ивановна</Cell>
   <Cell before={<Avatar src="https://sun1-93.userapi.com/c848524/v848524153/1a65c1/4vIW-y1aE0k.jpg"/>} description="Заместитель директора по ВР">Орлова Татьяна Андреевна</Cell>
   <Cell before={<Avatar src="https://sun9-67.userapi.com/c849520/v849520489/5ce9a/kmSvoPoHndE.jpg"/>}>Бральнина Ольга Геннадьевна</Cell>
   <Cell before={<Avatar src="https://sun9-50.userapi.com/c850128/v850128827/32cfc/_63WxP1TFag.jpg"/>} description="Заместитель директора по АХЧ">Орехова Наталья Борисовна</Cell>

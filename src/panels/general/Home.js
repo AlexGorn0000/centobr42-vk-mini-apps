@@ -35,25 +35,26 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Recent from '@vkontakte/icons/dist/24/recent';
+import Icon24Home from '@vkontakte/icons/dist/24/home';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Личный кабинет</PanelHeader>
+	<PanelHeader>Личный кабинет</PanelHeader> 
 	<Group>
 	<List>
-	 <Cell expandable before={<Icon24User />} onClick={go} Data-to="Profile">Мой профиль</Cell>
+	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={go} Data-to="Profile">Учетная запись</Cell>
+	 <Separator style={{ margin: '3px 0' }} />
+	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 14 февраля">Доска почета</Cell>
+	 <Cell expandable before={<Icon24Education fill="#00acff" />} onClick={go} Data-to="Education">Образование</Cell>
+	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={go} Data-to="Projects">Мероприятия</Cell>
+	 <Cell before={<Icon24Live fill="#00acff"/>} description="В разработке до 14 февраля">Прямая трансляция</Cell>
+	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
-	 <Cell before={<Icon24Newsfeed/>} description="В разработке до 7 февраля">Доска почета</Cell>
-	 <Cell expandable before={<Icon24Education />} onClick={go} Data-to="Education">Образование</Cell>
-	 <Cell expandable before={<Icon24Services />} onClick={go} Data-to="Projects">Мероприятия</Cell>
-	 <Cell before={<Icon24Live/>} description="В разработке до 12 февраля">Прямая трансляция</Cell>
-	 <Cell expandable before={<Icon24Help/>} onClick={go} Data-to="Help">Помощь</Cell>
-	 <Separator style={{ margin: '10px 0' }} />
-	 <Cell expandable before={<Icon24Settings />} onClick={go} Data-to="Settings">Настройки</Cell>
+	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={go} Data-to="Settings">Настройки</Cell>
 	 </List>
 	 </Group>
 	 <Group>
-	 <Cell before={<Icon24Info/>}>Информация</Cell>
+	 <Cell before={<Icon24Info fill="#00acff"/>}>Информация</Cell>
 		    <Gallery
                 slideWidth="100%"
                 align="center"
@@ -70,7 +71,7 @@ const Home = ({ id, go, fetchedUser }) => (
          </Group>
     <Group>
 	<List>
-	 <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/public168892763">Наша группа</Cell>
+	 <Cell expandable before={<Icon24LogoVk fill="#00acff" />} href="https://vk.com/public168892763">Наша группа</Cell>
 	</List>
 	</Group>
  </Panel>
