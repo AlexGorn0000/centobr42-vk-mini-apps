@@ -42,8 +42,8 @@ const Home = ({ id, go, fetchedUser }) => (
 	<PanelHeader>Личный кабинет</PanelHeader> 
 	<Group>
 	<List>
-	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={go} Data-to="Profile">Учетная запись</Cell>
-	 <Separator style={{ margin: '3px 0' }} />
+	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={go} Data-to="Profile">Мой профиль</Cell>
+	 <Separator style={{ margin: '5px 0' }} />
 	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 14 февраля">Доска почета</Cell>
 	 <Cell expandable before={<Icon24Education fill="#00acff" />} onClick={go} Data-to="Education">Образование</Cell>
 	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={go} Data-to="Projects">Мероприятия</Cell>

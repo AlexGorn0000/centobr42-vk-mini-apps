@@ -26,7 +26,6 @@ import Icon24Services from '@vkontakte/icons/dist/24/services';
 import Icon24Live from '@vkontakte/icons/dist/24/live';
 
 const Settings = ({ id, go, fetchedUser}) => (
-<View>
 <Panel id={id}>
 	<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Настройки</PanelHeader>
 	{fetchedUser &&
@@ -35,7 +34,7 @@ const Settings = ({ id, go, fetchedUser}) => (
 	</Group>}
 	<Group title="Блоки">
 	<List>
-	<Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={() => this.setState({ activePanel: 'nothing' })} indicator="Включена">Учетная запись</Cell>
+	<Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={() => this.setState({ activePanel: 'nothing' })} indicator="Включен">Мой профиль</Cell>
 	<Cell expandable before={<Icon24Newsfeed fill="#00acff"/>} onClick={() => this.setState({ activePanel: 'nothing' })} indicator="Включена">Доска почета</Cell>
 	<Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={() => this.setState({ activePanel: 'nothing' })} indicator="Включено">Образование</Cell>
 	<Cell expandable before={<Icon24Services fill="#00acff"/>} onClick={() => this.setState({ activePanel: 'nothing' })} indicator="Включены">Мероприятия</Cell>
@@ -56,12 +55,6 @@ const Settings = ({ id, go, fetchedUser}) => (
     </List>
     </Group>
 	</Panel>
-	<Panel id="nothing">
-	<PanelHeader
-	left={<HeaderButton onClick={() => this.setState({ activePanel: 'Settings' })}>{<Icon28ChevronBack/>}</HeaderButton>}>Настройки</PanelHeader>
-	<Div style={{flex: '0 0 auto', color: 'grey', textAlign: 'center'}}>В данный момент ведутся технические работы! Попробуйте вернуться позднее.</Div>
-	</Panel>
-	</View>
 );
 
 Settings.propTypes = {
