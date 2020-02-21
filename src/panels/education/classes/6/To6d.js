@@ -82,7 +82,7 @@ const To6d = ({ id, go, fetchedUser}) => (
   5-ый урок: Русский язык<br/>
   6-ой урок: История</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Поделиться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick={connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
   </Group>
  </Panel>
 );

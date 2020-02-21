@@ -7,10 +7,11 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import connect from '@vkontakte/vk-connect'; 
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
+import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import * as VKUI from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, FixedLayout} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -25,57 +26,52 @@ import Icon24MoneyTransfer from '@vkontakte/icons/dist/24/money_transfer';
 import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';
 import Icon24Market from '@vkontakte/icons/dist/24/market';
 import Icon24LogoVk from '@vkontakte/icons/dist/24/logo_vk';
-import Icon56FavoriteOutline from '@vkontakte/icons/dist/56/favorite_outline';
 import Icon24Help from '@vkontakte/icons/dist/24/help';
+import Icon24Followers from '@vkontakte/icons/dist/24/followers';
+import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Services from '@vkontakte/icons/dist/24/services';
+import Icon24Write from '@vkontakte/icons/dist/24/write';
+import Icon24Note from '@vkontakte/icons/dist/24/note';
+import Icon24Video from '@vkontakte/icons/dist/24/video';
+import Icon24Gallery from '@vkontakte/icons/dist/24/gallery';
 import Icon24Live from '@vkontakte/icons/dist/24/live';
+import Icon24Gift from '@vkontakte/icons/dist/24/gift';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
+import Icon24Place from '@vkontakte/icons/dist/24/place';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import Icon24Poll from '@vkontakte/icons/dist/24/poll';
 import user from '@vkontakte/icons/dist/24/user';
-import Icon24Up from '@vkontakte/icons/dist/24/up';
-import Icon28Story from '@vkontakte/icons/dist/28/story';
 import Icon24LikeOutline from '@vkontakte/icons/dist/24/like_outline';
 import Icon24Like from '@vkontakte/icons/dist/24/like';
-import Icon24MoreHorizontal from '@vkontakte/icons/dist/24/more_horizontal';
-import { render } from 'react-dom';
+import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
+import Icon56UsersOutline from '@vkontakte/icons/dist/56/users_outline';
 
-const itemStyle = {
-    flexShrink: 0,
-    width: 80,
-    height: 94,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    fontSize: 12
-  };
-
-  class Activity extends React.Component {
-    constructor(props) {
-      super(props);
-    this.state = {showContext1: '', hideContext1: false};
-    this.showContext1 = this.showContext1.bind(this);
+class Broadcast extends React.Component{
+constructor(props){
+super(props);
+this.state = {count: '', color: 'rgb(200,200,200)'};
+this.onLikes = this.onLikes.bind(this);
 }
-showContext1(e){
-this.setState({openContext1: 'Прошло достаточно много времени с тех пор, как появилось ученическое объединение в Центре образования №42. За это время, наши активисты, не остались не замечеными. Они с большим трудом привлекали аудиторию, проводили мероприятия, проявили свой талант и упорное стремление к цели. Мы считаем, что они достойны быть на доске почета.'});
-this.setState({hideContext1: true});
+onLikes(e){
+this.setState({count: +1})
+this.setState({color: 'rgb(235,0,0)'})
 }
-hideContext1(e){
-this.setState({openContext1: ''});
-this.setState({hideContext1: false});
-}
-
-render() {
-return (
-<Panel id={this.props.id}>
-		<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Доска почета</PanelHeader>
-		<img width="100%" height="100%" src="https://sun9-12.userapi.com/c857320/v857320206/cddd5/ItRmQjAxakE.jpg"></img>
+render(){
+return(
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Прямая трансляция</PanelHeader>
+    <Group>
+    <Gallery slideWidth="100%" align="center" style={{ height: 220 }}><iframe src="https://vk.com/video-187421428_456239051" frameborder="0" controls/></Gallery>
+    <Separator style={{margin: '10px 0'}}/>
+    <CellButton before={<Icon24Like fill={this.state.color}/>}onClick={this.state.onLikes}>{this.state.count}</CellButton>
+    </Group>
 </Panel>
 );
 }
 }
 
-Activity.propTypes = {
+Broadcast.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -88,4 +84,4 @@ Activity.propTypes = {
 	}),
 };
 
-export default Activity;
+export default Broadcast;

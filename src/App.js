@@ -11,6 +11,7 @@ import Activity from './panels/general/Activity'
 import Education from './panels/general/Education';
 import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
+import Broadcast from './panels/general/Broadcast';
 import Teaching from './panels/education/Teaching';
 import Help from './panels/general/Help';
 import Timetable from './panels/education/Timetable';
@@ -84,6 +85,7 @@ const App = () => {
 			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Projects id='Projects' go={go}/>
+			<Broadcast id='Broadcast' fetchedUser={fetchedUser} go={go}/>
 			<Settings id='Settings' fetchedUser={fetchedUser} go={go} />
 			<Teaching id='Teaching' fetchedUser={fetchedUser} go={go} />
 			<Timetable id='Timetable' fetchedUser={fetchedUser} go={go}/>

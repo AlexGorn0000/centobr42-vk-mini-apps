@@ -84,7 +84,7 @@ const To7b = ({ id, go, fetchedUser}) => (
   3-ий урок: Физическая культура<br/> 
   4-ый урок: Биология</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick="Likes.share('doc270919242_522292547', {}); return true;">Поделиться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick={connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
   </Group>
  </Panel>
 );

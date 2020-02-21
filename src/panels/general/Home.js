@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import Separator from '@vkontakte/vkui/dist/components/Separator/Separator'
-import { FormLayout, FormLayoutGroup, Input } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, Tooltip } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -36,26 +36,33 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Recent from '@vkontakte/icons/dist/24/recent';
 import Icon24Home from '@vkontakte/icons/dist/24/home';
+import Icon24Reorder from '@vkontakte/icons/dist/24/reorder';
 
-const Home = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
+class Home extends React.Component {
+ constructor(props) {
+super(props);
+this.state = {tooltip1: true, tooltip2: false, tooltip3: false};
+}
+render(){
+return(
+	<Panel id={this.props.id}>
 	<PanelHeader>Личный кабинет</PanelHeader> 
 	<Group>
 	<List>
-	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={go} Data-to="Profile">Мой профиль</Cell>
+	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={this.props.go} Data-to="Profile">Мой профиль</Cell>
 	 <Separator style={{ margin: '5px 0' }} />
-	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 14 февраля">Доска почета</Cell>
-	 <Cell expandable before={<Icon24Education fill="#00acff" />} onClick={go} Data-to="Education">Образование</Cell>
-	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={go} Data-to="Projects">Мероприятия</Cell>
-	 <Cell before={<Icon24Live fill="#00acff"/>} description="В разработке до 14 февраля">Прямая трансляция</Cell>
-	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={go} Data-to="Help">Помощь</Cell>
+	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 26 февраля">Новости</Cell>
+	 <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Education">Образование</Cell>
+	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={this.props.go} Data-to="Projects">Мероприятия</Cell>
+	 <Cell expandable before={<Icon24Live fill="#00acff"/>} onClick={this.props.go} Data-to="Broadcast">Прямая трансляция</Cell>
+	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={this.props.go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
-	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={go} Data-to="Settings">Настройки</Cell>
+	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={this.props.go} Data-to="Settings">Настройки</Cell>
 	 </List>
 	 </Group>
 	 <Group>
 	 <Cell before={<Icon24Info fill="#00acff"/>}>Информация</Cell>
-		    <Gallery
+	 <Gallery
                 slideWidth="100%"
                 align="center"
                 style={{ height: 220 }}
@@ -76,6 +83,8 @@ const Home = ({ id, go, fetchedUser }) => (
 	</Group>
  </Panel>
 );
+}
+}
 
 Home.propTypes = {
 	id: PropTypes.string.isRequired,
