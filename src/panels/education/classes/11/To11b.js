@@ -91,7 +91,7 @@ const To11b = ({ id, go, fetchedUser}) => (
   6-ой урок: Литература<br/>
   7-ой урок: Обществознание</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick={connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick={connect.subscribe("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
   </Group>
  </Panel>
 );
