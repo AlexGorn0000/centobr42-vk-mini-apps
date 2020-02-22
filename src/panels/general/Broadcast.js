@@ -64,7 +64,7 @@ return(
     <Group>
     <Gallery slideWidth="100%" align="center" style={{ height: 220 }}><iframe src="https://vk.com/video-187421428_456239051" frameborder="0" controls/></Gallery>
     <Separator style={{margin: '10px 0'}}/>
-    <CellButton before={<Icon24Like fill={this.state.color}/>}onClick={this.state.onLikes}>{this.state.count}</CellButton>
+    <CellButton before={<Icon24Like fill={this.state.color}/>} onClick={this.state.onLikes}>{this.state.count}</CellButton>
     </Group>
 </Panel>
 );

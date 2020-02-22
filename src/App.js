@@ -50,7 +50,7 @@ import PJ1Photo from './panels/projects/project1/PJ1Photo';
 import Project2 from './panels/projects/project2/Project2';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('Home');
+	const [activePanel, setActivePanel] = useState('Profile');
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 	

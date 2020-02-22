@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, HorizontalScroll } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -37,9 +37,19 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 
+const itemStyle = {
+    flexShrink: 0,
+    width: 80,
+    height: 110,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    fontSize: 12
+  };
+
 const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
+		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
 		 <Group>
 		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">
@@ -57,8 +67,23 @@ const Profile = ({ id, go, fetchedUser }) => (
 		</Div>
 		</Group>}
 		<Group title="Достижения">
-		<Div><center><img src="https://vk.com/sticker/1-9022-128"/></center></Div><br/>
-		<Div><center>Увы, но у Вас нет каких-либо достижений. Чтобы их получить участвуйте в мероприятиях.<br/>
+		<HorizontalScroll>
+          <div style={{ display: 'flex' }}>
+            <div style={{ ...itemStyle, paddingLeft: 4 }}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2540/2540324.svg" /></Avatar>I am Bloger!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617855.svg" /></Avatar>Отличная работа!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617904.svg" /></Avatar>Король развлечений</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617891.svg" /></Avatar>Ученье - свет!</div>
+           </div>
+        </HorizontalScroll>
+		<HorizontalScroll>
+          <div style={{ display: 'flex' }}>
+            <div style={{ ...itemStyle, paddingLeft: 4 }}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617963.svg" /></Avatar>Методист</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617936.svg" /></Avatar>Победа в руках!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617930.svg" /></Avatar>На высоте!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617831.svg" /></Avatar>Око - за око</div>
+           </div>
+        </HorizontalScroll>
+		<Div><center>Хотите открыть больше достижений? Участвуйте в мероприятиях и получайте награды.<br/>
 		<Separator style={{margin: '10px 0'}}/>
 		<Button size="xl" level="commerce" onClick={go} Data-to="Projects">Перейти в блок "Мероприятия"</Button></center></Div>
 		</Group>

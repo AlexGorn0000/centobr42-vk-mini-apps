@@ -46,7 +46,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
     <Group>
     <Gallery
     slideWidth="100%"
@@ -66,34 +66,31 @@ const Project1 = ({ id, go, fetchedUser }) => (
                 <img src="https://sun9-26.userapi.com/c204616/v204616763/16bd5/C_RpWtVM7N0.jpg"/>
     </Gallery>
     </Group>
-    <Group title="Описание">
-
-    </Group>
     <Group>
-    <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
+    <Cell before={<Icon24Followers/>}>???? ??????????</Cell>
     <Div>
-    <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
+    <InfoRow>?????? ????: ? 25 ?? 29 ??????</InfoRow>
     </Div>
     <Div>
-    <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
+    <InfoRow>?????? ???? (?????): 16 ???????</InfoRow>
     </Div>
     <Separator style={{ margin: '5px 0' }} />
-    <Cell before={<Icon24Place/>}>Место проведения</Cell>
+    <Cell before={<Icon24Place/>}>????? ??????????</Cell>
     <Div>
-    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
+    <InfoRow>??????, ??????????? ???, ?.???????, ??.????????, ?.34?</InfoRow>
     </Div>
     </Group>
-    <Group title="Дополнительно">
+    <Group title="?????????????">
     <Separator style={{ margin: '5px 0' }} />
     <List>
-    <Cell expandable before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">Статистика</Cell>
-    <Cell expandable before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">Видеозаписи</Cell>
-    <Cell expandable before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">Фотографии</Cell>
+    <Cell expandable before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">??????????</Cell>
+    <Cell expandable before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">???????????</Cell>
+    <Cell expandable before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">??????????</Cell>
     </List>
     </Group>
     <Group>
   	<List>
-	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/centobr42_press_center">Наша группа</Cell>
+	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/centobr42_press_center">???? ??????</Cell>
 	 </List>
 	 </Group>
  </Panel>
