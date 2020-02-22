@@ -51,10 +51,9 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group>
-		<Cell before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}	description="Пользователь">
-		{`${fetchedUser.first_name} ${fetchedUser.last_name}`}</Cell>
-		</Group>}
+		 <Group fill="#1d81cb">
+		<Div><center><Avatar width={128} height={128} src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
+	    </Group>}
 		{fetchedUser &&
 		<Group>
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
@@ -66,7 +65,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
 		</Div>
 		</Group>}
-		<Group title="Достижения">
+		<Group title="Достижения" indicator="6">
 		<HorizontalScroll>
           <div style={{ display: 'flex' }}>
             <div style={{ ...itemStyle, paddingLeft: 4 }}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2540/2540324.svg" /></Avatar>I am Bloger!</div>
