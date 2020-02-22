@@ -51,8 +51,8 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group style={{background: "#1d81cb"}}>
-		<Div><center><Avatar width={128} height={128} src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
+		 <Group style={{background: "rgba(29, 129, 203, 0.5)", color: '#ffffff'}}>
+		<Div><center><Avatar width={148} height={148} src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
 	    </Group>}
 		{fetchedUser &&
 		<Group>
