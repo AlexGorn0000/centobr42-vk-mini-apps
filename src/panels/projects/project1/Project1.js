@@ -46,7 +46,7 @@ import user from '@vkontakte/icons/dist/24/user';
 
 const Project1 = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>??????? "???? ? ????"</PanelHeader>
+		<PanelHeader left={<HeaderButton onClick={go} Data-to="Projects"><Icon24BrowserBack/></HeaderButton>}>Конкурс "Один в один"</PanelHeader>
     <Group>
     <Gallery
     slideWidth="100%"
@@ -67,30 +67,30 @@ const Project1 = ({ id, go, fetchedUser }) => (
     </Gallery>
     </Group>
     <Group>
-    <Cell before={<Icon24Followers/>}>???? ??????????</Cell>
+    <Cell before={<Icon24Followers/>}>Дата проведения</Cell>
     <Div>
-    <InfoRow>?????? ????: ? 25 ?? 29 ??????</InfoRow>
+    <InfoRow>Первый этап: с 25 по 29 ноября</InfoRow>
     </Div>
     <Div>
-    <InfoRow>?????? ???? (?????): 16 ???????</InfoRow>
+    <InfoRow>Второй этап (финал): 16 декабря</InfoRow>
     </Div>
     <Separator style={{ margin: '5px 0' }} />
-    <Cell before={<Icon24Place/>}>????? ??????????</Cell>
+    <Cell before={<Icon24Place/>}>Место проведения</Cell>
     <Div>
-    <InfoRow>??????, ??????????? ???, ?.???????, ??.????????, ?.34?</InfoRow>
+    <InfoRow>Россия, Вологодская обл, г.Вологда, ул.Северная, д.34А</InfoRow>
     </Div>
     </Group>
-    <Group title="?????????????">
+    <Group title="Дополнительно">
     <Separator style={{ margin: '5px 0' }} />
     <List>
-    <Cell expandable before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">??????????</Cell>
-    <Cell expandable before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">???????????</Cell>
-    <Cell expandable before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">??????????</Cell>
+    <Cell expandable before={<Icon24Poll/>} onClick={go} Data-to="PJ1Poll">Статистика</Cell>
+    <Cell expandable before={<Icon24Video/>} onClick={go} Data-to="PJ1Video">Видеозаписи</Cell>
+    <Cell expandable before={<Icon24Gallery/>} onClick={go} Data-to="PJ1Photo">Фотографии</Cell>
     </List>
     </Group>
     <Group>
   	<List>
-	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/centobr42_press_center">???? ??????</Cell>
+	  <Cell expandable before={<Icon24LogoVk />} href="https://vk.com/centobr42_press_center">Наша группа</Cell>
 	 </List>
 	 </Group>
  </Panel>
