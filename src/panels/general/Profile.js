@@ -51,7 +51,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		<Group style={{background: "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"}}>
+		<Group style={{background: "linear-gradient(90deg, rgba(246,6,136,8) 0%, rgba(0,212,255,5) 100%)), url(https://sun9-25.userapi.com/c858416/v858416226/13f865/0_Wt1UCMpuY.jpg)"}}>
 		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
 		<Separator style={{margin: '5px 0'}}/>
 		Будь лучшим - среди лучших!
