@@ -51,11 +51,11 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group>
-		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center><br/>
+		<Group style={{background: "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"}}>
+		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
 		<Separator style={{margin: '5px 0'}}/>
 		Будь лучшим - среди лучших!
-		</Div>
+		</center></Div>
 	    </Group>}
 		{fetchedUser &&
 		<Group>
@@ -66,14 +66,6 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
 		<InfoRow title="Город">{`${fetchedUser.city.title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
-		</Div>
-		</Group>}
-		{fetchedUser &&
-		<Group>
-		<Cell before={<Icon24Education/>}>Образование</Cell>
-		<Separator style={{margin: '5px 0'}}/>
-		<Div>
-		<InfoRow title="Школа">{`${fetchedUser.schools.name}`}<br/>{`${fetchedUser.city.title}`}, {`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
