@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import Separator from '@vkontakte/vkui/dist/components/Separator/Separator'
-import { FormLayout, FormLayoutGroup, Input, Tooltip } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, Tooltip, Counter } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -54,7 +54,7 @@ return(
 	 <Separator style={{ margin: '5px 0' }} />
 	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 28 февраля">Новости</Cell>
 	 <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Education">Образование</Cell>
-	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={this.props.go} Data-to="Projects">Мероприятия</Cell>
+	 <Cell expandable before={<Icon24Services fill="#00acff"/>} onClick={this.props.go} Data-to="Projects" indicator={<Counter mode="prominent">1</Counter>}>Мероприятия</Cell>
 	 <Cell expandable before={<Icon24Live fill="#00acff"/>} description="В разработке до 28 февраля">Прямая трансляция</Cell>
 	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={this.props.go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />

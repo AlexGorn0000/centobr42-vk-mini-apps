@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, HorizontalScroll } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, HorizontalScroll, Header, Counter, Link } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -51,7 +51,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		<Group style={{background: "linear-gradient(90deg, rgba(246,6,136,8) 0%, rgba(0,212,255,5) 100%)), url(https://sun9-25.userapi.com/c858416/v858416226/13f865/0_Wt1UCMpuY.jpg)"}}>
+		<Group style={{background: "linear-gradient(90deg, rgba(246,6,136,1) 0%, rgba(0,212,255,1) 100%)"}}>
 		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
 		<Separator style={{margin: '5px 0'}}/>
 		Будь лучшим - среди лучших!
