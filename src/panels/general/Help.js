@@ -82,6 +82,7 @@ class Help extends React.Component {
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
+	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
 	this.setState({ popout:
 		<Alert
 		  actions={[{
@@ -94,8 +95,6 @@ class Help extends React.Component {
 		  <p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор ответит на Ваш вопрос в течении суток.</p>
 		</Alert>
 	  });
-	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
-	event.preventDefault();
 	}
 	
 	closePopout () {
