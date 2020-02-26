@@ -47,6 +47,7 @@ render(){
 return(
 	<Panel id={this.props.id}>
 	<PanelHeader>Личный кабинет</PanelHeader> 
+	<img width="100%" height="100%" src="https://sun9-12.userapi.com/c205824/v205824455/82fec/nOnsoMv-mC0.jpg"></img>
 	<Group>
 	<List>
 	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={this.props.go} Data-to="Profile">Мой профиль</Cell>

@@ -51,8 +51,8 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group style={{background: "rgba(29, 129, 203, 0.8)", color: '#ffffff'}}>
-		<Div><center><Avatar width={148} height={148} src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
+		 <Group style={{background: URL("https://sun9-12.userapi.com/c205824/v205824455/82fec/nOnsoMv-mC0.jpg")}}>
+		<Div><center><Avatar width="64" height="64" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
 	    </Group>}
 		{fetchedUser &&
 		<Group>
@@ -72,14 +72,18 @@ const Profile = ({ id, go, fetchedUser }) => (
 		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617855.svg" /></Avatar>Отличная работа!</div>
 		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617904.svg" /></Avatar>Король развлечений</div>
 		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617891.svg" /></Avatar>Ученье - свет!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617963.svg" /></Avatar>Методист</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617930.svg" /></Avatar>На высоте!</div>
            </div>
         </HorizontalScroll>
 		<HorizontalScroll>
           <div style={{ display: 'flex' }}>
-            <div style={{ ...itemStyle, paddingLeft: 4 }}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617963.svg" /></Avatar>Методист</div>
-		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617936.svg" /></Avatar>Победа в руках!</div>
-		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617930.svg" /></Avatar>На высоте!</div>
-		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617831.svg" /></Avatar>Око - за око</div>
+           <div style={{ ...itemStyle, paddingLeft: 4 }}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617757.svg" /></Avatar>Лидер мнений</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/2617/2617958.svg"/></Avatar>На лестнице успеха</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/338/338090.svg"/></Avatar>Please, wait!</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/1029/1029132.svg"/></Avatar>Комментатор</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/401/401544.svg"/></Avatar>Диктатор</div>
+		   <div style={itemStyle}><Avatar size={64} style={{ marginBottom: 8 }}><img width={64} height={64} src="https://image.flaticon.com/icons/svg/401/401559.svg" /></Avatar>Мудрец</div>
            </div>
         </HorizontalScroll>
 		<Div><center>Хотите открыть больше достижений? Участвуйте в мероприятиях и получайте награды.<br/>

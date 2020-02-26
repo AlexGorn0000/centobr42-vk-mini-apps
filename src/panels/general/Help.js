@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link, ActionSheet, ActionSheetItem} from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, UsersStack, Textarea, Checkbox, Link, ActionSheet, ActionSheetItem, Alert} from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -37,11 +37,13 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Dropdown from '@vkontakte/icons/dist/24/dropdown';
 import user from '@vkontakte/icons/dist/24/user';
 import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
+import Icon24RecentOutline from '@vkontakte/icons/dist/24/recent_outline';
+import Icon24DoneOutline from '@vkontakte/icons/dist/24/done_outline';
 
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: '', context_2: '', context_3: ''};
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: '', context_2: '', context_3: '',  popout: null, actionsLog: [],};
 
 	  this.openWithoutContext_1 = this.openWithoutContext_1.bind(this);
 	  this.closeWithoutContext_1 = this.closeWithoutContext_1.bind(this);
@@ -52,7 +54,7 @@ class Help extends React.Component {
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
+	  this.onSubmit = this.onSubmit.bind(this);
     }
 	 
 	openWithoutContext_1(){
@@ -80,10 +82,26 @@ class Help extends React.Component {
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
+	this.setState({ popout:
+		<Alert
+		  actions={[{
+			title: 'Закрыть',
+			autoclose: true,
+			mode: 'cancel'
+		  }]}
+		  onClose={this.closePopout}>
+		  <h2>Заявка отправлена</h2>
+		  <p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор ответит на Ваш вопрос в течении суток.</p>
+		</Alert>
+	  });
 	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
 	event.preventDefault();
 	}
-
+	
+	closePopout () {
+	this.setState({ popout: null });
+	}
+	
 	onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
@@ -100,7 +118,7 @@ class Help extends React.Component {
     return (
 	<Panel id={this.props.id}>
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
- 	<Group>
+	<Group>
    	<List>
     <CellButton onClick={this.openWithoutContext_1}>Что делать, если у моего ребенка неправильное расписание уроков?</CellButton>
 	{this.state.context_1 && 
