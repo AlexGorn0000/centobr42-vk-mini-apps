@@ -51,8 +51,8 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group style={{background: ("https://sun9-25.userapi.com/c858416/v858416226/13f865/0_Wt1UCMpuY.jpg")}}>
-		<Div><center><Avatar width="64" height="64" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
+		 <Group style={{backgroundImage: ("https://sun9-25.userapi.com/c858416/v858416226/13f865/0_Wt1UCMpuY.jpg")}}>
+		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
 	    </Group>}
 		{fetchedUser &&
 		<Group>
@@ -61,8 +61,16 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Div>
 		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow><br/>
 		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
-		<InfoRow title="Родной город">{`${fetchedUser.city.title}`}</InfoRow><br/>
+		<InfoRow title="Город">{`${fetchedUser.city.title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
+		</Div>
+		</Group>}
+		{fetchedUser &&
+		<Group>
+		<Cell before={<Icon24Education/>}>Образование</Cell>
+		<Separator style={{margin: '5px 0'}}/>
+		<Div>
+		<InfoRow title="Школа">{`${fetchedUser.schools.name}`}<br/>{`${fetchedUser.city.title}`}, {`${fetchedUser.schools.year_from}`}-{`${fetchedUser.schools.year_to}`}</InfoRow>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
