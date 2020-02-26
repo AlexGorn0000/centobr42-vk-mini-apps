@@ -40,8 +40,8 @@ const Education = ({ id, go, fetchedUser}) => (
 		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Образование</PanelHeader>
    <Group title="Образование">
    <List>
-    <Cell expandable before={<Icon24Education/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
-    <Cell expandable before={<Icon24Note/>} onClick={go} Data-to="Timetable">Расписание уроков</Cell>
+    <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
+    <Cell expandable before={<Icon24Note fill="#00acff"/>} onClick={go} Data-to="Timetable">Расписание уроков</Cell>
    </List>
    </Group>
    </Panel>

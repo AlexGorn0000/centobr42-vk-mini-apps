@@ -51,7 +51,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
-		 <Group style={{background: URL("https://sun9-12.userapi.com/c205824/v205824455/82fec/nOnsoMv-mC0.jpg")}}>
+		 <Group style={{background: URL("https://sun9-25.userapi.com/c858416/v858416226/13f865/0_Wt1UCMpuY.jpg")}}>
 		<Div><center><Avatar width="64" height="64" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}</center></Div>
 	    </Group>}
 		{fetchedUser &&

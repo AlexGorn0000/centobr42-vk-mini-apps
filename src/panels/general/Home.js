@@ -52,10 +52,10 @@ return(
 	<List>
 	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={this.props.go} Data-to="Profile">Мой профиль</Cell>
 	 <Separator style={{ margin: '5px 0' }} />
-	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 26 февраля">Новости</Cell>
+	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 28 февраля">Новости</Cell>
 	 <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Education">Образование</Cell>
 	 <Cell expandable before={<Icon24Services fill="#00acff" />} onClick={this.props.go} Data-to="Projects">Мероприятия</Cell>
-	 <Cell expandable before={<Icon24Live fill="#00acff"/>} onClick={this.props.go} Data-to="Broadcast">Прямая трансляция</Cell>
+	 <Cell expandable before={<Icon24Live fill="#00acff"/>} description="В разработке до 28 февраля">Прямая трансляция</Cell>
 	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={this.props.go} Data-to="Help">Помощь</Cell>
 	 <Separator style={{ margin: '10px 0' }} />
 	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={this.props.go} Data-to="Settings">Настройки</Cell>
