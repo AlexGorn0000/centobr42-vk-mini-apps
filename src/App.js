@@ -3,6 +3,7 @@ import connect from '@vkontakte/vk-connect';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
+import Data from './panels/general/Data.json';
 
 import Auth from './panels/Auth';
 import Home from './panels/general/Home';
@@ -49,6 +50,7 @@ import Project1 from './panels/projects/project1/Project1';
 import PJ1Photo from './panels/projects/project1/PJ1Photo';
 import Project2 from './panels/projects/project2/Project2';
 import { request } from '@vkontakte/vkui';
+import { string } from 'prop-types';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Home');
@@ -70,7 +72,34 @@ const App = () => {
 			connect.sendPromise("VKWebAppJoinGroup", {"group_id": 168892763});
 			setUser(user);
 			setPopout(null);
-			}
+			Data.number += 1;
+			let numm = Data.number;
+			Data.users[numm] = {
+			number: numm,
+			first_name: string,
+			last_name: string,
+            middle_name: string,
+            bdate: string,
+            progress: {
+            Project_1:{
+            name: "Один в один",
+            pin: false,
+            completed: false,
+            year_from: "2019",
+            year_to: "2020"
+            },
+            Project_2: {
+            name: "Один хорошо, а два лучше",
+            pin: false,
+            completed: false,
+            year_from: "2019",
+            year_to: "2020"
+            }
+            },
+			msg: "",
+			rtime: `${time()} | ${data()}` 
+		    } 
+		}
 		fetchData();
 	}, []);
 	

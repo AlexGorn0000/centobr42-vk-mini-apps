@@ -48,6 +48,7 @@ const itemStyle = {
     fontSize: 12
   };
 
+  
 const Profile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
@@ -67,8 +68,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
 		<InfoRow title="Город">{`${fetchedUser.city.title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
-		<InfoRow title="Последнее сообщение">{Data.users.user_1.msg}</InfoRow><br/>
-		</Div>
+	    </Div>
 		</Group>}
 		<Group title="Достижения">
 		<HorizontalScroll>

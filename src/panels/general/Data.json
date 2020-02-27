@@ -8,22 +8,25 @@
             "middle_name": "Сергеевич",
             "bdate": "26.12.2005",
             "progress": {
-            "Project 1":{
+            "Project_1":{
             "name": "Один в один",
-            "place": false,
-            "pin": false,
-            "completed": false
+           "pin": false,
+            "completed": false,
+            "year_from": "2019",
+            "year_to": "2020"
             },
-            "Project 2": {
+            "Project_2": {
             "name": "Один хорошо, а два лучше",
-            "place": false,
             "pin": false,
-            "completed": false
+            "completed": false,
+            "year_from": "2019",
+            "year_to": "2020"
             }
             },
             "login": "alex_gorn00@mail.ru",
             "password": "Underdog261205",
-            "msg": "Администрация: [Re: Ваша заявка успешно отправлена]"
+            "msg": "",
+            "rtime": "16:30:05 | 01.01.2020" 
         },
         "user_2": {
             "number": 2,
@@ -33,22 +36,25 @@
             "middle_name": "Ивановна",
             "bdate": false,
             "progress": {
-            "Project 1":{
+            "Project_1":{
             "name": "Один в один",
-            "place": false,
             "pin": false,
-            "completed": false
+            "completed": false,
+            "year_from": "2019",
+            "year_to": "2020"
             },
-            "Project 2": {
+            "Project_2": {
             "name": "Один хорошо, а два лучше",
-            "place": false,
-            "pin": false,
-            "completed": false
+            "pin": [1,2,3,4],
+            "completed": false,
+            "year_from": "2019",
+            "year_to": "2020"
             }
             },
             "login": "elenakalistratova",
             "password": "elena754984",
-            "msg": ""
+            "msg": "",
+            "rtime": "18:30:05 | 27.02.2020" 
         }
     }
 }
