@@ -54,25 +54,14 @@ render(){
 return(
 <Panel id={this.props.id}>
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>7 «А» класс</PanelHeader>
-  
-  <Div>
-	<h3>Понедельник</h3>
-	<table className="mark">
-	<tbody>
-	<th>Урок №</th>
-	<th>Предмет</th>
-  <th>Кабинет №</th>
-  <th>Преподаватель</th>
-	</tbody>
-	<tr><td>1</td><td>Обществознание</td><td>№223</td><td>М.В. Уханова</td></tr>
-	<tr><td>2</td><td>Технология</td><td>№102/104</td><td>И.А. Невзоров/Е.О. Ролич</td></tr>	
-  <tr><td>3</td><td>Алгебра</td><td>№228</td><td>А.М. Дурягина</td></tr>		
-	<tr><td>4</td><td>Геометрия</td><td>№228</td><td>А.М. Дурягина</td></tr>
-  <tr><td>5</td><td>Русский язык</td><td>№328</td><td>В.А. Сычева</td></tr>
-  <tr><td>6</td><td>Литература</td><td>№328</td><td>В.А. Сычева</td></tr>	
-	</table>
-		</Div>
   <Group>
+  <Div>Понедельник<br/>
+  1-ый урок: Обществознание<br/>
+  2-ой урок: Технология<br/> 
+  3-ий урок: Алгебра<br/> 
+  4-ый урок: Геометрия<br/> 
+  5-ый урок: Русский язык<br/>
+  6-ой урок: Литература</Div>
   <Separator style={{margin: '10px 0'}}/>
   <Div>Вторник<br/>
   1-ый урок: Физическая культура (бассейн)<br/>
