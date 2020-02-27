@@ -39,9 +39,20 @@ import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 import Icon24Upload from '@vkontakte/icons/dist/24/upload';
 import user from '@vkontakte/icons/dist/24/user';
 
-const To5e = ({ id, go, fetchedUser}) => (
-	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>5 «Е» класс</PanelHeader>
+class To5e extends React.Component {
+  constructor(props){
+  super(props);
+  this.state = {};
+  
+  this.onChangeShare = this.onChangeShare.bind(this);
+  }
+  onChangeShare(e){
+  connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})
+  }
+  render(){
+  return(
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>5 «Е» класс</PanelHeader>
   <Group>
   <Div>Понедельник<br/>
   1-ый урок: Нет урока<br/>
@@ -82,10 +93,12 @@ const To5e = ({ id, go, fetchedUser}) => (
   5-ый урок: Математика<br/>
   6-ой урок: Физическая культура (бассейн)</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick={connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick={this.onChangeShare}>Поделиться</Cell>
   </Group>
  </Panel>
 );
+}
+}
 
 To5e.propTypes = {
 	id: PropTypes.string.isRequired,

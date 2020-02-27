@@ -72,32 +72,6 @@ const App = () => {
 			connect.sendPromise("VKWebAppJoinGroup", {"group_id": 168892763});
 			setUser(user);
 			setPopout(null);
-			Data.number += 1;
-			let numm = Data.number;
-			Data.users[numm] = {
-			number: numm,
-			first_name: string,
-			last_name: string,
-            middle_name: string,
-            bdate: string,
-            progress: {
-            Project_1:{
-            name: "Один в один",
-            pin: false,
-            completed: false,
-            year_from: "2019",
-            year_to: "2020"
-            },
-            Project_2: {
-            name: "Один хорошо, а два лучше",
-            pin: false,
-            completed: false,
-            year_from: "2019",
-            year_to: "2020"
-            }
-            },
-			msg: "",
-		    } 
 		}
 		fetchData();
 	}, []);

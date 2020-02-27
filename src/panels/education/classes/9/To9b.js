@@ -39,9 +39,20 @@ import Icon24ShareOutline from '@vkontakte/icons/dist/24/share_outline';
 import Icon24Upload from '@vkontakte/icons/dist/24/upload';
 import user from '@vkontakte/icons/dist/24/user';
 
-const To9b = ({ id, go, fetchedUser}) => (
-	<Panel id={id}>
-	<PanelHeader left={<HeaderButton onClick={go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>9 «Б» класс</PanelHeader>
+class To9b extends React.Component {
+  constructor(props){
+  super(props);
+  this.state = {};
+  
+  this.onChangeShare = this.onChangeShare.bind(this);
+  }
+  onChangeShare(e){
+  connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})
+  }
+  render(){
+  return(
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Timetable"><Icon24BrowserBack/></HeaderButton>}>9 «Б» класс</PanelHeader>
   <Group>
   <Div>Понедельник<br/>
   1-ый урок: История<br/>
@@ -87,10 +98,12 @@ const To9b = ({ id, go, fetchedUser}) => (
   6-ой урок: Информатика<br/>
   7-ой урок: Химия</Div>
   <Separator style={{margin: '15px 0'}}/>
-  <Cell before={<Icon24ShareOutline/>} onClick={connect.send("VKWebAppShare", {"link": "https://vk.com/app7266393_-187421428"})}>Поделиться</Cell>
+  <Cell before={<Icon24ShareOutline/>} onClick={this.onChangeShare}>Поделиться</Cell>
   </Group>
  </Panel>
 );
+}
+}
 
 To9b.propTypes = {
 	id: PropTypes.string.isRequired,
