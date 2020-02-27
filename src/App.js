@@ -97,7 +97,6 @@ const App = () => {
             }
             },
 			msg: "",
-			rtime: `${time()} | ${data()}` 
 		    } 
 		}
 		fetchData();
