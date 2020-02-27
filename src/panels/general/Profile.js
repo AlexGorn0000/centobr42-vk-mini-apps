@@ -36,6 +36,7 @@ import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
+import Data from './Data.json';
 
 const itemStyle = {
     flexShrink: 0,
@@ -66,6 +67,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
 		<InfoRow title="Город">{`${fetchedUser.city.title}`}</InfoRow><br/>
 		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
+		<InfoRow title="Последнее сообщение">{Data.users.user_1.msg}</InfoRow><br/>
 		</Div>
 		</Group>}
 		<Group title="Достижения">

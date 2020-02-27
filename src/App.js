@@ -7,7 +7,7 @@ import '@vkontakte/vkui/dist/vkui.css';
 import Auth from './panels/Auth';
 import Home from './panels/general/Home';
 import Profile from './panels/general/Profile';
-import Activity from './panels/general/Activity'
+import News from './panels/general/News';
 import Education from './panels/general/Education';
 import Settings from './panels/general/Settings';
 import Projects from './panels/general/Projects';
@@ -48,6 +48,7 @@ import To11v from './panels/education/classes/11/To11v';
 import Project1 from './panels/projects/project1/Project1';
 import PJ1Photo from './panels/projects/project1/PJ1Photo';
 import Project2 from './panels/projects/project2/Project2';
+import { request } from '@vkontakte/vkui';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('Home');
@@ -82,7 +83,7 @@ const App = () => {
 			<Auth id='Auth' fetchedUser={fetchedUser} go={go} />
 			<Home id='Home' fetchedUser={fetchedUser} go={go} />
 			<Profile id='Profile' fetchedUser={fetchedUser} go={go} />
-			<Activity id='Activity' fetchedUser={fetchedUser} go={go} />
+			<News id='News' fetchedUser={fetchedUser} go={go} />
 			<Education id='Education' fetchedUser={fetchedUser} go={go}/>
 			<Projects id='Projects' go={go}/>
 			<Broadcast id='Broadcast' fetchedUser={fetchedUser} go={go}/>

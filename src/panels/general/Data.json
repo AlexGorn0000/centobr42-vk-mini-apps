@@ -1,0 +1,54 @@
+{
+    "users": {
+        "user_1": {
+            "number": 1,
+            "id": 270919242,
+            "first_name": "Александр",
+            "last_name": "Горбунов",
+            "middle_name": "Сергеевич",
+            "bdate": "26.12.2005",
+            "progress": {
+            "Project 1":{
+            "name": "Один в один",
+            "place": false,
+            "pin": false,
+            "completed": false
+            },
+            "Project 2": {
+            "name": "Один хорошо, а два лучше",
+            "place": false,
+            "pin": false,
+            "completed": false
+            }
+            },
+            "login": "alex_gorn00@mail.ru",
+            "password": "Underdog261205",
+            "msg": "Администрация: [Re: Ваша заявка успешно отправлена]"
+        },
+        "user_2": {
+            "number": 2,
+            "id": 223646052,
+            "first_name": "Елена",
+            "last_name": "Калистратова",
+            "middle_name": "Ивановна",
+            "bdate": false,
+            "progress": {
+            "Project 1":{
+            "name": "Один в один",
+            "place": false,
+            "pin": false,
+            "completed": false
+            },
+            "Project 2": {
+            "name": "Один хорошо, а два лучше",
+            "place": false,
+            "pin": false,
+            "completed": false
+            }
+            },
+            "login": "elenakalistratova",
+            "password": "elena754984",
+            "msg": ""
+        }
+    }
+}
