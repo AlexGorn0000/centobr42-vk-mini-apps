@@ -43,7 +43,7 @@ import Icon24DoneOutline from '@vkontakte/icons/dist/24/done_outline';
 class Help extends React.Component {
     constructor(props) {
       super(props);
-	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: '', context_2: '', context_3: '',  popout: null, actionsLog: [],};
+	  this.state = {name: '',email: '', message: '', text: 'Отправить', level: 'primary', context_1: '', context_2: '', context_3: ''};
 
 	  this.openWithoutContext_1 = this.openWithoutContext_1.bind(this);
 	  this.closeWithoutContext_1 = this.closeWithoutContext_1.bind(this);
@@ -54,7 +54,8 @@ class Help extends React.Component {
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
-	}
+	  this.onSubmit = this.onSubmit.bind(this);
+    }
 	 
 	openWithoutContext_1(){
 	this.setState({context_1: 'Здравствуйте! Чтобы посмотреть информацию о текущем расписании уроков, перейдите в блок "Расписание уроков" и выберите в нем класс своего ребенка.'});
@@ -74,14 +75,21 @@ class Help extends React.Component {
 	closeWithoutContext_3(){
 	this.setState({context_3: ''});
 	}
-	onSubmit(e) {
+
+	onSubmit(event){
 	this.setState({name: ''});
 	this.setState({email: ''});
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
 	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "7266393", "domain":"club187421428", "messages": "{this.state.message}"}});
+	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
 	}
+	
+	closePopout () {
+	this.setState({ popout: null });
+	}
+	
 	onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
@@ -122,7 +130,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_532132361">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_532132364">политики конфиденциальности</Link></Checkbox><br/>
-	<Button size="xl" level={this.state.level} onClick={this.state.onSubmit}>{this.state.text}</Button></Div>
+	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );
