@@ -50,13 +50,13 @@ return(
 	<img width="100%" height="100%" src="https://sun9-12.userapi.com/c205824/v205824455/82fec/nOnsoMv-mC0.jpg"></img>
 	<Group>
 	<List>
-	 <Tooltip text="Здесь Вы можете посмотреть данные о своем профиле." isShown={this.state.tooltip} onClose={() => this.setState({ tooltip: false, tooltip2: true })} offsetX={10}>
+	 <Tooltip text="Здесь Вы можете посмотреть данные о своем профиле." isShown={this.state.tooltip} onClose={() => this.setState({ tooltip: false, tooltip2: true })} offsetX={10} offsetY={10}>
 	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={this.props.go} Data-to="Profile">Мой профиль</Cell></Tooltip>
 	 <Separator style={{ margin: '5px 0' }} />
 	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 2 марта">Новости</Cell>
 	 <Tooltip text="Следите за успеваемостью ребенка уже сегодня! Для этого перейдите в блок «Образование»." isShown={this.state.tooltip4} onClose={() => this.setState({ tooltip4: false, tooltip5: true })} offsetX={10}>
 	 <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Education">Образование</Cell></Tooltip>
-	 <Tooltip isShown={this.state.tooltip2} onClose={() => this.setState({tooltip2: false, tooltip3: true})} offsetX={10} text="У Вас есть талант, но не знаешь кому показать? Тогда Вам сюда!">
+	 <Tooltip isShown={this.state.tooltip2} onClose={() => this.setState({tooltip2: false, tooltip3: true})} offsetX={10} text="У Вас есть талант, но не знаете кому показать? Тогда Вам сюда!">
 	 <Cell expandable before={<Icon24Services fill="#00acff"/>} onClick={this.props.go} Data-to="Projects" indicator={<Counter mode="prominent">1</Counter>}>Мероприятия</Cell></Tooltip>
 	 <Cell expandable before={<Icon24Live fill="#00acff"/>} description="В разработке до 3 марта">Прямая трансляция</Cell>
 	 <Tooltip text="Хотите задать вопрос, но не знаете куда обратиться? Техническая поддержка Вам в помощь!" isShown={this.state.tooltip3} onClose={() => this.setState({ tooltip3: false, tooltip4: true })} offsetX={10}>
