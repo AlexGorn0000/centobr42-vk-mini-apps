@@ -54,9 +54,7 @@ class Help extends React.Component {
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
-	  this.openDefault = this.openDefault.bind(this);
-	  this.closePopout = this.closePopout.bind(this);
-    }
+	}
 	 
 	openWithoutContext_1(){
 	this.setState({context_1: 'Здравствуйте! Чтобы посмотреть информацию о текущем расписании уроков, перейдите в блок "Расписание уроков" и выберите в нем класс своего ребенка.'});
@@ -76,22 +74,7 @@ class Help extends React.Component {
 	closeWithoutContext_3(){
 	this.setState({context_3: ''});
 	}
-	openDefault () {
-		this.setState({ popout:
-		  <Alert
-			actions={[{
-			  title: 'Отмена',
-			  autoclose: true,
-			  mode: 'cancel'
-			}]}
-			onClose={this.closePopout}
-		  >
-			<h2>Отчет о доставке</h2>
-			<p>Ваша заявка успешно отправлена. Администратор рассмотрит Вашу заявку в течении суток.</p>
-		  </Alert>
-		});
-	  }
-	closePopout () {
+	onSubmit(e) {
 	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "7266393", "domain":"club187421428", "messages": "{this.state.message}"}});
 	this.setState({ popout: null });
 	this.setState({name: ''});
@@ -100,7 +83,6 @@ class Help extends React.Component {
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
 	}
-	
 	onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
@@ -141,7 +123,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_532132361">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_532132364">политики конфиденциальности</Link></Checkbox><br/>
-	<Button size="xl" level={this.state.level} onClick={this.openDefault}>{this.state.text}</Button></Div>
+	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );
