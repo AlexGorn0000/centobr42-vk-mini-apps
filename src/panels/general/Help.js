@@ -77,7 +77,7 @@ class Help extends React.Component {
 	this.setState({context_3: ''});
 	}
 	openPopout(){
-	this.setState({ popout: <Alert actions={[{title: 'Закрыть',	autoclose: false, mode: 'cancel'}]} onClose={this.closePopout}><h2>Заявка отправлена</h2><p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор рассмотрит Вашу заявку в течении суток.</p></Alert>});
+	this.setState({ popout: <Alert actions={[{title: 'Закрыть',	autoclose: true, mode: 'cancel'}]} onClose={this.closePopout}><h2>Заявка отправлена</h2><p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор рассмотрит Вашу заявку в течении суток.</p></Alert>});
 	}
 	closePopout () {
 	this.setState({ popout: null });
@@ -102,7 +102,7 @@ class Help extends React.Component {
 
 	render() {
     return (
-	<Panel id={this.props.id}>
+	<Panel popout={this.state.popout} id={this.props.id}>
 	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Помощь</PanelHeader>
 	<Group>
    	<List>
