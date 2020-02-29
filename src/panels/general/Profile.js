@@ -37,7 +37,6 @@ import Icon24Bug from '@vkontakte/icons/dist/24/bug';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 import Data from './Data.json';
-import './table.css';
 import { Math } from 'core-js';
 
 const itemStyle = {

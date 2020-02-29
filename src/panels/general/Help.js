@@ -54,7 +54,8 @@ class Help extends React.Component {
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
-	  this.onSubmit = this.onSubmit.bind(this);
+	  this.openPopout = this.openPopout.bind(this);
+	  this.closePopout = this.closePopout.bind(this);
     }
 	 
 	openWithoutContext_1(){
@@ -75,36 +76,22 @@ class Help extends React.Component {
 	closeWithoutContext_3(){
 	this.setState({context_3: ''});
 	}
-
-	onSubmit(event){
+	openPopout(){
+	this.setState({ popout: <Alert actions={[{title: 'Закрыть',	autoclose: true, mode: 'cancel'}]} onClose={this.closePopout}><h2>Заявка отправлена</h2><p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор рассмотрит Вашу заявку в течении суток.</p></Alert>});
+	}
+	closePopout () {
+	this.setState({ popout: null });
 	this.setState({name: ''});
 	this.setState({email: ''});
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
-	this.setState({ popout:
-		<Alert
-		  actions={[{
-			title: 'Закрыть',
-			autoclose: true,
-			mode: 'cancel'
-		  }]}
-		  onClose={this.closePopout}>
-		  <h2>Заявка отправлена</h2>
-		  <p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор ответит на Ваш вопрос в течении суток.</p>
-		</Alert>
-	  });
-	}
-	
-	closePopout () {
-	this.setState({ popout: null });
+	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "7266393", "domain":"club187421428", "messages": "{this.state.message}"}});
 	}
 	
 	onChangeMessage(event){
       this.setState({message: event.target.value});
 	}
-	
 	onChangeName(e){
 	this.setState({name: e.target.value});
 	}
@@ -142,7 +129,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_532132361">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_532132364">политики конфиденциальности</Link></Checkbox><br/>
-	<Button size="xl" level={this.state.level} onClick={this.onSubmit}>{this.state.text}</Button></Div>
+	<Button size="xl" level={this.state.level} onClick={this.openPopout}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );

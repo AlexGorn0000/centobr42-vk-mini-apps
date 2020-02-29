@@ -37,6 +37,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Recent from '@vkontakte/icons/dist/24/recent';
 import Icon24Home from '@vkontakte/icons/dist/24/home';
 import Icon24Reorder from '@vkontakte/icons/dist/24/reorder';
+import InfoBlock from './info_block.css';
 
 class Home extends React.Component {
  constructor(props) {
