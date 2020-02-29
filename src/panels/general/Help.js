@@ -54,7 +54,7 @@ class Help extends React.Component {
 	  this.onChangeName = this.onChangeName.bind(this);
       this.onChangeEmail = this.onChangeEmail.bind(this);
       this.onChangeMessage = this.onChangeMessage.bind(this);
-	  this.openPopout = this.openPopout.bind(this);
+	  this.openDefault = this.openDefault.bind(this);
 	  this.closePopout = this.closePopout.bind(this);
     }
 	 
@@ -76,17 +76,29 @@ class Help extends React.Component {
 	closeWithoutContext_3(){
 	this.setState({context_3: ''});
 	}
-	openPopout(){
-	this.setState({ popout: <Alert actions={[{title: 'Закрыть',	autoclose: true, mode: 'cancel'}]} onClose={this.closePopout}><h2>Заявка отправлена</h2><p>Ваша заявка была успешно отправлена в службу технической поддержки. Администратор рассмотрит Вашу заявку в течении суток.</p></Alert>});
-	}
+	openDefault () {
+		this.setState({ popout:
+		  <Alert
+			actions={[{
+			  title: 'Отмена',
+			  autoclose: true,
+			  mode: 'cancel'
+			}]}
+			onClose={this.closePopout}
+		  >
+			<h2>Отчет о доставке</h2>
+			<p>Ваша заявка успешно отправлена. Администратор рассмотрит Вашу заявку в течении суток.</p>
+		  </Alert>
+		});
+	  }
 	closePopout () {
+	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "7266393", "domain":"club187421428", "messages": "{this.state.message}"}});
 	this.setState({ popout: null });
 	this.setState({name: ''});
 	this.setState({email: ''});
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "7266393", "domain":"club187421428", "messages": "{this.state.message}"}});
 	}
 	
 	onChangeMessage(event){
@@ -129,7 +141,7 @@ class Help extends React.Component {
 	<Input placeholder="Введите E-mail" type="email" value={this.state.email} onChange={this.onChangeEmail}/><br/>
 	<Textarea placeholder="Напишите что-нибудь" value={this.state.message} onChange={this.onChangeMessage}/><br/>
 	<Checkbox>Я принимаю условия <Link component="a" href="https://vk.com/doc270919242_532132361">лицензионного соглашения</Link> и <Link component="a" href="https://vk.com/doc270919242_532132364">политики конфиденциальности</Link></Checkbox><br/>
-	<Button size="xl" level={this.state.level} onClick={this.openPopout}>{this.state.text}</Button></Div>
+	<Button size="xl" level={this.state.level} onClick={this.openDefault}>{this.state.text}</Button></Div>
     </Group>
  </Panel>
 );
