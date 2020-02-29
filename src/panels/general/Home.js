@@ -50,7 +50,7 @@ return(
 	<img width="100%" height="100%" src="https://sun9-12.userapi.com/c205824/v205824455/82fec/nOnsoMv-mC0.jpg"></img>
 	<Group>
 	<List>
-	 <Tooltip text="Здесь Вы можете посмотреть данные о своем профиле." isShown={this.state.tooltip} onClose={() => this.setState({ tooltip: false, tooltip2: true })} offsetX={10}>
+	 <Tooltip text="Здесь Вы можете посмотреть данные о своем профиле." isShown={this.state.tooltip} onClose={() => this.setState({ tooltip: false, tooltip2: true })} offsetX={10} offsetY={30}>
 	 <Cell expandable before={<Icon24Home fill="#00acff"/>} onClick={this.props.go} Data-to="Profile">Мой профиль</Cell></Tooltip>
 	 <Separator style={{ margin: '5px 0' }} />
 	 <Cell before={<Icon24Newsfeed fill="#00acff"/>} description="В разработке до 2 марта">Новости</Cell>
