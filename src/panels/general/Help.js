@@ -82,7 +82,7 @@ class Help extends React.Component {
 	this.setState({message: ''});
 	this.setState({text: 'Отправлено'});
 	this.setState({level: 'secondary'});
-	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": 423504+1, "peer_id": -187421428 ,"domain": 187421428, "messages": "Тестирование"}});
+	connect.send("VKWebAppCallAPIMethod", {"method": "messages.send", "params": {"random_id": "4235041", "peer_id": "-187421428" ,"domain": "187421428", "messages": "Тестирование"}});
 	console.log({name: this.state.name, email: this.state.email, message: this.state.message});
 	}
 	
