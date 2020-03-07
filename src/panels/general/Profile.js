@@ -34,9 +34,13 @@ import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24Gift from '@vkontakte/icons/dist/24/gift';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
+import Icon20HomeOutline from '@vkontakte/icons/dist/20/home_outline';
+import Icon20MessageOutline from '@vkontakte/icons/dist/20/message_outline';
+import Icon20EducationOutline from '@vkontakte/icons/dist/20/education_outline';
+import Icon20CalendarOutline from '@vkontakte/icons/dist/20/calendar_outline';
+import Icon20ArticleOutline from '@vkontakte/icons/dist/20/article_outline';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
-import Data from './Data.json';
 import { Math } from 'core-js';
 
 const itemStyle = {
@@ -65,11 +69,12 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<InfoRow title="Имя">{`${fetchedUser.first_name}`}</InfoRow><br/>
-		<InfoRow title="Фамилия">{`${fetchedUser.last_name}`}</InfoRow><br/>
-		<InfoRow title="Город">{`${fetchedUser.city.title}`}</InfoRow><br/>
-		<InfoRow title="Дата рождения">{`${fetchedUser.bdate}`}</InfoRow><br/>
-	    </Div>
+		<Cell before={<Icon20MessageOutline/>}><InfoRow title="Статус:">{`${fetchedUser.status}`}</InfoRow></Cell>
+		<Cell before={<Icon20ArticleOutline/>}><InfoRow title="Имя:">{`${fetchedUser.first_name}`}</InfoRow></Cell><br/>
+		<Cell><InfoRow title="Фамилия:">{`${fetchedUser.last_name}`}</InfoRow></Cell><br/>
+		<Cell before={<Icon20HomeOutline/>}><InfoRow title="Город:">{`${fetchedUser.city.title}`}</InfoRow></Cell><br/>
+		<Cell before={<Icon20CalendarOutline/>}><InfoRow title="Дата рождения:">{`${fetchedUser.bdate}`}</InfoRow></Cell><br/>
+		</Div>
 		</Group>}
 		<Group title="Достижения">
 		<HorizontalScroll>

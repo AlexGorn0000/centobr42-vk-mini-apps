@@ -3,7 +3,6 @@ import connect from '@vkontakte/vk-connect';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
-import Data from './panels/general/Data.json';
 
 import Auth from './panels/Auth';
 import Home from './panels/general/Home';
