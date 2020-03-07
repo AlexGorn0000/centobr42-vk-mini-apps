@@ -10,7 +10,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
-import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, classNames } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, classNames, Separator } from '@vkontakte/vkui';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -32,20 +32,39 @@ import Icon24Note from '@vkontakte/icons/dist/24/note';
 import Icon24Live from '@vkontakte/icons/dist/24/live';
 import Icon24PlayNext from '@vkontakte/icons/dist/24/play_next';
 import Icon24Bug from '@vkontakte/icons/dist/24/bug';
+import Icon24List from '@vkontakte/icons/dist/24/list';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import user from '@vkontakte/icons/dist/24/user';
 
-const Education = ({ id, go, fetchedUser}) => (
-	<Panel id={id}>
-		<PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Образование</PanelHeader>
+class Education extends React.Component {
+	constructor(props) {
+   super(props);
+   this.state = {notification: null, button_text: "Включить уведомления"};
+   this.onAllowNotification = this.onAllowNotification.bind(this);
+   }
+   onAllowNotification(e){
+   this.setState({button_text: "Выключить уведомления"});
+   connect.send("VKWebAppAllowNotifications", {"request_id": 7266393})
+}
+   render(){
+   return(
+	<Panel id={this.props.id}>
+	<PanelHeader left={<HeaderButton onClick={this.props.go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Образование</PanelHeader>
    <Group title="Образование">
    <List>
-    <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={go} Data-to="Teaching">Педагогический состав</Cell>
-    <Cell expandable before={<Icon24Note fill="#00acff"/>} onClick={go} Data-to="Timetable">Расписание уроков</Cell>
+    <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Teaching">Педагогический состав</Cell>
+    <Cell expandable before={<Icon24Newsfeed fill="#00acff"/>} onClick={this.props.go} Data-to="Timetable">Расписание уроков</Cell>
+	<Separator style={{margin: "5px 0"}}/>
+	<Cell before={<Icon24Note fill="#00acff"/>} description="В разработке">Электронный дневник</Cell>
    </List>
    </Group>
+   <Div style={{textAlign: "center"}}><img src="https://vk.com/sticker/1-3375-128"/><br/>
+   <h4>Вы еще не включили уведомления?! Чего же Вы ждете? Включите уведомления, чтобы не пропускать важные обновления.</h4><Separator style={{margin: "5px 0"}}/>
+   <Button size="l" level="outline" onClick={this.onAllowNotification}>{this.state.button_text}</Button></Div>
    </Panel>
 );
+}
+}
 
 Education.propTypes = {
 	id: PropTypes.string.isRequired,

@@ -59,7 +59,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
 		<Group style={{background: "linear-gradient(90deg, rgba(246,6,136,1) 0%, rgba(0,212,255,1) 100%)"}}>
-		<Div><center><Avatar width="148" height="148" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
+		<Div><center><Avatar size={64} src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
 		<Separator style={{margin: '5px 0'}}/>
 		Будь лучшим - среди лучших!
 		</center></Div>

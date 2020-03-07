@@ -37,6 +37,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import Icon24Recent from '@vkontakte/icons/dist/24/recent';
 import Icon24Home from '@vkontakte/icons/dist/24/home';
 import Icon24Reorder from '@vkontakte/icons/dist/24/reorder';
+import "./WallPost.css";
 
 class Home extends React.Component {
  constructor(props) {
@@ -73,12 +74,15 @@ return(
                 align="center"
                 style={{ height: 220 }}
               >
-				<iframe src="https://vk.com/video_ext.php?oid=-187421428&id=456239049&hash=de4c61aa47a2c3a9" frameborder="0" controls/>
+				<img src="https://sun1-27.userapi.com/BbxhADmLTC-VUKwrzblMu_R2zgNQZE1Nu46V2A/ksS1_CXcL78.jpg"/>
+				<img src="https://sun9-7.userapi.com/c205720/v205720542/8544e/Xbn4aY4Zdp0.jpg"/>
+				<img src="https://sun9-27.userapi.com/c206520/v206520353/658d9/8v_Bg-7JsIE.jpg"/>
+				<img src="https://sun9-9.userapi.com/c855732/v855732618/1f829b/MTdYyUi3dEg.jpg"/>
               </Gallery>
 			  <Separator style={{ margin: '10px 0'}}/>
 		<FormLayoutGroup>
 		<FormLayout>
-			  <Button size="xl" level="outline"component="a" href="https://vk.com/centobr42_press_center">Подробнее</Button>
+			  <Button size="xl" level="outline" onClick={this.props.go} Data-to="News">Подробнее</Button>
 		</FormLayout>
 		</FormLayoutGroup>
          </Group>
