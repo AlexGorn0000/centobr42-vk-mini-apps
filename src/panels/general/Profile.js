@@ -69,11 +69,10 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<Cell before={<Icon20MessageOutline/>}>Статус: {`${fetchedUser.status}`}</Cell><br/>
-		<Cell before={<Icon20ArticleOutline/>}>Имя: {`${fetchedUser.first_name}`}</Cell><br/>
-		<Cell>Фамилия: {`${fetchedUser.last_name}`}</Cell><br/>
-		<Cell before={<Icon20HomeOutline/>}>Город: {`${fetchedUser.city.title}`}</Cell><br/>
-		<Cell before={<Icon20CalendarOutline/>}>Дата рождения: {`${fetchedUser.bdate}`}</Cell><br/>
+		<Cell before={<Icon20MessageOutline/>}>Статус: {`${fetchedUser.status}`}</Cell>
+		<Cell before={<Icon20ArticleOutline/>}>Имя: {`${fetchedUser.first_name}`}<br/>Фамилия: {`${fetchedUser.last_name}`}</Cell>
+		<Cell before={<Icon20HomeOutline/>}>Город: {`${fetchedUser.city.title}`}</Cell>
+		<Cell before={<Icon20CalendarOutline/>}>Дата рождения: {`${fetchedUser.bdate}`}</Cell>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
