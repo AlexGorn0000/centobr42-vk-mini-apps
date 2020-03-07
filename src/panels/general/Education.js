@@ -47,12 +47,12 @@ class Education extends React.Component {
    }
    onChangehours(e){
    setInterval(() => {
-   this.setState({hours: -1})
+   this.setState({hours: 120-1})
    }, 3600000);
    }
    onChangeMinutes(e){
    setInterval(() => {
-   this.setState({minutes: -1})
+   this.setState({minutes: 59-1})
    if (this.setState({minutes: 0})){
    this.setState({minutes: 60})
    }
@@ -60,13 +60,12 @@ class Education extends React.Component {
    }
    onChangeSeconds(e){
    setInterval(() => {
-   this.setState({seconds: -1})
+   this.setState({seconds: 59-1})
    if (this.setState({seconds: 0})){
    this.setState({seconds: 60})
    }
    }, 1000);
    }
-
    onAllowNotification(e){
    this.setState({button_text: "Выключить уведомления"});
    connect.send("VKWebAppAllowNotifications", {"request_id": 7266393})
