@@ -59,7 +59,7 @@ const Profile = ({ id, go, fetchedUser }) => (
 		 <PanelHeader left={<HeaderButton onClick={go} Data-to="Home"><Icon24BrowserBack/></HeaderButton>}>Мой профиль</PanelHeader>
 		 {fetchedUser &&
 		<Group style={{background: "linear-gradient(90deg, rgba(246,6,136,1) 0%, rgba(0,212,255,1) 100%)"}}>
-		<Div><center><Avatar width="124" height="124" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
+		<Div><center><Avatar width="148" height="148" src={fetchedUser.photo_200}/><br/>{`${fetchedUser.first_name}`} {`${fetchedUser.last_name}`}<br/>
 		<Separator style={{margin: '5px 0'}}/>
 		Будь лучшим - среди лучших!
 		</center></Div>
@@ -69,11 +69,11 @@ const Profile = ({ id, go, fetchedUser }) => (
 		<Cell before={<Icon24User/>}>Информация о пользователе</Cell>
 		<Separator style={{margin: '5px 0'}}/>
 		<Div>
-		<Cell before={<Icon20MessageOutline/>}><InfoRow title="Статус:">{`${fetchedUser.status}`}</InfoRow></Cell>
-		<Cell before={<Icon20ArticleOutline/>}><InfoRow title="Имя:">{`${fetchedUser.first_name}`}</InfoRow></Cell><br/>
-		<Cell><InfoRow title="Фамилия:">{`${fetchedUser.last_name}`}</InfoRow></Cell><br/>
-		<Cell before={<Icon20HomeOutline/>}><InfoRow title="Город:">{`${fetchedUser.city.title}`}</InfoRow></Cell><br/>
-		<Cell before={<Icon20CalendarOutline/>}><InfoRow title="Дата рождения:">{`${fetchedUser.bdate}`}</InfoRow></Cell><br/>
+		<Cell before={<Icon20MessageOutline/>}>Статус: {`${fetchedUser.status}`}</Cell><br/>
+		<Cell before={<Icon20ArticleOutline/>}>Имя: {`${fetchedUser.first_name}`}</Cell><br/>
+		<Cell>Фамилия: {`${fetchedUser.last_name}`}</Cell><br/>
+		<Cell before={<Icon20HomeOutline/>}>Город: {`${fetchedUser.city.title}`}</Cell><br/>
+		<Cell before={<Icon20CalendarOutline/>}>Дата рождения: {`${fetchedUser.bdate}`}</Cell><br/>
 		</Div>
 		</Group>}
 		<Group title="Достижения">
