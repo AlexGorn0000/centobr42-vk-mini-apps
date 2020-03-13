@@ -39,37 +39,13 @@ import user from '@vkontakte/icons/dist/24/user';
 class Education extends React.Component {
 	constructor(props) {
    super(props);
-   this.state = {notification: null, button_text: "Включить уведомления", hours: 120, minutes: 59, seconds: 59};
+   this.state = {notification: null, button_text: "Включить уведомления"};
    this.onAllowNotification = this.onAllowNotification.bind(this);
-   this.onChangehours = this.onChangehours.bind(this);
-   this.onChangeMinutes = this.onChangeMinutes.bind(this);
-   this.onChangeSeconds = this.onChangeSeconds.bind(this);
-   }
-   onChangehours(e){
-   setInterval(() => {
-   this.setState({hours: 120-1})
-   }, 3600000);
-   }
-   onChangeMinutes(e){
-   setInterval(() => {
-   this.setState({minutes: 59-1})
-   if (this.setState({minutes: 0})){
-   this.setState({minutes: 60})
-   }
-   }, 60000);
-   }
-   onChangeSeconds(e){
-   setInterval(() => {
-   this.setState({seconds: 59-1})
-   if (this.setState({seconds: 0})){
-   this.setState({seconds: 60})
-   }
-   }, 1000);
    }
    onAllowNotification(e){
    this.setState({button_text: "Выключить уведомления"});
    connect.send("VKWebAppAllowNotifications", {"request_id": 7266393})
-}
+   }
    render(){
    return(
 	<Panel id={this.props.id}>
@@ -79,7 +55,7 @@ class Education extends React.Component {
     <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Teaching">Педагогический состав</Cell>
     <Cell expandable before={<Icon24Newsfeed fill="#00acff"/>} onClick={this.props.go} Data-to="Timetable">Расписание уроков</Cell>
 	<Separator style={{margin: "5px 0"}}/>
-   <Cell before={<Icon24Note fill="#00acff"/>}>Электронный дневник<br/>осталось: {this.state.hours}:{this.state.minutes}:{this.state.seconds}</Cell>
+   <Cell before={<Icon24Note fill="#00acff"/>} description="В разработке">Электронный дневник</Cell>
    </List>
    </Group>
    <Div style={{textAlign: "center"}}><img src="https://vk.com/sticker/1-3375-128"/><br/>
