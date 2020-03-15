@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://vk.com/centobr42_press_center/">
-    <img width="254" height="254" src="https://sun9-68.userapi.com/c845321/v845321615/a3f6e/VtwaS87uOz0.jpg">
+    <img width="254" height="254" src="https://sun1-85.userapi.com/uA48p3UJnlZtL-uKMirGdh_MJ9rN0_HV0_mXLQ/-QDY0dN5w9A.jpg">
   </a>
   <br>
   <br>
