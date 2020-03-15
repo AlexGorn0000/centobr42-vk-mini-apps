@@ -70,31 +70,6 @@ return(
 	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={this.props.go} Data-to="Settings">Настройки</Cell></Tooltip>
 	 </List>
 	 </Group>
-	 <Gradient>
-      <Group header={
-        <Header
-          aside={<Link>Показать все</Link>}
-          subtitle="С быстрым входом"
-        >
-          Другие сервисы VK
-        </Header>
-      }>
-        <CardScroll style={{ paddingBottom: 20 }}>
-          <Card mode="outline" size="s">
-            <div style={{ width: 144, height: 96 }} />
-          </Card>
-          <Card mode="outline" size="s">
-            <div style={{ width: 144, height: 96 }} />
-          </Card>
-          <Card mode="outline" size="s">
-            <div style={{ width: 144, height: 96 }} />
-          </Card>
-          <Card mode="outline" size="s">
-            <div style={{ width: 144, height: 96 }} />
-          </Card>
-        </CardScroll>
-      </Group>
-    </Gradient>
 	 <Group>
 	 <Cell before={<Icon24Info fill="#00acff"/>}>Информация</Cell>
 	 <Gallery
