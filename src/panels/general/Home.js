@@ -11,9 +11,6 @@ import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import Separator from '@vkontakte/vkui/dist/components/Separator/Separator'
 import { FormLayout, FormLayoutGroup, Input, Tooltip, Counter, Link, Header } from '@vkontakte/vkui';
-import Card from '@vkontakte/vkui/dist/components/Card/Card';
-import Gradient from '@vkontakte/vkui/dist/components/Gradient/Gradient';
-import CardScroll from '@vkontakte/vkui/dist/components/CardScroll/CardScroll';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -62,7 +59,7 @@ return(
 	 <Cell expandable before={<Icon24Education fill="#00acff"/>} onClick={this.props.go} Data-to="Education">Образование</Cell></Tooltip>
 	 <Tooltip isShown={this.state.tooltip2} onClose={() => this.setState({tooltip2: false, tooltip3: true})} offsetX={10} text="У Вас есть талант, но не знаете кому показать? Тогда Вам сюда!">
 	 <Cell expandable before={<Icon24Services fill="#00acff"/>} onClick={this.props.go} Data-to="Projects" indicator={<Counter mode="prominent">1</Counter>}>Мероприятия</Cell></Tooltip>
-	 <Cell expandable before={<Icon24Live fill="#00acff"/>} description="В разработке до 15 марта">Прямая трансляция</Cell>
+	 <Cell expandable before={<Icon24Live fill="#00acff"/>} description="В разработке до 16 марта">Прямая трансляция</Cell>
 	 <Tooltip text="Хотите задать вопрос, но не знаете куда обратиться? Техническая поддержка Вам в помощь!" isShown={this.state.tooltip3} onClose={() => this.setState({ tooltip3: false, tooltip4: true })} offsetX={10}>
 	 <Cell expandable before={<Icon24Help fill="#00acff"/>} onClick={this.props.go} Data-to="Help">Помощь</Cell></Tooltip>
 	 <Separator style={{ margin: '10px 0' }} />

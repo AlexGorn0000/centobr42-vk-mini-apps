@@ -12,9 +12,6 @@ import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator, HorizontalScroll, Link, Header } from '@vkontakte/vkui';
-import Card from '@vkontakte/vkui/dist/components/Card/Card';
-import Gradient from '@vkontakte/vkui/dist/components/Gradient/Gradient';
-import CardScroll from '@vkontakte/vkui/dist/components/CardScroll/CardScroll';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
