@@ -10,7 +10,10 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Gallery from '@vkontakte/vkui/dist/components/Gallery/Gallery';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import Separator from '@vkontakte/vkui/dist/components/Separator/Separator'
-import { FormLayout, FormLayoutGroup, Input, Tooltip, Counter } from '@vkontakte/vkui';
+import { FormLayout, FormLayoutGroup, Input, Tooltip, Counter, Link, Header } from '@vkontakte/vkui';
+import Card from '@vkontakte/vkui/dist/components/Card/Card';
+import Gradient from '@vkontakte/vkui/dist/components/Gradient/Gradient';
+import CardScroll from '@vkontakte/vkui/dist/components/CardScroll/CardScroll';
 import { HeaderButton } from '@vkontakte/vkui';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -67,6 +70,31 @@ return(
 	 <Cell expandable before={<Icon24Settings fill="#00acff"/>} onClick={this.props.go} Data-to="Settings">Настройки</Cell></Tooltip>
 	 </List>
 	 </Group>
+	 <Gradient>
+      <Group header={
+        <Header
+          aside={<Link>Показать все</Link>}
+          subtitle="С быстрым входом"
+        >
+          Другие сервисы VK
+        </Header>
+      }>
+        <CardScroll style={{ paddingBottom: 20 }}>
+          <Card mode="outline" size="s">
+            <div style={{ width: 144, height: 96 }} />
+          </Card>
+          <Card mode="outline" size="s">
+            <div style={{ width: 144, height: 96 }} />
+          </Card>
+          <Card mode="outline" size="s">
+            <div style={{ width: 144, height: 96 }} />
+          </Card>
+          <Card mode="outline" size="s">
+            <div style={{ width: 144, height: 96 }} />
+          </Card>
+        </CardScroll>
+      </Group>
+    </Gradient>
 	 <Group>
 	 <Cell before={<Icon24Info fill="#00acff"/>}>Информация</Cell>
 	 <Gallery
