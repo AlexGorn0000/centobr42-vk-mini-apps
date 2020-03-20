@@ -10,7 +10,7 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import { FormLayout, FormLayoutGroup, Input, FormStatus, HorizontalScroll, Separator, Select, View, Tooltip, Alert} from '@vkontakte/vkui';
-import { HeaderButton } from '@vkontakte/vkui';
+import { HeaderButton } from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton'
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon24BrowserBack from '@vkontakte/icons/dist/24/browser_back';

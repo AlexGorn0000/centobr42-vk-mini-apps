@@ -12,7 +12,7 @@ import InfoRow from '@vkontakte/vkui/dist/components/InfoRow/InfoRow';
 import Progress from '@vkontakte/vkui/dist/components/Progress/Progress';
 import List from '@vkontakte/vkui/dist/components/List/List';
 import { FormLayout, FormLayoutGroup, Input, FormStatus, Search, CellButton, Separator } from '@vkontakte/vkui';
-import { HeaderButton } from '@vkontakte/vkui';
+import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
 ///Icons
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon24Search from '@vkontakte/icons/dist/24/search';
